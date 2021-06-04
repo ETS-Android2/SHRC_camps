@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@color/white"
+                android:background="@color/whiteOverlay"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:paddingTop="8dp">
@@ -51,6 +51,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="24dp"
+                    android:background="@color/white"
+                    android:padding="12dp"
                     android:src="@drawable/app_icon" />
 
 
@@ -121,17 +123,16 @@
                                     android:textColor="@color/colorPrimary"
                                     android:textSize="18sp" />
 
-                                <LinearLayout
+                                <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="horizontal">
 
                                     <EditText
                                         android:id="@+id/password"
-                                        android:layout_width="0dp"
+                                        android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_weight="8"
                                         android:background="@color/white"
                                         android:drawableStart="@drawable/ic_lock_close"
                                         android:drawablePadding="8dp"
@@ -155,14 +156,14 @@
                                         android:id="@+id/showPassword"
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/login_eyestyle"
+                                        android:layout_alignParentEnd="true"
                                         android:onClick="@{callback::onShowPasswordClick}"
                                         android:paddingStart="12dp"
                                         android:paddingEnd="12dp"
                                         android:src="@drawable/ic_login_eye"
                                         android:textSize="20sp" />
 
-                                </LinearLayout>
+                                </RelativeLayout>
 
                                 <ProgressBar
                                     android:id="@+id/pbarMR"
