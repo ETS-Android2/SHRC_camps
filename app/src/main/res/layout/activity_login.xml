@@ -126,6 +126,7 @@
                                 <RelativeLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:elevation="1dp"
                                     android:orientation="horizontal">
 
                                     <EditText
@@ -136,7 +137,6 @@
                                         android:background="@color/white"
                                         android:drawableStart="@drawable/ic_lock_close"
                                         android:drawablePadding="8dp"
-                                        android:elevation="1dp"
                                         android:hint="Password"
                                         android:imeActionLabel="Password"
                                         android:imeOptions="actionUnspecified"
