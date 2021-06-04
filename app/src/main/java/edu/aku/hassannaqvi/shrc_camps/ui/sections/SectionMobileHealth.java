@@ -287,6 +287,11 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
 
         mobileHealth.setMh06(bi.mh06.getSelectedItem().toString());
 
+        mobileHealth.setMh06a(bi.mh06a01.isChecked() ? "1"
+                : bi.mh06a02.isChecked() ? "2"
+                : bi.mh06a03.isChecked() ? "3"
+                : "-1");
+
         mobileHealth.setMh07(bi.mh07.getText().toString().trim().isEmpty() ? "-1" : bi.mh07.getText().toString());
 
         mobileHealth.setMh08(bi.mh08.getText().toString().trim().isEmpty() ? "-1" : bi.mh08.getText().toString());
@@ -304,6 +309,13 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         mobileHealth.setMh010a(bi.mh010a01.isChecked() ? "1"
                 : bi.mh010a02.isChecked() ? "2"
                 : "-1");
+
+        mobileHealth.setMh010b(bi.mh010b01.isChecked() ? "1"
+                : bi.mh010b02.isChecked() ? "2"
+                : bi.mh010b03.isChecked() ? "3"
+                : bi.mh010b04.isChecked() ? "4"
+                : "-1");
+        mobileHealth.setMh010b04x(bi.mh010b04x.getText().toString().trim().isEmpty() ? "-1" : bi.mh010b04x.getText().toString());
 
         mobileHealth.setMh01101(bi.mh01101.getText().toString().trim().isEmpty() ? "-1" : bi.mh01101.getText().toString());
         mobileHealth.setMh01102(bi.mh01102.getText().toString().trim().isEmpty() ? "-1" : bi.mh01102.getText().toString());
