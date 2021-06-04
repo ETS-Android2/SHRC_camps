@@ -17,7 +17,7 @@ android {
         jvmTarget = '1.8'
     }
 
-    def Properties versionProps = new Properties()
+    Properties versionProps = new Properties()
     def versionPropsFile = file('version.properties')
 
     //Create a version properties file and add required properties with default values
@@ -42,7 +42,7 @@ android {
 
         def runTasks = gradle.startParameter.taskNames
         if ('assemble' in runTasks || ':app:assembleRelease' in runTasks || 'aR' in runTasks) {
-            value = 1;
+            value = 1
             versionType = "R"
         }
 
@@ -62,14 +62,14 @@ android {
             applicationId "edu.aku.hassannaqvi.shrc_camps"
             versionCode versionBuild
             versionName "${versionNumber}.${versionPatch}${versionType}"
-            minSdkVersion 29
-            targetSdkVersion 29
+            minSdkVersion 21
+            targetSdkVersion 30
         }
 
         applicationVariants.all { variant ->
             variant.outputs.each { output ->
 
-                def appName = "PSBITrial"
+                def appName = "SHRC Camps"
                 def date = new Date()
                 def formattedDate = date.format('yyyy_MM_dd')
 
