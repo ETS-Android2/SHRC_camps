@@ -34,11 +34,11 @@
             android:id="@+id/testing"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryLight"
+            android:background="@color/redOverlay"
             android:gravity="center"
             android:keepScreenOn="true"
             android:text="@string/only_for_testing"
-            android:textColor="@color/whiteOverlay"
+            android:textColor="@color/colorAccent"
             android:textSize="20sp"
             android:textStyle="bold" />
 
