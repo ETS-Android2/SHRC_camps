@@ -33,6 +33,11 @@
     <string name="mh04">UC</string>
     <string name="mh05">Location</string>
     <string name="mh06">Doctor Name</string>
+    <string name="Q_mh06a"> mh06a </string>
+    <string name="mh06a"> Medical Examiner: </string>
+    <string name="mh06a01"> Medical Officer </string>
+    <string name="mh06a02"> Vaccinator </string>
+    <string name="mh06a03"> Dispenser </string>
     <string name="mh07">Patient Name</string>
     <string name="mh08">Father/Husband\'s Name</string>
     <string name="mh0801">Father</string>
@@ -48,6 +53,13 @@
     <string name="mh010a"> Marital Status </string>
     <string name="mh010a01"> Married </string>
     <string name="mh010a02"> Un Married </string>
+    <string name="Q_mh010b"> mh010b </string>
+    <string name="mh010b"> Referred By: </string>
+    <string name="mh010b01"> C H W  /  L H W </string>
+    <string name="mh010b02"> Social Mobilizers </string>
+    <string name="mh010b03"> Polio Team </string>
+    <string name="mh010b04"> Others </string>
+    <string name="mh010b04x"> Explain Others </string>
     <string name="mh011"> Presenting Complaints </string>
     <string name="mh012"> Weight (KG) </string>
 
