@@ -50,18 +50,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingTop="24dp"
-                    android:src="@drawable/naunehal_mobile_service" />
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/app_icon" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto"
-                    android:gravity="center"
-                    android:padding="24dp"
-                    android:text="@string/app_name"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="24dp" />
+
 
                 <TextView
                     style="@style/labels"

@@ -18,12 +18,12 @@
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorAccent"
                 android:gravity="center"
                 android:padding="8dp"
                 android:text="Camp No."
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="@color/white"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
