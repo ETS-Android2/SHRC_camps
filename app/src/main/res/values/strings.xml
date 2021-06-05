@@ -28,7 +28,7 @@
     <string name="hh2603">Refused</string>
 
     <string name="mh01">Date</string>
-    <string name="mh02">MHS No</string>
+    <string name="mh02">Camp No</string>
     <string name="mh03">Town</string>
     <string name="mh04">UC</string>
     <string name="mh05">Location</string>
@@ -40,6 +40,7 @@
     <string name="mh06a03"> Dispenser </string>
     <string name="mh07">Patient Name</string>
     <string name="mh08">Father/Husband\'s Name</string>
+    <string name="mh08a">Patient\'s Address</string>
     <string name="mh0801">Father</string>
     <string name="mh0802">Husband</string>
     <string name="mh09"> Age </string>
@@ -142,7 +143,7 @@
     <string name="mh027b03"> Fully Immunized as per age </string>
     <string name="mh027b04"> Vaccine Not Available at Camp </string>
 
-    <string name="mh026">Vaccinations done at MHS</string>
+    <string name="mh026">Vaccinations done at Camp</string>
     <string name="mh02601">BCG</string>
     <string name="mh02602">Penta1</string>
     <string name="mh02603">Penta2</string>
@@ -160,7 +161,10 @@
     <string name="mh026016">PCV3</string>
     <string name="mh026017">Rota1</string>
     <string name="mh026018">Rota2</string>
-    <string name="mh026019">IPV</string>
+    <string name="mh026019">IPV 1</string>
+    <string name="mh026020">IPV 2</string>
+    <string name="mh026021">Typhoid (TCV)</string>
+    <string name="mh026022"> Hep B </string>
     <string name="mh026birth">Birth</string>
     <string name="mh026w06">06 Weeks</string>
     <string name="mh026w10">10 Weeks</string>
@@ -480,6 +484,7 @@
     <string name='Q_mh06'>mh06</string>
     <string name='Q_mh07'>mh07</string>
     <string name='Q_mh08'>mh08</string>
+    <string name='Q_mh08a'>mh08a</string>
     <string name='Q_mh09'>mh09</string>
     <string name='Q_mh09d'>mh09d</string>
     <string name='Q_mh09m'>mh09m</string>
