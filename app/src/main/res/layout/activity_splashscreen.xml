@@ -20,7 +20,7 @@
             android:layout_centerInParent="true"
             android:layout_margin="24dp"
             android:paddingTop="24dp"
-            android:src="@drawable/naunehal_mobile_service" />
+            android:src="@drawable/app_icon" />
 
         <TextView
             android:id="@+id/textView7"
