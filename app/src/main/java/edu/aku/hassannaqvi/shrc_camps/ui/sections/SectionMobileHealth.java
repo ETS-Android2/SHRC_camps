@@ -214,6 +214,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         bi.mh012.setMaxvalue(250f);
         bi.mh012.setMask("###.#");
         bi.mh012.setHint("###.#");
+        Clear.clearAllFields(bi.fldGrpCVmh010a);
         Clear.clearAllFields(bi.fldGrpCVmh017);
         Clear.clearAllFields(bi.llmh020);
         Clear.clearAllFields(bi.fldGrpCVmh015);
@@ -222,6 +223,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         Clear.clearAllFields(bi.llchild);
         bi.mh02601.setChecked(false);
         bi.mh026019.setChecked(false);
+        bi.fldGrpCVmh010a.setVisibility(View.GONE);
         bi.fldGrpCVmh017.setVisibility(View.GONE);
         bi.llmh020.setVisibility(View.GONE);
         bi.fldGrpCVmh015.setVisibility(View.GONE);
@@ -234,6 +236,9 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
             bi.fldGrpCVmh017.setVisibility(View.VISIBLE);
             bi.llmh020.setVisibility(View.VISIBLE);
             patientType = "MWRA";
+        }
+        if (age >= 5110) {
+            bi.fldGrpCVmh010a.setVisibility(View.VISIBLE);
         }
         if (age <= 1825) {
             bi.fldGrpCVmh015.setVisibility(View.VISIBLE);
