@@ -78,6 +78,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:gravity="center"
+                                android:text="@{mob.plan_date}"
                                 android:hint="YYYY-MM-DD"
                                 android:inputType="number"
                                 app:dateFormat="yyyy-MM-dd"
@@ -494,10 +495,10 @@
                             android:id="@+id/mh08a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM"
+                            android:digits="qwertyuiopasdfghjklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM 1234567890 - , . "
                             android:hint="@string/mh08a"
                             android:inputType="text|textCapWords|textNoSuggestions"
-                            android:maxLength="20" />
+                            android:maxLength="200" />
 
                     </LinearLayout>
 
@@ -981,6 +982,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/mh013b" />
+                            <RadioButton
+                                android:id="@+id/mh01397"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="N/A" />
 
                         </RadioGroup>
 
@@ -1037,6 +1044,13 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="@string/mh014b" />
+
+                            <RadioButton
+                                android:id="@+id/mh01497"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="N/A" />
 
                         </RadioGroup>
 

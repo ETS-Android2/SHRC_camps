@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"> TPVICS SHRC Camps </string>
+    <string name="app_name"> SHRUC Health Camps </string>
     <string name="action_database">Database Manager</string>
     <string name="action_data_sync">Sync Data</string>
     <string name="btnDownload">Download Data</string>
@@ -123,7 +123,7 @@
     <string name="mh021">Tetanus Vaccine Administered</string>
     <string name="mh02101">Yes</string>
     <string name="mh02102">No</string>
-    <string name="mh022t">Vaccination in Children</string>
+    <string name="mh022t">Vaccination in children</string>
     <string name="mh022">Ever received OPV</string>
     <string name="mh02201">Yes</string>
     <string name="mh02202">No</string>
@@ -137,13 +137,13 @@
     <string name="mh02501">Yes</string>
     <string name="mh02502">No</string>
 
-    <string name="mh027b"> Immunization Status </string>
+    <string name="mh027b"> Vaccination status at the camp </string>
     <string name="mh027b01"> Refused </string>
     <string name="mh027b02"> Vaccinated At Camp </string>
-    <string name="mh027b03"> Fully Immunized as per age </string>
-    <string name="mh027b04"> Vaccine Not Available at Camp </string>
+    <string name="mh027b03"> Fully-immunized as per age </string>
+    <string name="mh027b04"> Vaccine not available at the camp </string>
 
-    <string name="mh026">Vaccinations done at Camp</string>
+    <string name="mh026">Vaccinations administered at the camp</string>
     <string name="mh02601">BCG</string>
     <string name="mh02602">Penta1</string>
     <string name="mh02603">Penta2</string>
@@ -173,7 +173,7 @@
     <string name="mh026m15">15 Months</string>
     <string name="mh026m59">0-59 Months</string>
 
-    <string name="mh027"> Vaccination Card Issued </string>
+    <string name="mh027"> Vaccination Card Issued at Camp </string>
     <string name="mh02701"> Yes </string>
     <string name="mh02702"> No </string>
 

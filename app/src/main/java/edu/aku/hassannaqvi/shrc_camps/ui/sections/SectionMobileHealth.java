@@ -86,6 +86,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
             });
         }*/
 
+
         bi.chkWeight.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.mh012, !b));
         bi.chkHeight.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.mh015, !b));
         bi.chkMUAC.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.mh016, !b));
@@ -149,13 +150,14 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
             }
         });
 
-        setTags(bi.mh02601, new View[]{bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019});
-        setTags(bi.rgmh02601, new View[]{bi.mh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019});
-        setTags(bi.rgmh02602, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019});
-        setTags(bi.rgmh02603, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02604, bi.rgmh02605, bi.mh026019});
-        setTags(bi.rgmh02604, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02605, bi.mh026019});
-        setTags(bi.rgmh02605, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.mh026019});
-        setTags(bi.mh026019, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605});
+        setTags(bi.mh02601, new View[]{bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
+        setTags(bi.rgmh02601, new View[]{bi.mh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
+        setTags(bi.rgmh02602, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
+        setTags(bi.rgmh02603, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
+        setTags(bi.rgmh02604, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
+        setTags(bi.rgmh02605, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.mh026019, bi.rgmh02606});
+        setTags(bi.rgmh02606, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604,bi.rgmh02605, bi.mh026019});
+        setTags(bi.mh026019, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606});
 
         bi.rgmh02603.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVmh027a);
@@ -326,11 +328,11 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         mobileHealth.setChkWeight(bi.chkWeight.isChecked() ? "97" : "-1");
 
         mobileHealth.setMh013(bi.mh013a.isChecked() ? "1"
-                : bi.mh013b.isChecked() ? "2"
+                : bi.mh013b.isChecked() ? "2" : bi.mh01397.isChecked() ? "97"
                 : "-1");
 
         mobileHealth.setMh014(bi.mh014a.isChecked() ? "1"
-                : bi.mh014b.isChecked() ? "2"
+                : bi.mh014b.isChecked() ? "2" : bi.mh01497.isChecked() ? "97"
                 : "-1");
 
         mobileHealth.setMh015(bi.mh015.getText().toString().trim().isEmpty() ? "-1" : bi.mh015.getText().toString());
@@ -474,6 +476,22 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
             int check = Integer.parseInt(bi.mh09d.getText().toString()) + Integer.parseInt(bi.mh09m.getText().toString()) + Integer.parseInt(bi.mh09y.getText().toString());
             if (check == 0)
                 return Validator.emptyCustomTextBox(this, bi.mh09d, "All Fields can't be zero");
+        }
+
+        if(bi.mh027b02.isChecked()
+                && bi.rgmh02601.getCheckedRadioButtonId() == -1
+                && bi.rgmh02602.getCheckedRadioButtonId() == -1
+                && bi.rgmh02603.getCheckedRadioButtonId() == -1
+                && bi.rgmh02604.getCheckedRadioButtonId() == -1
+                && bi.rgmh02605.getCheckedRadioButtonId() == -1
+                && bi.rgmh02606.getCheckedRadioButtonId() == -1
+                && !bi.mh02601.isChecked()
+                && !bi.mh026019.isChecked()
+                && !bi.mh026021.isChecked()
+                && !bi.mh026022.isChecked()
+
+        ) {
+            return Validator.emptyCustomTextBox(this, bi.mh026020, "Please select at least one vaccine.");
         }
 
        /* if (!AllVaccinationsViewed && Integer.valueOf(bi.mh09y.getText().toString()) <= 5 && bi.mh027b02.isChecked()) {

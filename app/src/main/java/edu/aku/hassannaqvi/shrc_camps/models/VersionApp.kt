@@ -33,6 +33,6 @@ class VersionApp {
         const val COLUMN_VERSION_CODE = "versionCode"
         const val COLUMN_VERSION_NAME = "versionName"
         const val COLUMN_PATH_NAME = "outputFile"
-        const val SERVER_URI = "output.json"
+        const val SERVER_URI = "output-metadata.json"
     }
 }
