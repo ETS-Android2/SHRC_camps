@@ -2397,22 +2397,27 @@
                                                 android:text="@string/mh026018" />
 
                                         </RadioGroup>
+
                                         <RadioGroup
                                             android:id="@+id/rgmh02606"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:orientation="horizontal">
-                                        <RadioButton
+
+                                            <RadioButton
                                             android:id="@+id/mh026019"
                                             android:layout_width="85dp"
                                             android:layout_height="wrap_content"
                                             android:text="@string/mh026019" />
-                                        <RadioButton
+
+                                            <RadioButton
                                             android:id="@+id/mh026020"
                                             android:layout_width="85dp"
                                             android:layout_height="wrap_content"
                                             android:text="@string/mh026020" />
+
                                         </RadioGroup>
+
                                         <View
                                             android:layout_width="102dp"
                                             android:layout_height="wrap_content" />
