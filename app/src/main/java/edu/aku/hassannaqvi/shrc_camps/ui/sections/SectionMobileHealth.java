@@ -69,11 +69,6 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         setupSkips();
 
 
-        //Please add another option Not Reported (NR) value 9 in following questions.
-
-        //MH06A  MEDICAL EXAMINER
-        //MH022  Ever Received OPV
-        //MH023  Ever Received Routine Immunization
         //MH024  Vaccination Card Available
         //MH025  Received OPV in last Campaign
         //MH027  Vaccination Card Issued at Camp
@@ -429,10 +424,12 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
 
         mobileHealth.setMh023(bi.mh02301.isChecked() ? "1"
                 : bi.mh02302.isChecked() ? "2"
+                : bi.mh02303.isChecked() ? "9"
                 : "-1");
 
         mobileHealth.setMh024(bi.mh02401.isChecked() ? "1"
                 : bi.mh02402.isChecked() ? "2"
+                : bi.mh02403.isChecked() ? "9"
                 : "-1");
 
         mobileHealth.setMh025(bi.mh02501.isChecked() ? "1"
