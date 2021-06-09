@@ -2303,11 +2303,13 @@
                                                 android:text="@string/mh026011" />
 
                                         </RadioGroup>
+
                                         <RadioButton
                                             android:id="@+id/mh026021"
                                             android:layout_width="120dp"
                                             android:layout_height="wrap_content"
                                             android:text="@string/mh026021" />
+
                                         <View
                                             android:layout_width="102dp"
                                             android:layout_height="wrap_content" />
@@ -2404,16 +2406,16 @@
                                             android:orientation="horizontal">
 
                                             <RadioButton
-                                            android:id="@+id/mh026019"
-                                            android:layout_width="85dp"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/mh026019" />
+                                                android:id="@+id/mh026019"
+                                                android:layout_width="85dp"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/mh026019" />
 
                                             <RadioButton
-                                            android:id="@+id/mh026020"
-                                            android:layout_width="85dp"
-                                            android:layout_height="wrap_content"
-                                            android:text="@string/mh026020" />
+                                                android:id="@+id/mh026020"
+                                                android:layout_width="85dp"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/mh026020" />
 
                                         </RadioGroup>
 

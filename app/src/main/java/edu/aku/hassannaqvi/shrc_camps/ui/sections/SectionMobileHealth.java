@@ -133,31 +133,36 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
             bi.rgmh02604.setTag(null);
             bi.rgmh02605.setTag(null);
             bi.mh026019.setTag(null);
+            bi.mh026021.setTag(null);
+            bi.mh026022.setTag(null);
             Clear.clearAllFields(bi.fldGrpCVmh026);
             Clear.clearAllFields(bi.fldGrpCVmh027);
             Clear.clearAllFields(bi.fldGrpCVmh027a);
             bi.mh02601.setChecked(false);
             bi.mh026019.setChecked(false);
+            bi.mh026021.setChecked(false);
+            bi.mh026022.setChecked(false);
             bi.fldGrpCVmh026.setVisibility(View.GONE);
             bi.fldGrpCVmh027.setVisibility(View.GONE);
-            bi.fldGrpCVmh027a.setVisibility(View.GONE);
+            bi.fldGrpCVmh027a.setVisibility(View.VISIBLE);
             if (i == bi.mh027b02.getId()) {
                 bi.fldGrpCVmh026.setVisibility(View.VISIBLE);
                 bi.fldGrpCVmh027.setVisibility(View.VISIBLE);
+                //bi.fldGrpCVmh027a.setVisibility(View.VISIBLE);
+            }/* else if (i == bi.mh027b01.getId()) {
                 bi.fldGrpCVmh027a.setVisibility(View.VISIBLE);
-            } else if (i == bi.mh027b01.getId()) {
-                bi.fldGrpCVmh027a.setVisibility(View.VISIBLE);
-            }
+            }*/
         });
 
-        setTags(bi.mh02601, new View[]{bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
-        setTags(bi.rgmh02601, new View[]{bi.mh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
-        setTags(bi.rgmh02602, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
-        setTags(bi.rgmh02603, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02604, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
-        setTags(bi.rgmh02604, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02605, bi.mh026019, bi.rgmh02606});
-        setTags(bi.rgmh02605, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.mh026019, bi.rgmh02606});
-        setTags(bi.rgmh02606, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604,bi.rgmh02605, bi.mh026019});
-        setTags(bi.mh026019, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606});
+        setTags(bi.mh02601, new View[]{bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606, bi.mh026021, bi.mh026022});
+        setTags(bi.rgmh02601, new View[]{bi.mh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606, bi.mh026021, bi.mh026022});
+        setTags(bi.rgmh02602, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606, bi.mh026021, bi.mh026022});
+        setTags(bi.rgmh02603, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606, bi.mh026021, bi.mh026022});
+        setTags(bi.rgmh02604, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02605, bi.rgmh02606, bi.mh026021, bi.mh026022});
+        setTags(bi.rgmh02605, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02606, bi.mh026021, bi.mh026022});
+        setTags(bi.rgmh02606, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.mh026021, bi.mh026022});
+        setTags(bi.mh026021, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606, bi.mh026022});
+        setTags(bi.mh026022, new View[]{bi.mh02601, bi.rgmh02601, bi.rgmh02602, bi.rgmh02603, bi.rgmh02604, bi.rgmh02605, bi.rgmh02606, bi.mh026021});
 
         bi.rgmh02603.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVmh027a);
