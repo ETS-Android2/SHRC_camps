@@ -181,10 +181,12 @@
     <string name="mh027"> Vaccination Card Issued at Camp </string>
     <string name="mh02701"> Yes </string>
     <string name="mh02702"> No </string>
+    <string name="mh02703"> N R </string>
 
     <string name="mh027a">OPV</string>
     <string name="mh027a01">Administered</string>
     <string name="mh027a02">Refused</string>
+    <string name="mh027a03"> N R </string>
 
     <string name="mh028">Referred</string>
     <string name="mh02801">Yes</string>

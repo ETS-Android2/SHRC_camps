@@ -68,9 +68,6 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         bi.mh01.setMinDate(convertDateFormat(camp.getPlan_date()));
         setupSkips();
 
-
-        //MH024  Vaccination Card Available
-        //MH025  Received OPV in last Campaign
         //MH027  Vaccination Card Issued at Camp
         //MH027a OPV (other than Routine)
         //MH028  Referred
@@ -465,10 +462,12 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
 
         mobileHealth.setMh027a(bi.mh027a01.isChecked() ? "1"
                 : bi.mh027a02.isChecked() ? "2"
+                : bi.mh027a03.isChecked() ? "9"
                 : "-1");
 
         mobileHealth.setMh027(bi.mh02701.isChecked() ? "1"
                 : bi.mh02702.isChecked() ? "2"
+                : bi.mh02703.isChecked() ? "9"
                 : "-1");
 
         mobileHealth.setMh028(bi.mh02801.isChecked() ? "1"
