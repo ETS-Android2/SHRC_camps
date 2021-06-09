@@ -1873,6 +1873,13 @@
                                         android:layout_weight="1"
                                         android:text="@string/mh02202" />
 
+                                    <RadioButton
+                                        android:id="@+id/mh02203"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/mh02203" />
+
                                 </RadioGroup>
 
                                 <View

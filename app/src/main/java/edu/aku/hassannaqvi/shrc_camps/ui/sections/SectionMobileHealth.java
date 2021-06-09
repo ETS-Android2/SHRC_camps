@@ -424,6 +424,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
 
         mobileHealth.setMh022(bi.mh02201.isChecked() ? "1"
                 : bi.mh02202.isChecked() ? "2"
+                : bi.mh02203.isChecked() ? "9"
                 : "-1");
 
         mobileHealth.setMh023(bi.mh02301.isChecked() ? "1"

@@ -38,7 +38,7 @@
     <string name="mh06a01"> Medical Officer </string>
     <string name="mh06a02"> Vaccinator </string>
     <string name="mh06a03"> Dispenser </string>
-    <string name="mh06a04"> Not Reported </string>
+    <string name="mh06a04"> N R </string>
     <string name="mh07">Patient Name</string>
     <string name="mh08">Father/Husband\'s Name</string>
     <string name="mh08a">Patient\'s Address</string>
@@ -128,6 +128,7 @@
     <string name="mh022">Ever received OPV</string>
     <string name="mh02201">Yes</string>
     <string name="mh02202">No</string>
+    <string name="mh02203"> N R </string>
     <string name="mh023">Ever received routine immunization</string>
     <string name="mh02301">Yes</string>
     <string name="mh02302">No</string>
