@@ -67,6 +67,21 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         populateSpinner(camp.getIdCamp());
         bi.mh01.setMinDate(convertDateFormat(camp.getPlan_date()));
         setupSkips();
+
+
+        //Please add another option Not Reported (NR) value 9 in following questions.
+
+        //MH06A  MEDICAL EXAMINER
+        //MH022  Ever Received OPV
+        //MH023  Ever Received Routine Immunization
+        //MH024  Vaccination Card Available
+        //MH025  Received OPV in last Campaign
+        //MH027  Vaccination Card Issued at Camp
+        //MH027a OPV (other than Routine)
+        //MH028  Referred
+        //MH029  Consent Given
+
+
     }
 
 
@@ -302,6 +317,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         mobileHealth.setMh06a(bi.mh06a01.isChecked() ? "1"
                 : bi.mh06a02.isChecked() ? "2"
                 : bi.mh06a03.isChecked() ? "3"
+                : bi.mh06a04.isChecked() ? "9"
                 : "-1");
 
         mobileHealth.setMh07(bi.mh07.getText().toString().trim().isEmpty() ? "-1" : bi.mh07.getText().toString());

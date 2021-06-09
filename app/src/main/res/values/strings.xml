@@ -38,6 +38,7 @@
     <string name="mh06a01"> Medical Officer </string>
     <string name="mh06a02"> Vaccinator </string>
     <string name="mh06a03"> Dispenser </string>
+    <string name="mh06a04"> Not Reported </string>
     <string name="mh07">Patient Name</string>
     <string name="mh08">Father/Husband\'s Name</string>
     <string name="mh08a">Patient\'s Address</string>

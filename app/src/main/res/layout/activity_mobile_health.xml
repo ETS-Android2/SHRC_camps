@@ -369,6 +369,13 @@
                                 android:layout_weight="1"
                                 android:text="@string/mh06a03" />
 
+                            <RadioButton
+                                android:id="@+id/mh06a04"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/mh06a04" />
+
                         </RadioGroup>
 
                     </LinearLayout>
