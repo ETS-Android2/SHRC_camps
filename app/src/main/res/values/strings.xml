@@ -183,19 +183,21 @@
     <string name="mh02702"> No </string>
     <string name="mh02703"> N R </string>
 
-    <string name="mh027a">OPV</string>
-    <string name="mh027a01">Administered</string>
-    <string name="mh027a02">Refused</string>
+    <string name="mh027a"> OPV </string>
+    <string name="mh027a01"> Administered </string>
+    <string name="mh027a02"> Refused </string>
     <string name="mh027a03"> N R </string>
 
-    <string name="mh028">Referred</string>
-    <string name="mh02801">Yes</string>
-    <string name="mh02802">No</string>
-    <string name="mh029">Consent given?</string>
-    <string name="mh02901">Yes</string>
-    <string name="mh02902">No</string>
-    <string name="mh030">Remarks</string>
-    <string name="none">None</string>
+    <string name="mh028"> Referred </string>
+    <string name="mh02801"> Yes </string>
+    <string name="mh02802"> No </string>
+    <string name="mh02803"> N R </string>
+    <string name="mh029"> Consent given ? </string>
+    <string name="mh02901"> Yes </string>
+    <string name="mh02902"> No </string>
+    <string name="mh02903"> N R </string>
+    <string name="mh030"> Remarks </string>
+    <string name="none"> None </string>
 
 
     <string name='Q_bf01'>bf01</string>

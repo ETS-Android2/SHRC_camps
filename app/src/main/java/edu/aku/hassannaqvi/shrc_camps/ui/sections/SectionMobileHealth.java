@@ -68,8 +68,6 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         bi.mh01.setMinDate(convertDateFormat(camp.getPlan_date()));
         setupSkips();
 
-        //MH027  Vaccination Card Issued at Camp
-        //MH027a OPV (other than Routine)
         //MH028  Referred
         //MH029  Consent Given
 
