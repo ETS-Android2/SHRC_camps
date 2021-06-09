@@ -132,6 +132,7 @@
     <string name="mh023">Ever received routine immunization</string>
     <string name="mh02301">Yes</string>
     <string name="mh02302">No</string>
+    <string name="mh02303"> N R </string>
     <string name="mh024">Vaccination card available</string>
     <string name="mh02401">Yes</string>
     <string name="mh02402">No</string>
