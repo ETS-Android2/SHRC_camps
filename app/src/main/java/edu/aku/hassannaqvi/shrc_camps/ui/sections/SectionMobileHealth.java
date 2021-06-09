@@ -67,11 +67,6 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
         populateSpinner(camp.getIdCamp());
         bi.mh01.setMinDate(convertDateFormat(camp.getPlan_date()));
         setupSkips();
-
-        //MH028  Referred
-        //MH029  Consent Given
-
-
     }
 
 
@@ -475,6 +470,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
 
         mobileHealth.setMh029(bi.mh02901.isChecked() ? "1"
                 : bi.mh02902.isChecked() ? "2"
+                : bi.mh02903.isChecked() ? "9"
                 : "-1");
 
         mobileHealth.setMh030(bi.mh030.getText().toString().trim().isEmpty() ? "-1" : bi.mh030.getText().toString());
