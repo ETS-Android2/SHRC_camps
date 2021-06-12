@@ -145,6 +145,8 @@ public class SyncActivity extends AppCompatActivity {
                 // MobileHealth
                 uploadTables.add(new SyncModel(MHContract.MHTable.TABLE_NAME));
                 MainApp.uploadData.add(db.getUnsyncedMH());
+
+                MainApp.downloadData = new String[uploadTables.size()];
                 setAdapter(uploadTables);
                 BeginUpload();
                 break;

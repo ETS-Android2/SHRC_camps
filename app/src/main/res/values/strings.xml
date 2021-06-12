@@ -147,7 +147,7 @@
     <string name="mh027b02"> Vaccinated At Camp </string>
     <string name="mh027b03"> Fully-immunized as per age </string>
     <string name="mh027b04"> Vaccine not available at the camp </string>
-
+    <string name="mh027b05">Vaccination Not Reported</string>
     <string name="mh026">Vaccinations administered at the camp</string>
     <string name="mh02601">BCG</string>
     <string name="mh02602">Penta1</string>
@@ -501,5 +501,7 @@
     <string name="Q_mh027a">MH027a</string>
     <string name="Q_mh027b">MH027B</string>
     <string name="Q_mh030">MH030</string>
+
+
 
 </resources>
