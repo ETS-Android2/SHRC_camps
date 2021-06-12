@@ -922,7 +922,7 @@
                                 android:hint="###.#"
                                 android:inputType="number"
                                 app:mask="###.#"
-                                app:maxValue="58"
+                                app:maxValue="250"
                                 app:minValue="0.9"
                                 app:type="range" />
 
@@ -2133,6 +2133,11 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/mh027b04" />
+                                <RadioButton
+                                    android:id="@+id/mh027b05"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mh027b05" />
 
                             </RadioGroup>
 

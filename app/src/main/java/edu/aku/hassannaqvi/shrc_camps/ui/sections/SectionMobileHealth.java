@@ -209,8 +209,8 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
             return;
         int age = Integer.parseInt(bi.mh09d.getText().toString()) + (Integer.parseInt(bi.mh09m.getText().toString()) * 29) + (Integer.parseInt(bi.mh09y.getText().toString()) * 365);
 
-        bi.mh012.setMinvalue(15f);
-        bi.mh012.setMaxvalue(250f);
+       /* bi.mh012.setMinvalue(15f);
+        bi.mh012.setMaxvalue(250f);*/
         bi.mh012.setMask("###.#");
         bi.mh012.setHint("###.#");
         Clear.clearAllFields(bi.fldGrpCVmh010a);
@@ -425,6 +425,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
                 : bi.mh027b02.isChecked() ? "2"
                 : bi.mh027b03.isChecked() ? "3"
                 : bi.mh027b04.isChecked() ? "4"
+                : bi.mh027b05.isChecked() ? "5"
                 : "-1");
 
         mobileHealth.setMh02601(bi.mh02601.isChecked() ? "1" : "-1");
