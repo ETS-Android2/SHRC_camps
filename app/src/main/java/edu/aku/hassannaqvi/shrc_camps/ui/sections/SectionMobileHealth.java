@@ -174,19 +174,13 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
 
     public void setTags(RadioGroup rg, View[] views) {
         rg.setOnCheckedChangeListener((radioGroup, i) -> {
-            for (View view : views) {
-                view.setTag("-1");
-            }
+            for (View view : views) view.setTag("-1");
         });
     }
 
     public void setTags(RadioButton rb, View[] views) {
         rb.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
-                for (View view : views) {
-                    view.setTag("-1");
-                }
-            }
+            if (b) for (View view : views) view.setTag("-1");
         });
     }
 
