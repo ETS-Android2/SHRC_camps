@@ -388,13 +388,15 @@ public class SyncActivity extends AppCompatActivity {
                     if (workInfo.getState() != null &&
                             workInfo.getState() == WorkInfo.State.SUCCEEDED) {
 
-                        String result = workInfo.getOutputData().getString("message");
+                        //String result = workInfo.getOutputData().getString("message");
+
 
                         int sSynced = 0;
                         int sDuplicate = 0;
                         StringBuilder sSyncedError = new StringBuilder();
                         JSONArray json;
 
+                        String result = MainApp.downloadData[position];
                         if (result != null) {
                             if (result.length() > 0) {
                                 try {

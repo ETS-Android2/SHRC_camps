@@ -33,7 +33,7 @@ import static edu.aku.hassannaqvi.shrc_camps.database.CreateTable.PROJECT_NAME;
 
 public class DataUpWorkerALL extends Worker {
 
-    private static final Object APP_NAME = PROJECT_NAME;
+    private static final String APP_NAME = PROJECT_NAME;
     private final String TAG = "DataWorkerEN()";
 
     // to be initialised by workParams
@@ -41,7 +41,7 @@ public class DataUpWorkerALL extends Worker {
     private final String uploadTable;
     private final JSONArray uploadData;
     private final URL serverURL = null;
-    private final String nTitle = "Naunehal: Data Upload";
+    private final String nTitle = PROJECT_NAME+": Data Upload";
     private final int position;
     private final String uploadWhere;
     HttpURLConnection urlConnection;
