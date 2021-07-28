@@ -253,13 +253,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(MHContract.MHTable.COLUMN_USERNAME, mobileHealth.getUserName());
         values.put(MHContract.MHTable.COLUMN_SYSDATE, mobileHealth.getSysDate());
         values.put(MHContract.MHTable.COLUMN_SA, mobileHealth.sAtoString());
-        values.put(MHContract.MHTable.COLUMN_MH01, mobileHealth.getMh01());
-        values.put(MHContract.MHTable.COLUMN_MH02, mobileHealth.getMh02());
-        values.put(MHContract.MHTable.COLUMN_MH03, mobileHealth.getMh03());
-        values.put(MHContract.MHTable.COLUMN_MH04, mobileHealth.getMh04());
-        values.put(MHContract.MHTable.COLUMN_MH05, mobileHealth.getMh05());
-        values.put(MHContract.MHTable.COLUMN_MH06, mobileHealth.getMh06());
-        values.put(MHContract.MHTable.COLUMN_MH07, mobileHealth.getMh07());
+        values.put(MHContract.MHTable.COLUMN_SS101, mobileHealth.getSs101());
+        values.put(MHContract.MHTable.COLUMN_SS102, mobileHealth.getSs102());
+        values.put(MHContract.MHTable.COLUMN_SS103, mobileHealth.getSs103());
+        values.put(MHContract.MHTable.COLUMN_SS104, mobileHealth.getSs104());
+        values.put(MHContract.MHTable.COLUMN_SS105, mobileHealth.getSs105());
+        values.put(MHContract.MHTable.COLUMN_SS106, mobileHealth.getSs106());
+        values.put(MHContract.MHTable.COLUMN_SS107, mobileHealth.getSs107());
         values.put(MHContract.MHTable.COLUMN_DEVICEID, mobileHealth.getDeviceId());
         values.put(MHContract.MHTable.COLUMN_DEVICETAGID, mobileHealth.getDeviceTag());
         values.put(MHContract.MHTable.COLUMN_SYNCED, mobileHealth.getSynced());
@@ -1487,13 +1487,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 MHContract.MHTable.COLUMN_SYNCED_DATE,
                 MHContract.MHTable.COLUMN_STATUS,
                 MHContract.MHTable.COLUMN_SERIAL,
-                MHContract.MHTable.COLUMN_MH01,
-                MHContract.MHTable.COLUMN_MH02,
-                MHContract.MHTable.COLUMN_MH03,
-                MHContract.MHTable.COLUMN_MH04,
-                MHContract.MHTable.COLUMN_MH05,
-                MHContract.MHTable.COLUMN_MH06,
-                MHContract.MHTable.COLUMN_MH07,
+                MHContract.MHTable.COLUMN_SS101,
+                MHContract.MHTable.COLUMN_SS102,
+                MHContract.MHTable.COLUMN_SS103,
+                MHContract.MHTable.COLUMN_SS104,
+                MHContract.MHTable.COLUMN_SS105,
+                MHContract.MHTable.COLUMN_SS106,
+                MHContract.MHTable.COLUMN_SS107,
                 MHContract.MHTable.COLUMN_SA
         };
 
@@ -1642,14 +1642,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 MHTable.COLUMN_ID,
                 MHTable.COLUMN_UID,
                 MHTable.COLUMN_SYSDATE,
-                MHTable.COLUMN_MH02,
-                MHTable.COLUMN_MH06,
-                MHTable.COLUMN_MH07,
+                MHTable.COLUMN_SS102,
+                MHTable.COLUMN_SS106,
+                MHTable.COLUMN_SS107,
                 MHTable.COLUMN_SA,
                 MHTable.COLUMN_SYNCED,
 
         };
-        String whereClause = MHTable.COLUMN_MH02 + " = ? ";
+        String whereClause = MHTable.COLUMN_SS102 + " = ? ";
         String[] whereArgs = new String[]{cluster};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
@@ -1674,9 +1674,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setId(c.getString(c.getColumnIndex(MHTable.COLUMN_ID)));
                 fc.setUid(c.getString(c.getColumnIndex(MHTable.COLUMN_UID)));
                 fc.setSysDate(c.getString(c.getColumnIndex(MHTable.COLUMN_SYSDATE)));
-                fc.setMh02(c.getString(c.getColumnIndex(MHTable.COLUMN_MH02)));
-                fc.setMh06(c.getString(c.getColumnIndex(MHTable.COLUMN_MH06)));
-                fc.setMh07(c.getString(c.getColumnIndex(MHTable.COLUMN_MH07)));
+                fc.setSs102(c.getString(c.getColumnIndex(MHTable.COLUMN_SS102)));
+                fc.setSs106(c.getString(c.getColumnIndex(MHTable.COLUMN_SS106)));
+                fc.setSs107(c.getString(c.getColumnIndex(MHTable.COLUMN_SS107)));
                 fc.setSynced(c.getString(c.getColumnIndex(MHTable.COLUMN_SYNCED)));
                 fc.sAHydrate(c.getString(c.getColumnIndex(MHTable.COLUMN_SA)));
                 Log.d(TAG, "getFormsByCluster: " + c.getString(c.getColumnIndex(MHTable.COLUMN_SA)));
@@ -1787,9 +1787,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 MHTable.COLUMN_ID,
                 MHTable.COLUMN_UID,
                 MHTable.COLUMN_SYSDATE,
-                MHTable.COLUMN_MH02,
-                MHTable.COLUMN_MH06,
-                MHTable.COLUMN_MH07,
+                MHTable.COLUMN_SS102,
+                MHTable.COLUMN_SS106,
+                MHTable.COLUMN_SS107,
                 MHTable.COLUMN_SA,
                 MHTable.COLUMN_SYNCED,
 
@@ -1819,9 +1819,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setId(c.getString(c.getColumnIndex(MHTable.COLUMN_ID)));
                 fc.setUid(c.getString(c.getColumnIndex(MHTable.COLUMN_UID)));
                 fc.setSysDate(c.getString(c.getColumnIndex(MHTable.COLUMN_SYSDATE)));
-                fc.setMh02(c.getString(c.getColumnIndex(MHTable.COLUMN_MH02)));
-                fc.setMh06(c.getString(c.getColumnIndex(MHTable.COLUMN_MH06)));
-                fc.setMh07(c.getString(c.getColumnIndex(MHTable.COLUMN_MH07)));
+                fc.setSs102(c.getString(c.getColumnIndex(MHTable.COLUMN_SS102)));
+                fc.setSs106(c.getString(c.getColumnIndex(MHTable.COLUMN_SS106)));
+                fc.setSs107(c.getString(c.getColumnIndex(MHTable.COLUMN_SS107)));
                 fc.sAHydrate(c.getString(c.getColumnIndex(MHTable.COLUMN_SA)));
                 fc.setSynced(c.getString(c.getColumnIndex(MHTable.COLUMN_SYNCED)));
                 allFC.add(fc);

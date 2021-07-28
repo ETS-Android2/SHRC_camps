@@ -10,7 +10,7 @@ public class MHContract {
 
 
     public static abstract class MHTable implements BaseColumns {
-        public static final String TABLE_NAME = "camp_patient_dtl";
+        public static final String TABLE_NAME = "mobilehealth_r2";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "projectName";
         public static final String COLUMN_ID = "_id";
@@ -19,13 +19,13 @@ public class MHContract {
         public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_SERIAL = "serial";
         public static final String COLUMN_SA = "sA";
-        public static final String COLUMN_MH01 = "mh01";
-        public static final String COLUMN_MH02 = "mh02";
-        public static final String COLUMN_MH03 = "mh03";
-        public static final String COLUMN_MH04 = "mh04";
-        public static final String COLUMN_MH05 = "mh05";
-        public static final String COLUMN_MH06 = "mh06";
-        public static final String COLUMN_MH07 = "mh07";
+        public static final String COLUMN_SS101 = "ss101";
+        public static final String COLUMN_SS102 = "ss102";
+        public static final String COLUMN_SS103 = "ss103";
+        public static final String COLUMN_SS104 = "ss104";
+        public static final String COLUMN_SS105 = "ss105";
+        public static final String COLUMN_SS106 = "ss106";
+        public static final String COLUMN_SS107 = "ss107";
 
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_DEVICETAGID = "devicetagid";

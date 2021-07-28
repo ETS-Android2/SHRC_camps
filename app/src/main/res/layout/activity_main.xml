@@ -304,14 +304,14 @@
                             android:onClick="openForm"
                             android:text="07-cv" />
 
-                        <Button
+                   <!--     <Button
                             android:id="@+id/btn08"
                             style="?android:attr/buttonBarButtonStyle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="8dp"
                             android:onClick="openForm"
-                            android:text="08-se" />
+                            android:text="08-se" />-->
                     </LinearLayout>
 
                     <Button

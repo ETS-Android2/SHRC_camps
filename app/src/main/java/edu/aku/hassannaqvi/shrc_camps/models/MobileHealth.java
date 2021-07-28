@@ -20,110 +20,124 @@ import edu.aku.hassannaqvi.shrc_camps.core.MainApp;
 public class MobileHealth extends BaseObservable {
 
     //Section MobileHealth
-    private String mh01 = StringUtils.EMPTY;
-    private String mh02 = StringUtils.EMPTY;
-    private String mh03 = StringUtils.EMPTY;
-    private String mh04 = StringUtils.EMPTY;
-    private String mh05 = StringUtils.EMPTY;
-    private String mh06 = StringUtils.EMPTY;
-    private String mh06a = StringUtils.EMPTY;
-    private String mh07 = StringUtils.EMPTY;
-    private String mh08 = StringUtils.EMPTY;
-    private String mh08a = StringUtils.EMPTY;
-    private String mh09y = StringUtils.EMPTY;
-    private String mh09m = StringUtils.EMPTY;
-    private String mh09d = StringUtils.EMPTY;
+    public String ss101;
+    public String ss101d;
+    public String ss101m;
+    public String ss101y;
+    public String ss102;
+    public String ss103;
+    public String ss104;
+    public String ss105;
+    public String ss106;
+
+    public String ss107;
+    public String ss107y;
+    public String ss107m;
+    public String ss107d;
+    public String ss108;
+    public String ss109;
+    public String ss110;
+    public String ss111;
+    public String ss111a;
+    public String ss111b;
+    public String ss111c;
+    public String ss111d;
+    public String pc201;
+    public String pc20101;
+    public String pc20102;
+    public String pc20103;
+    public String pc20104;
+    public String pc20105;
+    public String pc20106;
+    public String pc20107;
+    public String pc20108;
+    public String pc20109;
+    public String pc20110;
+    public String pc20111;
+    public String pc20112;
+    public String pc20113;
+    public String pc20114;
+    public String pc20115;
+    public String pc20116;
+    public String pc20117;
+    public String pc20118;
+    public String pc20119;
+    public String pc20196;
+    public String pc20196x;
+    public String di202;
+    public String di20201;
+    public String di20202;
+    public String di20203;
+    public String di20204;
+    public String di20205;
+    public String di20206;
+    public String di20207;
+    public String di20208;
+    public String di20209;
+    public String di20210;
+    public String di20211;
+    public String di20212;
+    public String di20213;
+    public String di20214;
+    public String di20215;
+    public String di20216;
+    public String di20217;
+    public String di20218;
+    public String di20219;
+    public String di20296;
+    public String di20296x;
+    public String me203;
+    public String me20301;
+    public String me20302;
+    public String me20303;
+    public String me20304;
+    public String me20305;
+    public String me20306;
+    public String me20307;
+    public String me20308;
+    public String me20309;
+    public String me20310;
+    public String me20311;
+    public String me20312;
+    public String me20313;
+    public String me20314;
+    public String me20315;
+    public String me20316;
+    public String me20317;
+    public String me20318;
+    public String me20319;
+    public String me20320;
+    public String me20321;
+    public String me20322;
+    public String me20323;
+    public String me20324;
+    public String me20396;
+    public String me20396x;
+    public String vs301;
+    public String vs302;
+    public String vs303;
+    public String vs304;
+    public String vs305;
+    public String vs306;
+    public String vs306a;
+    public String vs306b;
+    public String vs306c;
+    public String vs306d;
+    public String vs306e;
+    public String vs306f;
+    public String vs306g;
+    public String vs306i;
+    public String vs307;
+    public String vs308;
+
     private String patientType = StringUtils.EMPTY;
-    private String mh010 = StringUtils.EMPTY;
-    private String mh010a = StringUtils.EMPTY;
-    private String mh010b = StringUtils.EMPTY;
-    private String mh010b04x = StringUtils.EMPTY;
-    private String mh01101 = StringUtils.EMPTY;
-    private String mh01102 = StringUtils.EMPTY;
-    private String mh01103 = StringUtils.EMPTY;
-    private String mh012 = StringUtils.EMPTY;
+
     private String chkWeight = StringUtils.EMPTY;
-    private String mh013 = StringUtils.EMPTY;
-    private String mh014 = StringUtils.EMPTY;
-    private String mh015 = StringUtils.EMPTY;
+
     private String chkHeight = StringUtils.EMPTY;
-    private String mh016 = StringUtils.EMPTY;
+
     private String chkMUAC = StringUtils.EMPTY;
-    private String mh01701 = StringUtils.EMPTY;
-    private String mh01702 = StringUtils.EMPTY;
-    private String mh01703 = StringUtils.EMPTY;
-    private String mh01704 = StringUtils.EMPTY;
-    private String mh017077 = StringUtils.EMPTY;
-    private String mh017077x = StringUtils.EMPTY;
-    private String mh017097 = StringUtils.EMPTY;
-    private String mh01801 = StringUtils.EMPTY;
-    private String mh01802 = StringUtils.EMPTY;
-    private String mh01803 = StringUtils.EMPTY;
-    private String mh01804 = StringUtils.EMPTY;
-    private String mh01805 = StringUtils.EMPTY;
-    private String mh01806 = StringUtils.EMPTY;
-    private String mh01807 = StringUtils.EMPTY;
-    private String mh01808 = StringUtils.EMPTY;
-    private String mh01809 = StringUtils.EMPTY;
-    private String mh018010 = StringUtils.EMPTY;
-    private String mh018011 = StringUtils.EMPTY;
-    private String mh018012 = StringUtils.EMPTY;
-    private String mh018013 = StringUtils.EMPTY;
-    private String mh018014 = StringUtils.EMPTY;
-    private String mh018015 = StringUtils.EMPTY;
-    private String mh018016 = StringUtils.EMPTY;
-    private String mh018077 = StringUtils.EMPTY;
-    private String mh018077x = StringUtils.EMPTY;
-    private String mh018097 = StringUtils.EMPTY;
-    private String mh01901 = StringUtils.EMPTY;
-    private String mh01902 = StringUtils.EMPTY;
-    private String mh01903 = StringUtils.EMPTY;
-    private String mh01904 = StringUtils.EMPTY;
-    private String mh01905 = StringUtils.EMPTY;
-    private String mh01906 = StringUtils.EMPTY;
-    private String mh01907 = StringUtils.EMPTY;
-    private String mh01908 = StringUtils.EMPTY;
-    private String mh01909 = StringUtils.EMPTY;
-    private String mh019010 = StringUtils.EMPTY;
-    private String mh019011 = StringUtils.EMPTY;
-    private String mh019012 = StringUtils.EMPTY;
-    private String mh019013 = StringUtils.EMPTY;
-    private String mh019014 = StringUtils.EMPTY;
-    private String mh019015 = StringUtils.EMPTY;
-    private String mh019077 = StringUtils.EMPTY;
-    private String mh019077x = StringUtils.EMPTY;
-    private String mh019097 = StringUtils.EMPTY;
-    private String mh020 = StringUtils.EMPTY;
-    private String mh021 = StringUtils.EMPTY;
-    private String mh022 = StringUtils.EMPTY;
-    private String mh023 = StringUtils.EMPTY;
-    private String mh024 = StringUtils.EMPTY;
-    private String mh025 = StringUtils.EMPTY;
-    private String mh027b = StringUtils.EMPTY;
-    private String mh02601 = StringUtils.EMPTY;
-    private String mh02602 = StringUtils.EMPTY;
-    private String mh02603 = StringUtils.EMPTY;
-    private String mh02604 = StringUtils.EMPTY;
-    private String mh02605 = StringUtils.EMPTY;
-    private String mh02606 = StringUtils.EMPTY;
-    private String mh02608 = StringUtils.EMPTY;
-    private String mh02609 = StringUtils.EMPTY;
-    private String mh026010 = StringUtils.EMPTY;
-    private String mh026011 = StringUtils.EMPTY;
-    private String mh026014 = StringUtils.EMPTY;
-    private String mh026015 = StringUtils.EMPTY;
-    private String mh026016 = StringUtils.EMPTY;
-    private String mh026017 = StringUtils.EMPTY;
-    private String mh026018 = StringUtils.EMPTY;
-    private String mh026019 = StringUtils.EMPTY;
-    private String mh026020 = StringUtils.EMPTY;
-    private String mh026021 = StringUtils.EMPTY;
-    private String mh026022 = StringUtils.EMPTY;
-    private String mh027a = StringUtils.EMPTY;
-    private String mh027 = StringUtils.EMPTY;
-    private String mh028 = StringUtils.EMPTY;//mh028
-    private String mh029 = StringUtils.EMPTY;//mh029
-    private String mh030 = StringUtils.EMPTY;//mh030
+
 
     // APP VARIABLES
     private String projectName = MainApp.PROJECT_NAME;
@@ -285,1150 +299,6 @@ public class MobileHealth extends BaseObservable {
         return this;
     }
 
-
-    @Bindable
-    public String getMh01() {
-        return mh01;
-    }
-
-    public void setMh01(String mh01) {
-        this.mh01 = mh01;
-        notifyPropertyChanged(BR.mh01);
-    }
-
-
-    @Bindable
-    public String getMh02() {
-        return mh02;
-    }
-
-    public void setMh02(String mh02) {
-        this.mh02 = mh02;
-        notifyPropertyChanged(BR.mh02);
-    }
-
-
-    @Bindable
-    public String getMh03() {
-        return mh03;
-    }
-
-    public void setMh03(String mh03) {
-        this.mh03 = mh03;
-        notifyPropertyChanged(BR.mh03);
-    }
-
-
-    @Bindable
-    public String getMh04() {
-        return mh04;
-    }
-
-    public void setMh04(String mh04) {
-        this.mh04 = mh04;
-        notifyPropertyChanged(BR.mh04);
-    }
-
-
-    @Bindable
-    public String getMh05() {
-        return mh05;
-    }
-
-    public void setMh05(String mh05) {
-        this.mh05 = mh05;
-        notifyPropertyChanged(BR.mh05);
-    }
-
-
-    @Bindable
-    public String getMh06() {
-        return mh06;
-    }
-
-    public void setMh06(String mh06) {
-        this.mh06 = mh06;
-        notifyPropertyChanged(BR.mh06);
-    }
-
-
-    @Bindable
-    public String getMh06a() {
-        return mh06a;
-    }
-
-    public void setMh06a(String mh06a) {
-        this.mh06a = mh06a;
-        notifyPropertyChanged(BR.mh06a);
-    }
-
-
-    @Bindable
-    public String getMh07() {
-        return mh07;
-    }
-
-    public void setMh07(String mh07) {
-        this.mh07 = mh07;
-        notifyPropertyChanged(BR.mh07);
-    }
-
-
-    @Bindable
-    public String getMh08() {
-        Log.d("TAG", "Mh08: " + this.mh08);
-        return mh08;
-    }
-
-    public void setMh08(String mh08) {
-        this.mh08 = mh08;
-        Log.d("TAG", "Mh08: " + this.mh08);
-
-        notifyPropertyChanged(BR.mh08);
-    }
-  @Bindable
-    public String getMh08a() {
-        Log.d("TAG", "mh08a: " + this.mh08a);
-        return mh08a;
-    }
-
-    public void setMh08a(String mh08a) {
-        this.mh08a = mh08a;
-        Log.d("TAG", "mh08a: " + this.mh08a);
-
-        notifyPropertyChanged(BR.mh08a);
-    }
-
-
-    @Bindable
-    public String getMh09y() {
-        Log.d("TAG", "Mh09y: " + this.mh09y);
-        return mh09y;
-    }
-
-    public void setMh09y(String mh09y) {
-        this.mh09y = mh09y;
-        Log.d("TAG", "Mh09y: " + this.mh09y);
-        notifyPropertyChanged(BR.mh09y);
-    }
-
-
-    @Bindable
-    public String getMh09m() {
-        return mh09m;
-    }
-
-    public void setMh09m(String mh09m) {
-        this.mh09m = mh09m;
-
-        notifyPropertyChanged(BR.mh09m);
-    }
-
-
-    @Bindable
-    public String getMh09d() {
-        return mh09d;
-    }
-
-    public void setMh09d(String mh09d) {
-        this.mh09d = mh09d;
-        notifyPropertyChanged(BR.mh09d);
-    }
-
-
-    @Bindable
-    public String getPatientType() {
-        return patientType;
-    }
-
-    public void setPatientType(String patientType) {
-        this.patientType = patientType;
-        notifyPropertyChanged(BR.patientType);
-    }
-
-
-    @Bindable
-    public String getMh010() {
-        return mh010;
-    }
-
-    public void setMh010(String mh010) {
-        this.mh010 = mh010;
-        notifyPropertyChanged(BR.mh010);
-    }
-
-
-    @Bindable
-    public String getMh010a() {
-        return mh010a;
-    }
-
-    public void setMh010a(String mh010a) {
-        this.mh010a = mh010a;
-        notifyPropertyChanged(BR.mh010a);
-    }
-
-
-    @Bindable
-    public String getMh010b() {
-        return mh010b;
-    }
-
-    public void setMh010b(String mh010b) {
-        this.mh010b = mh010b;
-        notifyPropertyChanged(BR.mh010b);
-    }
-
-
-    @Bindable
-    public String getMh010b04x() {
-        return mh010b04x;
-    }
-
-    public void setMh010b04x(String mh010b04x) {
-        this.mh010b04x = mh010b04x;
-        notifyPropertyChanged(BR.mh010b04x);
-    }
-
-
-    @Bindable
-    public String getMh01101() {
-        return mh01101;
-    }
-
-    public void setMh01101(String mh01101) {
-        this.mh01101 = mh01101;
-        notifyPropertyChanged(BR.mh01101);
-    }
-
-
-    @Bindable
-    public String getMh01102() {
-        return mh01102;
-    }
-
-    public void setMh01102(String mh01102) {
-        this.mh01102 = mh01102;
-        notifyPropertyChanged(BR.mh01102);
-    }
-
-
-    @Bindable
-    public String getMh01103() {
-        return mh01103;
-    }
-
-    public void setMh01103(String mh01103) {
-        this.mh01103 = mh01103;
-        notifyPropertyChanged(BR.mh01103);
-    }
-
-
-    @Bindable
-    public String getMh012() {
-        return mh012;
-    }
-
-    public void setMh012(String mh012) {
-        this.mh012 = mh012;
-        notifyPropertyChanged(BR.mh012);
-    }
-
-
-    @Bindable
-    public String getChkWeight() {
-        return chkWeight;
-    }
-
-    public void setChkWeight(String chkWeight) {
-        this.chkWeight = chkWeight;
-        notifyPropertyChanged(BR.chkWeight);
-    }
-
-
-    @Bindable
-    public String getMh013() {
-        return mh013;
-    }
-
-    public void setMh013(String mh013) {
-        this.mh013 = mh013;
-        notifyPropertyChanged(BR.mh013);
-    }
-
-
-    @Bindable
-    public String getMh014() {
-        return mh014;
-    }
-
-    public void setMh014(String mh014) {
-        this.mh014 = mh014;
-        notifyPropertyChanged(BR.mh014);
-    }
-
-
-    @Bindable
-    public String getMh015() {
-        return mh015;
-    }
-
-    public void setMh015(String mh015) {
-        this.mh015 = mh015;
-        notifyPropertyChanged(BR.mh015);
-    }
-
-
-    @Bindable
-    public String getChkHeight() {
-        return chkHeight;
-    }
-
-    public void setChkHeight(String chkHeight) {
-        this.chkHeight = chkHeight;
-        notifyPropertyChanged(BR.chkHeight);
-    }
-
-
-    @Bindable
-    public String getMh016() {
-        return mh016;
-    }
-
-    public void setMh016(String mh016) {
-        this.mh016 = mh016;
-        notifyPropertyChanged(BR.mh016);
-    }
-
-
-    @Bindable
-    public String getChkMUAC() {
-        return chkMUAC;
-    }
-
-    public void setChkMUAC(String chkMUAC) {
-        this.chkMUAC = chkMUAC;
-        notifyPropertyChanged(BR.chkMUAC);
-    }
-
-
-    @Bindable
-    public String getMh01701() {
-        return mh01701;
-    }
-
-    public void setMh01701(String mh01701) {
-        this.mh01701 = mh01701;
-        notifyPropertyChanged(BR.mh01701);
-    }
-
-
-    @Bindable
-    public String getMh01702() {
-        return mh01702;
-    }
-
-    public void setMh01702(String mh01702) {
-        this.mh01702 = mh01702;
-        notifyPropertyChanged(BR.mh01702);
-    }
-
-
-    @Bindable
-    public String getMh01703() {
-        return mh01703;
-    }
-
-    public void setMh01703(String mh01703) {
-        this.mh01703 = mh01703;
-        notifyPropertyChanged(BR.mh01703);
-    }
-
-
-    @Bindable
-    public String getMh01704() {
-        return mh01704;
-    }
-
-    public void setMh01704(String mh01704) {
-        this.mh01704 = mh01704;
-        notifyPropertyChanged(BR.mh01704);
-    }
-
-
-    @Bindable
-    public String getMh017077() {
-        return mh017077;
-    }
-
-    public void setMh017077(String mh017077) {
-        this.mh017077 = mh017077;
-        notifyPropertyChanged(BR.mh017077);
-    }
-
-
-    @Bindable
-    public String getMh017077x() {
-        return mh017077x;
-    }
-
-    public void setMh017077x(String mh017077x) {
-        this.mh017077x = mh017077x;
-        notifyPropertyChanged(BR.mh017077x);
-    }
-
-
-    @Bindable
-    public String getMh017097() {
-        return mh017097;
-    }
-
-    public void setMh017097(String mh017097) {
-        this.mh017097 = mh017097;
-        notifyPropertyChanged(BR.mh017097);
-    }
-
-
-    @Bindable
-    public String getMh01801() {
-        return mh01801;
-    }
-
-    public void setMh01801(String mh01801) {
-        this.mh01801 = mh01801;
-        notifyPropertyChanged(BR.mh01801);
-    }
-
-
-    @Bindable
-    public String getMh01802() {
-        return mh01802;
-    }
-
-    public void setMh01802(String mh01802) {
-        this.mh01802 = mh01802;
-        notifyPropertyChanged(BR.mh01802);
-    }
-
-
-    @Bindable
-    public String getMh01803() {
-        return mh01803;
-    }
-
-    public void setMh01803(String mh01803) {
-        this.mh01803 = mh01803;
-        notifyPropertyChanged(BR.mh01803);
-    }
-
-
-    @Bindable
-    public String getMh01804() {
-        return mh01804;
-    }
-
-    public void setMh01804(String mh01804) {
-        this.mh01804 = mh01804;
-        notifyPropertyChanged(BR.mh01804);
-    }
-
-
-    @Bindable
-    public String getMh01805() {
-        return mh01805;
-    }
-
-    public void setMh01805(String mh01805) {
-        this.mh01805 = mh01805;
-        notifyPropertyChanged(BR.mh01805);
-    }
-
-
-    @Bindable
-    public String getMh01806() {
-        return mh01806;
-    }
-
-    public void setMh01806(String mh01806) {
-        this.mh01806 = mh01806;
-        notifyPropertyChanged(BR.mh01806);
-    }
-
-
-    @Bindable
-    public String getMh01807() {
-        return mh01807;
-    }
-
-    public void setMh01807(String mh01807) {
-        this.mh01807 = mh01807;
-        notifyPropertyChanged(BR.mh01807);
-    }
-
-
-    @Bindable
-    public String getMh01808() {
-        return mh01808;
-    }
-
-    public void setMh01808(String mh01808) {
-        this.mh01808 = mh01808;
-        notifyPropertyChanged(BR.mh01808);
-    }
-
-
-    @Bindable
-    public String getMh01809() {
-        return mh01809;
-    }
-
-    public void setMh01809(String mh01809) {
-        this.mh01809 = mh01809;
-        notifyPropertyChanged(BR.mh01809);
-    }
-
-
-    @Bindable
-    public String getMh018010() {
-        return mh018010;
-    }
-
-    public void setMh018010(String mh018010) {
-        this.mh018010 = mh018010;
-        notifyPropertyChanged(BR.mh018010);
-    }
-
-
-    @Bindable
-    public String getMh018011() {
-        return mh018011;
-    }
-
-    public void setMh018011(String mh018011) {
-        this.mh018011 = mh018011;
-        notifyPropertyChanged(BR.mh018011);
-    }
-
-
-    @Bindable
-    public String getMh018012() {
-        return mh018012;
-    }
-
-    public void setMh018012(String mh018012) {
-        this.mh018012 = mh018012;
-        notifyPropertyChanged(BR.mh018012);
-    }
-
-
-    @Bindable
-    public String getMh018013() {
-        return mh018013;
-    }
-
-    public void setMh018013(String mh018013) {
-        this.mh018013 = mh018013;
-        notifyPropertyChanged(BR.mh018013);
-    }
-
-
-    @Bindable
-    public String getMh018014() {
-        return mh018014;
-    }
-
-    public void setMh018014(String mh018014) {
-        this.mh018014 = mh018014;
-        notifyPropertyChanged(BR.mh018014);
-    }
-
-
-    @Bindable
-    public String getMh018015() {
-        return mh018015;
-    }
-
-    public void setMh018015(String mh018015) {
-        this.mh018015 = mh018015;
-        notifyPropertyChanged(BR.mh018015);
-    }
-
-
-    @Bindable
-    public String getMh018016() {
-        return mh018016;
-    }
-
-    public void setMh018016(String mh018016) {
-        this.mh018016 = mh018016;
-        notifyPropertyChanged(BR.mh018016);
-    }
-
-
-    @Bindable
-    public String getMh018077() {
-        return mh018077;
-    }
-
-    public void setMh018077(String mh018077) {
-        this.mh018077 = mh018077;
-        notifyPropertyChanged(BR.mh018077);
-    }
-
-
-    @Bindable
-    public String getMh018077x() {
-        return mh018077x;
-    }
-
-    public void setMh018077x(String mh018077x) {
-        this.mh018077x = mh018077x;
-        notifyPropertyChanged(BR.mh018077x);
-    }
-
-
-    @Bindable
-    public String getMh018097() {
-        return mh018097;
-    }
-
-    public void setMh018097(String mh018097) {
-        this.mh018097 = mh018097;
-        notifyPropertyChanged(BR.mh018097);
-    }
-
-
-    @Bindable
-    public String getMh01901() {
-        return mh01901;
-    }
-
-    public void setMh01901(String mh01901) {
-        this.mh01901 = mh01901;
-        notifyPropertyChanged(BR.mh01901);
-    }
-
-
-    @Bindable
-    public String getMh01902() {
-        return mh01902;
-    }
-
-    public void setMh01902(String mh01902) {
-        this.mh01902 = mh01902;
-        notifyPropertyChanged(BR.mh01902);
-    }
-
-
-    @Bindable
-    public String getMh01903() {
-        return mh01903;
-    }
-
-    public void setMh01903(String mh01903) {
-        this.mh01903 = mh01903;
-        notifyPropertyChanged(BR.mh01903);
-    }
-
-
-    @Bindable
-    public String getMh01904() {
-        return mh01904;
-    }
-
-    public void setMh01904(String mh01904) {
-        this.mh01904 = mh01904;
-        notifyPropertyChanged(BR.mh01904);
-    }
-
-
-    @Bindable
-    public String getMh01905() {
-        return mh01905;
-    }
-
-    public void setMh01905(String mh01905) {
-        this.mh01905 = mh01905;
-        notifyPropertyChanged(BR.mh01905);
-    }
-
-
-    @Bindable
-    public String getMh01906() {
-        return mh01906;
-    }
-
-    public void setMh01906(String mh01906) {
-        this.mh01906 = mh01906;
-        notifyPropertyChanged(BR.mh01906);
-    }
-
-
-    @Bindable
-    public String getMh01907() {
-        return mh01907;
-    }
-
-    public void setMh01907(String mh01907) {
-        this.mh01907 = mh01907;
-        notifyPropertyChanged(BR.mh01907);
-    }
-
-
-    @Bindable
-    public String getMh01908() {
-        return mh01908;
-    }
-
-    public void setMh01908(String mh01908) {
-        this.mh01908 = mh01908;
-        notifyPropertyChanged(BR.mh01908);
-    }
-
-
-    @Bindable
-    public String getMh01909() {
-        return mh01909;
-    }
-
-    public void setMh01909(String mh01909) {
-        this.mh01909 = mh01909;
-        notifyPropertyChanged(BR.mh01909);
-    }
-
-
-    @Bindable
-    public String getMh019010() {
-        return mh019010;
-    }
-
-    public void setMh019010(String mh019010) {
-        this.mh019010 = mh019010;
-        notifyPropertyChanged(BR.mh019010);
-    }
-
-
-    @Bindable
-    public String getMh019011() {
-        return mh019011;
-    }
-
-    public void setMh019011(String mh019011) {
-        this.mh019011 = mh019011;
-        notifyPropertyChanged(BR.mh019011);
-    }
-
-
-    @Bindable
-    public String getMh019012() {
-        return mh019012;
-    }
-
-    public void setMh019012(String mh019012) {
-        this.mh019012 = mh019012;
-        notifyPropertyChanged(BR.mh019012);
-    }
-
-
-    @Bindable
-    public String getMh019013() {
-        return mh019013;
-    }
-
-    public void setMh019013(String mh019013) {
-        this.mh019013 = mh019013;
-        notifyPropertyChanged(BR.mh019013);
-    }
-
-
-    @Bindable
-    public String getMh019014() {
-        return mh019014;
-    }
-
-    public void setMh019014(String mh019014) {
-        this.mh019014 = mh019014;
-        notifyPropertyChanged(BR.mh019014);
-    }
-
-
-    @Bindable
-    public String getMh019015() {
-        return mh019015;
-    }
-
-    public void setMh019015(String mh019015) {
-        this.mh019015 = mh019015;
-        notifyPropertyChanged(BR.mh019015);
-    }
-
-
-    @Bindable
-    public String getMh019077() {
-        return mh019077;
-    }
-
-    public void setMh019077(String mh019077) {
-        this.mh019077 = mh019077;
-        notifyPropertyChanged(BR.mh019077);
-    }
-
-
-    @Bindable
-    public String getMh019077x() {
-        return mh019077x;
-    }
-
-    public void setMh019077x(String mh019077x) {
-        this.mh019077x = mh019077x;
-        notifyPropertyChanged(BR.mh019077x);
-    }
-
-
-    @Bindable
-    public String getMh019097() {
-        return mh019097;
-    }
-
-    public void setMh019097(String mh019097) {
-        this.mh019097 = mh019097;
-        notifyPropertyChanged(BR.mh019097);
-    }
-
-
-    @Bindable
-    public String getMh020() {
-        return mh020;
-    }
-
-    public void setMh020(String mh020) {
-        this.mh020 = mh020;
-        notifyPropertyChanged(BR.mh020);
-    }
-
-
-    @Bindable
-    public String getMh021() {
-        return mh021;
-    }
-
-    public void setMh021(String mh021) {
-        this.mh021 = mh021;
-        notifyPropertyChanged(BR.mh021);
-    }
-
-
-    @Bindable
-    public String getMh022() {
-        return mh022;
-    }
-
-    public void setMh022(String mh022) {
-        this.mh022 = mh022;
-        notifyPropertyChanged(BR.mh022);
-    }
-
-
-    @Bindable
-    public String getMh023() {
-        return mh023;
-    }
-
-    public void setMh023(String mh023) {
-        this.mh023 = mh023;
-        notifyPropertyChanged(BR.mh023);
-    }
-
-
-    @Bindable
-    public String getMh024() {
-        return mh024;
-    }
-
-    public void setMh024(String mh024) {
-        this.mh024 = mh024;
-        notifyPropertyChanged(BR.mh024);
-    }
-
-
-    @Bindable
-    public String getMh025() {
-        return mh025;
-    }
-
-    public void setMh025(String mh025) {
-        this.mh025 = mh025;
-        notifyPropertyChanged(BR.mh025);
-    }
-
-
-    @Bindable
-    public String getMh02601() {
-        return mh02601;
-    }
-
-    public void setMh02601(String mh02601) {
-        this.mh02601 = mh02601;
-        notifyPropertyChanged(BR.mh02601);
-    }
-
-
-    @Bindable
-    public String getMh02602() {
-        return mh02602;
-    }
-
-    public void setMh02602(String mh02602) {
-        this.mh02602 = mh02602;
-        notifyPropertyChanged(BR.mh02602);
-    }
-
-
-    @Bindable
-    public String getMh02603() {
-        return mh02603;
-    }
-
-    public void setMh02603(String mh02603) {
-        this.mh02603 = mh02603;
-        notifyPropertyChanged(BR.mh02603);
-    }
-
-
-    @Bindable
-    public String getMh02604() {
-        return mh02604;
-    }
-
-    public void setMh02604(String mh02604) {
-        this.mh02604 = mh02604;
-        notifyPropertyChanged(BR.mh02604);
-    }
-
-
-    @Bindable
-    public String getMh02605() {
-        return mh02605;
-    }
-
-    public void setMh02605(String mh02605) {
-        this.mh02605 = mh02605;
-        notifyPropertyChanged(BR.mh02605);
-    }
-
-
-    @Bindable
-    public String getMh02606() {
-        return mh02606;
-    }
-
-    public void setMh02606(String mh02606) {
-        this.mh02606 = mh02606;
-        notifyPropertyChanged(BR.mh02606);
-    }
-
-
-    @Bindable
-    public String getMh02608() {
-        return mh02608;
-    }
-
-    public void setMh02608(String mh02608) {
-        this.mh02608 = mh02608;
-        notifyPropertyChanged(BR.mh02608);
-    }
-
-
-    @Bindable
-    public String getMh02609() {
-        return mh02609;
-    }
-
-    public void setMh02609(String mh02609) {
-        this.mh02609 = mh02609;
-        notifyPropertyChanged(BR.mh02609);
-    }
-
-
-    @Bindable
-    public String getMh026010() {
-        return mh026010;
-    }
-
-    public void setMh026010(String mh026010) {
-        this.mh026010 = mh026010;
-        notifyPropertyChanged(BR.mh026010);
-    }
-
-
-    @Bindable
-    public String getMh026011() {
-        return mh026011;
-    }
-
-    public void setMh026011(String mh026011) {
-        this.mh026011 = mh026011;
-        notifyPropertyChanged(BR.mh026011);
-    }
-
-
-    @Bindable
-    public String getMh026014() {
-        return mh026014;
-    }
-
-    public void setMh026014(String mh026014) {
-        this.mh026014 = mh026014;
-        notifyPropertyChanged(BR.mh026014);
-    }
-
-
-    @Bindable
-    public String getMh026015() {
-        return mh026015;
-    }
-
-    public void setMh026015(String mh026015) {
-        this.mh026015 = mh026015;
-        notifyPropertyChanged(BR.mh026015);
-    }
-
-
-    @Bindable
-    public String getMh026016() {
-        return mh026016;
-    }
-
-    public void setMh026016(String mh026016) {
-        this.mh026016 = mh026016;
-        notifyPropertyChanged(BR.mh026016);
-    }
-
-
-    @Bindable
-    public String getMh026017() {
-        return mh026017;
-    }
-
-    public void setMh026017(String mh026017) {
-        this.mh026017 = mh026017;
-        notifyPropertyChanged(BR.mh026017);
-    }
-
-
-    @Bindable
-    public String getMh026018() {
-        return mh026018;
-    }
-
-    public void setMh026018(String mh026018) {
-        this.mh026018 = mh026018;
-        notifyPropertyChanged(BR.mh026018);
-    }
-
-
-    @Bindable
-    public String getMh026019() {
-        return mh026019;
-    }
-
-    public void setMh026019(String mh026019) {
-        this.mh026019 = mh026019;
-        notifyPropertyChanged(BR.mh026019);
-    }
-  @Bindable
-    public String getMh026020() {
-        return mh026020;
-    }
-
-    public void setMh026020(String mh026020) {
-        this.mh026020 = mh026020;
-        notifyPropertyChanged(BR.mh026020);
-    }
-    @Bindable
-    public String getMh026021() {
-        return mh026021;
-    }
-
-    public void setMh026021(String mh026021) {
-        this.mh026021 = mh026021;
-        notifyPropertyChanged(BR.mh026021);
-    }
-    @Bindable
-    public String getMh026022() {
-        return mh026022;
-    }
-
-    public void setMh026022(String mh026022) {
-        this.mh026022 = mh026022;
-        notifyPropertyChanged(BR.mh026022);
-    }
-    @Bindable
-    public String getMh027a() {
-        return mh027a;
-    }
-
-    public void setMh027a(String mh027a) {
-        this.mh027a = mh027a;
-        notifyPropertyChanged(BR.mh027a);
-    }
-
-
-    @Bindable
-    public String getMh027b() {
-        return mh027b;
-    }
-
-    public void setMh027b(String mh027b) {
-        this.mh027b = mh027b;
-        notifyPropertyChanged(BR.mh027b);
-    }
-
-
-    @Bindable
-    public String getMh027() {
-        return mh027;
-    }
-
-    public void setMh027(String mh027) {
-        this.mh027 = mh027;
-        notifyPropertyChanged(BR.mh027);
-    }
-
-
-    @Bindable
-    public String getMh028() {
-        return mh028;
-    }
-
-    public void setMh028(String mh028) {
-        this.mh028 = mh028;
-        notifyPropertyChanged(BR.mh028);
-    }
-
-
-    @Bindable
-    public String getMh029() {
-        return mh029;
-    }
-
-    public void setMh029(String mh029) {
-        this.mh029 = mh029;
-        notifyPropertyChanged(BR.mh029);
-    }
-
-
-    @Bindable
-    public String getMh030() {
-        return mh030;
-    }
-
-    public void setMh030(String mh030) {
-        this.mh030 = mh030;
-        notifyPropertyChanged(BR.mh030);
-    }
-
-
     @Bindable
     public String getStatus() {
         return status;
@@ -1452,13 +322,13 @@ public class MobileHealth extends BaseObservable {
         this.syncDate = jsonObject.getString(MHContract.MHTable.COLUMN_SYNCED_DATE);
         this.status = jsonObject.getString(MHContract.MHTable.COLUMN_STATUS);
         this.serial = jsonObject.getString(MHContract.MHTable.COLUMN_SERIAL);
-        this.mh01 = jsonObject.getString(MHContract.MHTable.COLUMN_MH01);
-        this.mh02 = jsonObject.getString(MHContract.MHTable.COLUMN_MH02);
-        this.mh03 = jsonObject.getString(MHContract.MHTable.COLUMN_MH03);
-        this.mh04 = jsonObject.getString(MHContract.MHTable.COLUMN_MH04);
-        this.mh05 = jsonObject.getString(MHContract.MHTable.COLUMN_MH05);
-        this.mh06 = jsonObject.getString(MHContract.MHTable.COLUMN_MH06);
-        this.mh07 = jsonObject.getString(MHContract.MHTable.COLUMN_MH07);
+        this.ss101 = jsonObject.getString(MHContract.MHTable.COLUMN_SS101);
+        this.ss102 = jsonObject.getString(MHContract.MHTable.COLUMN_SS102);
+        this.ss103 = jsonObject.getString(MHContract.MHTable.COLUMN_SS103);
+        this.ss104 = jsonObject.getString(MHContract.MHTable.COLUMN_SS104);
+        this.ss105 = jsonObject.getString(MHContract.MHTable.COLUMN_SS105);
+        this.ss106 = jsonObject.getString(MHContract.MHTable.COLUMN_SS106);
+        this.ss107 = jsonObject.getString(MHContract.MHTable.COLUMN_SS107);
 
         this.sA = jsonObject.getString(MHContract.MHTable.COLUMN_SA);
 
@@ -1479,13 +349,13 @@ public class MobileHealth extends BaseObservable {
         this.syncDate = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SYNCED_DATE));
         this.status = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_STATUS));
         this.serial = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SERIAL));
-        this.mh01 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_MH01));
-        this.mh02 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_MH02));
-        this.mh03 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_MH03));
-        this.mh04 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_MH04));
-        this.mh05 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_MH05));
-        this.mh06 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_MH06));
-        this.mh07 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_MH07));
+        this.ss101 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS101));
+        this.ss102 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS102));
+        this.ss103 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS103));
+        this.ss104 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS104));
+        this.ss105 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS105));
+        this.ss106 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS106));
+        this.ss107 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS107));
 
         //For childCount
         //this.sA = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SA));
@@ -1507,101 +377,108 @@ public class MobileHealth extends BaseObservable {
         JSONObject json = new JSONObject();
 
         try {
-            json.put("mh06a", mh06a)
-                    .put("mh08", mh08)
-                    .put("mh08a", mh08a)
-                    .put("mh09y", mh09y)
-                    .put("mh09m", mh09m)
-                    .put("mh09d", mh09d)
-                    .put("patientType", patientType)
-                    .put("mh010", mh010)
-                    .put("mh010a", mh010a)
-                    .put("mh010b", mh010b)
-                    .put("mh01101", mh01101)
-                    .put("mh01102", mh01102)
-                    .put("mh01103", mh01103)
-                    .put("mh012", mh012)
-                    .put("chkWeight", chkWeight)
-                    .put("mh013", mh013)
-                    .put("mh014", mh014)
-                    .put("mh015", mh015)
-                    .put("chkHeight", chkHeight)
-                    .put("mh016", mh016)
-                    .put("chkMUAC", chkMUAC)
-                    .put("mh01701", mh01701)
-                    .put("mh01702", mh01702)
-                    .put("mh01703", mh01703)
-                    .put("mh017077", mh017077)
-                    .put("mh017077x", mh017077x)
-                    .put("mh017097", mh017097)
-                    .put("mh01801", mh01801)
-                    .put("mh01802", mh01802)
-                    .put("mh01803", mh01803)
-                    .put("mh01804", mh01804)
-                    .put("mh01805", mh01805)
-                    .put("mh01806", mh01806)
-                    .put("mh01807", mh01807)
-                    .put("mh01808", mh01808)
-                    .put("mh01809", mh01809)
-                    .put("mh018010", mh018010)
-                    .put("mh018011", mh018011)
-                    .put("mh018012", mh018012)
-                    .put("mh018013", mh018013)
-                    .put("mh018014", mh018014)
-                    .put("mh018015", mh018015)
-                    .put("mh018016", mh018016)
-                    .put("mh018077", mh018077)
-                    .put("mh018077x", mh018077x)
-                    .put("mh018097", mh018097)
-                    .put("mh01901", mh01901)
-                    .put("mh01902", mh01902)
-                    .put("mh01903", mh01903)
-                    .put("mh01904", mh01904)
-                    .put("mh01905", mh01905)
-                    .put("mh01906", mh01906)
-                    .put("mh01907", mh01907)
-                    .put("mh01908", mh01908)
-                    .put("mh01909", mh01909)
-                    .put("mh019010", mh019010)
-                    .put("mh019011", mh019011)
-                    .put("mh019012", mh019012)
-                    .put("mh019013", mh019013)
-                    .put("mh019014", mh019014)
-                    .put("mh019015", mh019015)
-                    .put("mh019077", mh019077)
-                    .put("mh019077x", mh019077x)
-                    .put("mh019097", mh019097)
-                    .put("mh020", mh020)
-                    .put("mh021", mh021)
-                    .put("mh022", mh022)
-                    .put("mh023", mh023)
-                    .put("mh024", mh024)
-                    .put("mh025", mh025)
-                    .put("mh027b", mh027b)
-                    .put("mh02601", mh02601)
-                    .put("mh02602", mh02602)
-                    .put("mh02603", mh02603)
-                    .put("mh02604", mh02604)
-                    .put("mh02605", mh02605)
-                    .put("mh02606", mh02606)
-                    .put("mh02608", mh02608)
-                    .put("mh02609", mh02609)
-                    .put("mh026010", mh026010)
-                    .put("mh026011", mh026011)
-                    .put("mh026014", mh026014)
-                    .put("mh026015", mh026015)
-                    .put("mh026016", mh026016)
-                    .put("mh026017", mh026017)
-                    .put("mh026018", mh026018)
-                    .put("mh026019", mh026019)
-                    .put("mh026020", mh026020)
-                    .put("mh026021", mh026021)
-                    .put("mh026022", mh026022)
-                    .put("mh027a", mh027a)
-                    .put("mh027", mh027)
-                    .put("mh028", mh028)
-                    .put("mh029", mh029)
-                    .put("mh030", mh030);
+            json
+                    .put("ss101d", ss101d)
+                    .put("ss101m", ss101m)
+                    .put("ss101y", ss101y)
+                    .put("ss102", ss102)
+                    .put("ss103", ss103)
+                    .put("ss104", ss104)
+                    .put("ss105", ss105)
+                    .put("ss106", ss106)
+                    .put("ss107y", ss107y)
+                    .put("ss107m", ss107m)
+                    .put("ss107d", ss107d)
+                    .put("ss108", ss108)
+                    .put("ss109", ss109)
+                    .put("ss110", ss110)
+                    .put("ss111a", ss111a)
+                    .put("ss111b", ss111b)
+                    .put("ss111c", ss111c)
+                    .put("ss111d", ss111d)
+                    .put("pc20101", pc20101)
+                    .put("pc20102", pc20102)
+                    .put("pc20103", pc20103)
+                    .put("pc20104", pc20104)
+                    .put("pc20105", pc20105)
+                    .put("pc20106", pc20106)
+                    .put("pc20107", pc20107)
+                    .put("pc20108", pc20108)
+                    .put("pc20109", pc20109)
+                    .put("pc20110", pc20110)
+                    .put("pc20111", pc20111)
+                    .put("pc20112", pc20112)
+                    .put("pc20113", pc20113)
+                    .put("pc20114", pc20114)
+                    .put("pc20115", pc20115)
+                    .put("pc20116", pc20116)
+                    .put("pc20117", pc20117)
+                    .put("pc20118", pc20118)
+                    .put("pc20119", pc20119)
+                    .put("pc20196", pc20196)
+                    .put("pc20196x", pc20196x)
+                    .put("di20201", di20201)
+                    .put("di20202", di20202)
+                    .put("di20203", di20203)
+                    .put("di20204", di20204)
+                    .put("di20205", di20205)
+                    .put("di20206", di20206)
+                    .put("di20207", di20207)
+                    .put("di20208", di20208)
+                    .put("di20209", di20209)
+                    .put("di20210", di20210)
+                    .put("di20211", di20211)
+                    .put("di20212", di20212)
+                    .put("di20213", di20213)
+                    .put("di20214", di20214)
+                    .put("di20215", di20215)
+                    .put("di20216", di20216)
+                    .put("di20217", di20217)
+                    .put("di20218", di20218)
+                    .put("di20219", di20219)
+                    .put("di20296", di20296)
+                    .put("di20296x", di20296x)
+                    .put("me20301", me20301)
+                    .put("me20302", me20302)
+                    .put("me20303", me20303)
+                    .put("me20304", me20304)
+                    .put("me20305", me20305)
+                    .put("me20306", me20306)
+                    .put("me20307", me20307)
+                    .put("me20308", me20308)
+                    .put("me20309", me20309)
+                    .put("me20310", me20310)
+                    .put("me20311", me20311)
+                    .put("me20312", me20312)
+                    .put("me20313", me20313)
+                    .put("me20314", me20314)
+                    .put("me20315", me20315)
+                    .put("me20316", me20316)
+                    .put("me20317", me20317)
+                    .put("me20318", me20318)
+                    .put("me20319", me20319)
+                    .put("me20320", me20320)
+                    .put("me20321", me20321)
+                    .put("me20322", me20322)
+                    .put("me20323", me20323)
+                    .put("me20324", me20324)
+                    .put("me20396", me20396)
+                    .put("me20396x", me20396x)
+                    .put("vs301", vs301)
+                    .put("vs302", vs302)
+                    .put("vs303", vs303)
+                    .put("vs304", vs304)
+                    .put("vs305", vs305)
+                    .put("vs306a", vs306a)
+                    .put("vs306b", vs306b)
+                    .put("vs306c", vs306c)
+                    .put("vs306d", vs306d)
+                    .put("vs306e", vs306e)
+                    .put("vs306f", vs306f)
+                    .put("vs306g", vs306g)
+                    .put("vs306i", vs306i)
+                    .put("vs307", vs307)
+                    .put("vs308", vs308);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -1628,13 +505,13 @@ public class MobileHealth extends BaseObservable {
             json.put(MHContract.MHTable.COLUMN_SYNCED_DATE, this.syncDate == null ? JSONObject.NULL : this.syncDate);
             json.put(MHContract.MHTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
             json.put(MHContract.MHTable.COLUMN_SERIAL, this.serial == null ? JSONObject.NULL : this.serial);
-            json.put(MHContract.MHTable.COLUMN_MH01, this.mh01 == null ? JSONObject.NULL : this.mh01);
-            json.put(MHContract.MHTable.COLUMN_MH02, this.mh02 == null ? JSONObject.NULL : this.mh02);
-            json.put(MHContract.MHTable.COLUMN_MH03, this.mh03 == null ? JSONObject.NULL : this.mh03);
-            json.put(MHContract.MHTable.COLUMN_MH04, this.mh04 == null ? JSONObject.NULL : this.mh04);
-            json.put(MHContract.MHTable.COLUMN_MH05, this.mh05 == null ? JSONObject.NULL : this.mh05);
-            json.put(MHContract.MHTable.COLUMN_MH06, this.mh06 == null ? JSONObject.NULL : this.mh06);
-            json.put(MHContract.MHTable.COLUMN_MH07, this.mh07 == null ? JSONObject.NULL : this.mh07);
+            json.put(MHContract.MHTable.COLUMN_SS101, this.ss101 == null ? JSONObject.NULL : this.ss101);
+            json.put(MHContract.MHTable.COLUMN_SS102, this.ss102 == null ? JSONObject.NULL : this.ss102);
+            json.put(MHContract.MHTable.COLUMN_SS103, this.ss103 == null ? JSONObject.NULL : this.ss103);
+            json.put(MHContract.MHTable.COLUMN_SS104, this.ss104 == null ? JSONObject.NULL : this.ss104);
+            json.put(MHContract.MHTable.COLUMN_SS105, this.ss105 == null ? JSONObject.NULL : this.ss105);
+            json.put(MHContract.MHTable.COLUMN_SS106, this.ss106 == null ? JSONObject.NULL : this.ss106);
+            json.put(MHContract.MHTable.COLUMN_SS107, this.ss107 == null ? JSONObject.NULL : this.ss107);
 
             //For ChildCount
             //json.put(MHContract.MHTable.COLUMN_SA, this.sA == null ? JSONObject.NULL : this.sA);
@@ -1663,107 +540,109 @@ public class MobileHealth extends BaseObservable {
                 JSONObject json = null;
                 json = new JSONObject(string);
 
-                this.mh06a = json.getString("mh06a");
-                this.mh08 = json.getString("mh08");
-                this.mh08a = json.getString("mh08a");
-                Log.d("sAHydrate", "Mh08: " + this.mh08);
-                Log.d("sAHydrateJ", "Mh08: " + json.getString("mh08"));
 
-                this.mh09y = json.getString("mh09y");
-                Log.d("sAHydrate", "Mh09y: " + this.mh09y);
-                Log.d("sAHydrateJ", "Mh09y: " + json.getString("mh09y"));
+                this.ss101d = json.getString("ss101d");
+                this.ss101m = json.getString("ss101m");
+                this.ss101y = json.getString("ss101y");
+                this.ss102 = json.getString("ss102");
+                this.ss103 = json.getString("ss103");
+                this.ss104 = json.getString("ss104");
+                this.ss105 = json.getString("ss105");
+                this.ss106 = json.getString("ss106");
+                this.ss107y = json.getString("ss107y");
+                this.ss107m = json.getString("ss107m");
+                this.ss107d = json.getString("ss107d");
+                this.ss108 = json.getString("ss108");
+                this.ss109 = json.getString("ss109");
+                this.ss110 = json.getString("ss110");
+                this.ss111a = json.getString("ss111a");
+                this.ss111b = json.getString("ss111b");
+                this.ss111c = json.getString("ss111c");
+                this.ss111d = json.getString("ss111d");
+                this.pc20101 = json.getString("pc20101");
+                this.pc20102 = json.getString("pc20102");
+                this.pc20103 = json.getString("pc20103");
+                this.pc20104 = json.getString("pc20104");
+                this.pc20105 = json.getString("pc20105");
+                this.pc20106 = json.getString("pc20106");
+                this.pc20107 = json.getString("pc20107");
+                this.pc20108 = json.getString("pc20108");
+                this.pc20109 = json.getString("pc20109");
+                this.pc20110 = json.getString("pc20110");
+                this.pc20111 = json.getString("pc20111");
+                this.pc20112 = json.getString("pc20112");
+                this.pc20113 = json.getString("pc20113");
+                this.pc20114 = json.getString("pc20114");
+                this.pc20115 = json.getString("pc20115");
+                this.pc20116 = json.getString("pc20116");
+                this.pc20117 = json.getString("pc20117");
+                this.pc20118 = json.getString("pc20118");
+                this.pc20119 = json.getString("pc20119");
+                this.pc20196 = json.getString("pc20196");
+                this.pc20196x = json.getString("pc20196x");
+                this.di20201 = json.getString("di20201");
+                this.di20202 = json.getString("di20202");
+                this.di20203 = json.getString("di20203");
+                this.di20204 = json.getString("di20204");
+                this.di20205 = json.getString("di20205");
+                this.di20206 = json.getString("di20206");
+                this.di20207 = json.getString("di20207");
+                this.di20208 = json.getString("di20208");
+                this.di20209 = json.getString("di20209");
+                this.di20210 = json.getString("di20210");
+                this.di20211 = json.getString("di20211");
+                this.di20212 = json.getString("di20212");
+                this.di20213 = json.getString("di20213");
+                this.di20214 = json.getString("di20214");
+                this.di20215 = json.getString("di20215");
+                this.di20216 = json.getString("di20216");
+                this.di20217 = json.getString("di20217");
+                this.di20218 = json.getString("di20218");
+                this.di20219 = json.getString("di20219");
+                this.di20296 = json.getString("di20296");
+                this.di20296x = json.getString("di20296x");
+                this.me20301 = json.getString("me20301");
+                this.me20302 = json.getString("me20302");
+                this.me20303 = json.getString("me20303");
+                this.me20304 = json.getString("me20304");
+                this.me20305 = json.getString("me20305");
+                this.me20306 = json.getString("me20306");
+                this.me20307 = json.getString("me20307");
+                this.me20308 = json.getString("me20308");
+                this.me20309 = json.getString("me20309");
+                this.me20310 = json.getString("me20310");
+                this.me20311 = json.getString("me20311");
+                this.me20312 = json.getString("me20312");
+                this.me20313 = json.getString("me20313");
+                this.me20314 = json.getString("me20314");
+                this.me20315 = json.getString("me20315");
+                this.me20316 = json.getString("me20316");
+                this.me20317 = json.getString("me20317");
+                this.me20318 = json.getString("me20318");
+                this.me20319 = json.getString("me20319");
+                this.me20320 = json.getString("me20320");
+                this.me20321 = json.getString("me20321");
+                this.me20322 = json.getString("me20322");
+                this.me20323 = json.getString("me20323");
+                this.me20324 = json.getString("me20324");
+                this.me20396 = json.getString("me20396");
+                this.me20396x = json.getString("me20396x");
+                this.vs301 = json.getString("vs301");
+                this.vs302 = json.getString("vs302");
+                this.vs303 = json.getString("vs303");
+                this.vs304 = json.getString("vs304");
+                this.vs305 = json.getString("vs305");
+                this.vs306a = json.getString("vs306a");
+                this.vs306b = json.getString("vs306b");
+                this.vs306c = json.getString("vs306c");
+                this.vs306d = json.getString("vs306d");
+                this.vs306e = json.getString("vs306e");
+                this.vs306f = json.getString("vs306f");
+                this.vs306g = json.getString("vs306g");
+                this.vs306i = json.getString("vs306i");
+                this.vs307 = json.getString("vs307");
+                this.vs308 = json.getString("vs308");
 
-                this.mh09m = json.getString("mh09m");
-                this.mh09d = json.getString("mh09d");
-                this.patientType = json.getString("patientType");
-                this.mh010 = json.getString("mh010");
-                this.mh010a = json.getString("mh010a");
-                this.mh010b = json.getString("mh010b");
-                this.mh01101 = json.getString("mh01101");
-                this.mh01102 = json.getString("mh01102");
-                this.mh01103 = json.getString("mh01103");
-                this.mh012 = json.getString("mh012");
-                this.chkWeight = json.getString("chkWeight");
-                this.mh013 = json.getString("mh013");
-                this.mh014 = json.getString("mh014");
-                this.mh015 = json.getString("mh015");
-                this.chkHeight = json.getString("chkHeight");
-                this.mh016 = json.getString("mh016");
-                this.chkMUAC = json.getString("chkMUAC");
-                this.mh01701 = json.getString("mh01701");
-                this.mh01702 = json.getString("mh01702");
-                this.mh01703 = json.getString("mh01703");
-                this.mh017077 = json.getString("mh017077");
-                this.mh017077x = json.getString("mh017077x");
-                this.mh017097 = json.getString("mh017097");
-                this.mh01801 = json.getString("mh01801");
-                this.mh01802 = json.getString("mh01802");
-                this.mh01803 = json.getString("mh01803");
-                this.mh01804 = json.getString("mh01804");
-                this.mh01805 = json.getString("mh01805");
-                this.mh01806 = json.getString("mh01806");
-                this.mh01807 = json.getString("mh01807");
-                this.mh01808 = json.getString("mh01808");
-                this.mh01809 = json.getString("mh01809");
-                this.mh018010 = json.getString("mh018010");
-                this.mh018011 = json.getString("mh018011");
-                this.mh018012 = json.getString("mh018012");
-                this.mh018013 = json.getString("mh018013");
-                this.mh018014 = json.getString("mh018014");
-                this.mh018015 = json.getString("mh018015");
-                this.mh018016 = json.getString("mh018016");
-                this.mh018077 = json.getString("mh018077");
-                this.mh018077x = json.getString("mh018077x");
-                this.mh018097 = json.getString("mh018097");
-                this.mh01901 = json.getString("mh01901");
-                this.mh01902 = json.getString("mh01902");
-                this.mh01903 = json.getString("mh01903");
-                this.mh01904 = json.getString("mh01904");
-                this.mh01905 = json.getString("mh01905");
-                this.mh01906 = json.getString("mh01906");
-                this.mh01907 = json.getString("mh01907");
-                this.mh01908 = json.getString("mh01908");
-                this.mh01909 = json.getString("mh01909");
-                this.mh019010 = json.getString("mh019010");
-                this.mh019011 = json.getString("mh019011");
-                this.mh019012 = json.getString("mh019012");
-                this.mh019013 = json.getString("mh019013");
-                this.mh019014 = json.getString("mh019014");
-                this.mh019015 = json.getString("mh019015");
-                this.mh019077 = json.getString("mh019077");
-                this.mh019077x = json.getString("mh019077x");
-                this.mh019097 = json.getString("mh019097");
-                this.mh020 = json.getString("mh020");
-                this.mh021 = json.getString("mh021");
-                this.mh022 = json.getString("mh022");
-                this.mh023 = json.getString("mh023");
-                this.mh024 = json.getString("mh024");
-                this.mh025 = json.getString("mh025");
-                this.mh027b = json.getString("mh027b");
-                this.mh02601 = json.getString("mh02601");
-                this.mh02602 = json.getString("mh02602");
-                this.mh02603 = json.getString("mh02603");
-                this.mh02604 = json.getString("mh02604");
-                this.mh02605 = json.getString("mh02605");
-                this.mh02606 = json.getString("mh02606");
-                this.mh02608 = json.getString("mh02608");
-                this.mh02609 = json.getString("mh02609");
-                this.mh026010 = json.getString("mh026010");
-                this.mh026011 = json.getString("mh026011");
-                this.mh026014 = json.getString("mh026014");
-                this.mh026015 = json.getString("mh026015");
-                this.mh026016 = json.getString("mh026016");
-                this.mh026017 = json.getString("mh026017");
-                this.mh026018 = json.getString("mh026018");
-                this.mh026019 = json.getString("mh026019");
-                this.mh026020 = json.getString("mh026020");
-                this.mh026021 = json.getString("mh026021");
-                this.mh026022 = json.getString("mh026022");
-                this.mh027a = json.getString("mh027a");
-                this.mh027 = json.getString("mh027");
-                this.mh028 = json.getString("mh028");
-                this.mh029 = json.getString("mh029");
-                this.mh030 = json.getString("mh030");
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -1771,4 +650,1087 @@ public class MobileHealth extends BaseObservable {
         }
     }
 
+    @Bindable
+    public String getSs101d() {
+        return ss101d;
+    }
+
+    public void setSs101d(String ss101d) {
+        this.ss101d = ss101d;
+        notifyPropertyChanged(BR.ss101d);
+    }
+
+    @Bindable
+    public String getSs101m() {
+        return ss101m;
+    }
+
+    public void setSs101m(String ss101m) {
+        this.ss101m = ss101m;
+        notifyPropertyChanged(BR.ss101m);
+    }
+
+    @Bindable
+    public String getSs101y() {
+        return ss101y;
+    }
+
+    public void setSs101y(String ss101y) {
+        this.ss101y = ss101y;
+        notifyPropertyChanged(BR.ss101y);
+    }
+
+    @Bindable
+    public String getSs102() {
+        return ss102;
+    }
+
+    public void setSs102(String ss102) {
+        this.ss102 = ss102;
+        notifyPropertyChanged(BR.ss102);
+    }
+
+    @Bindable
+    public String getSs103() {
+        return ss103;
+    }
+
+    public void setSs103(String ss103) {
+        this.ss103 = ss103;
+        notifyPropertyChanged(BR.ss103);
+    }
+
+    @Bindable
+    public String getSs104() {
+        return ss104;
+    }
+
+    public void setSs104(String ss104) {
+        this.ss104 = ss104;
+        notifyPropertyChanged(BR.ss104);
+    }
+
+    @Bindable
+    public String getSs105() {
+        return ss105;
+    }
+
+    public void setSs105(String ss105) {
+        this.ss105 = ss105;
+        notifyPropertyChanged(BR.ss105);
+    }
+
+    @Bindable
+    public String getSs106() {
+        return ss106;
+    }
+
+    public void setSs106(String ss106) {
+        this.ss106 = ss106;
+        notifyPropertyChanged(BR.ss106);
+    }
+
+    @Bindable
+    public String getSs107y() {
+        return ss107y;
+    }
+
+    public void setSs107y(String ss107y) {
+        this.ss107y = ss107y;
+        notifyPropertyChanged(BR.ss107y);
+    }
+
+    @Bindable
+    public String getSs107m() {
+        return ss107m;
+    }
+
+    public void setSs107m(String ss107m) {
+        this.ss107m = ss107m;
+        notifyPropertyChanged(BR.ss107m);
+    }
+
+    @Bindable
+    public String getSs107d() {
+        return ss107d;
+    }
+
+    public void setSs107d(String ss107d) {
+        this.ss107d = ss107d;
+        notifyPropertyChanged(BR.ss107d);
+    }
+
+    @Bindable
+    public String getSs108() {
+        return ss108;
+    }
+
+    public void setSs108(String ss108) {
+        this.ss108 = ss108;
+        notifyPropertyChanged(BR.ss108);
+    }
+
+    @Bindable
+    public String getSs109() {
+        return ss109;
+    }
+
+    public void setSs109(String ss109) {
+        this.ss109 = ss109;
+        notifyPropertyChanged(BR.ss109);
+    }
+
+    @Bindable
+    public String getSs110() {
+        return ss110;
+    }
+
+    public void setSs110(String ss110) {
+        this.ss110 = ss110;
+        notifyPropertyChanged(BR.ss110);
+    }
+
+    @Bindable
+    public String getSs111() {
+        return ss111;
+    }
+
+    public void setSs111(String ss111) {
+        this.ss111 = ss111;
+        notifyPropertyChanged(BR.ss111);
+    }
+
+    @Bindable
+    public String getSs111a() {
+        return ss111a;
+    }
+
+    public void setSs111a(String ss111a) {
+        this.ss111a = ss111a;
+        notifyPropertyChanged(BR.ss111a);
+    }
+
+    @Bindable
+    public String getSs111b() {
+        return ss111b;
+    }
+
+    public void setSs111b(String ss111b) {
+        this.ss111b = ss111b;
+        notifyPropertyChanged(BR.ss111b);
+    }
+
+    @Bindable
+    public String getSs111c() {
+        return ss111c;
+    }
+
+    public void setSs111c(String ss111c) {
+        this.ss111c = ss111c;
+        notifyPropertyChanged(BR.ss111c);
+    }
+
+    @Bindable
+    public String getSs111d() {
+        return ss111d;
+    }
+
+    public void setSs111d(String ss111d) {
+        this.ss111d = ss111d;
+        notifyPropertyChanged(BR.ss111d);
+    }
+
+
+    @Bindable
+    public String getPc201() {
+        return pc201;
+    }
+
+    public void setPc201(String pc201) {
+        this.pc201 = pc201;
+        notifyPropertyChanged(BR.pc201);
+    }
+
+    @Bindable
+    public String getPc20101() {
+        return pc20101;
+    }
+
+    public void setPc20101(String pc20101) {
+        this.pc20101 = pc20101;
+        notifyPropertyChanged(BR.pc20101);
+    }
+
+    @Bindable
+    public String getPc20102() {
+        return pc20102;
+    }
+
+    public void setPc20102(String pc20102) {
+        this.pc20102 = pc20102;
+        notifyPropertyChanged(BR.pc20102);
+    }
+
+    @Bindable
+    public String getPc20103() {
+        return pc20103;
+    }
+
+    public void setPc20103(String pc20103) {
+        this.pc20103 = pc20103;
+        notifyPropertyChanged(BR.pc20103);
+    }
+
+    @Bindable
+    public String getPc20104() {
+        return pc20104;
+    }
+
+    public void setPc20104(String pc20104) {
+        this.pc20104 = pc20104;
+        notifyPropertyChanged(BR.pc20104);
+    }
+
+    @Bindable
+    public String getPc20105() {
+        return pc20105;
+    }
+
+    public void setPc20105(String pc20105) {
+        this.pc20105 = pc20105;
+        notifyPropertyChanged(BR.pc20105);
+    }
+
+    @Bindable
+    public String getPc20106() {
+        return pc20106;
+    }
+
+    public void setPc20106(String pc20106) {
+        this.pc20106 = pc20106;
+        notifyPropertyChanged(BR.pc20106);
+    }
+
+    @Bindable
+    public String getPc20107() {
+        return pc20107;
+    }
+
+    public void setPc20107(String pc20107) {
+        this.pc20107 = pc20107;
+        notifyPropertyChanged(BR.pc20107);
+    }
+
+    @Bindable
+    public String getPc20108() {
+        return pc20108;
+    }
+
+    public void setPc20108(String pc20108) {
+        this.pc20108 = pc20108;
+        notifyPropertyChanged(BR.pc20108);
+    }
+
+    @Bindable
+    public String getPc20109() {
+        return pc20109;
+    }
+
+    public void setPc20109(String pc20109) {
+        this.pc20109 = pc20109;
+        notifyPropertyChanged(BR.pc20109);
+    }
+
+    @Bindable
+    public String getPc20110() {
+        return pc20110;
+    }
+
+    public void setPc20110(String pc20110) {
+        this.pc20110 = pc20110;
+        notifyPropertyChanged(BR.pc20110);
+    }
+
+    @Bindable
+    public String getPc20111() {
+        return pc20111;
+    }
+
+    public void setPc20111(String pc20111) {
+        this.pc20111 = pc20111;
+        notifyPropertyChanged(BR.pc20111);
+    }
+
+    @Bindable
+    public String getPc20112() {
+        return pc20112;
+    }
+
+    public void setPc20112(String pc20112) {
+        this.pc20112 = pc20112;
+        notifyPropertyChanged(BR.pc20112);
+    }
+
+    @Bindable
+    public String getPc20113() {
+        return pc20113;
+    }
+
+    public void setPc20113(String pc20113) {
+        this.pc20113 = pc20113;
+        notifyPropertyChanged(BR.pc20113);
+    }
+
+    @Bindable
+    public String getPc20114() {
+        return pc20114;
+    }
+
+    public void setPc20114(String pc20114) {
+        this.pc20114 = pc20114;
+        notifyPropertyChanged(BR.pc20114);
+    }
+
+    @Bindable
+    public String getPc20115() {
+        return pc20115;
+    }
+
+    public void setPc20115(String pc20115) {
+        this.pc20115 = pc20115;
+        notifyPropertyChanged(BR.pc20115);
+    }
+
+    @Bindable
+    public String getPc20116() {
+        return pc20116;
+    }
+
+    public void setPc20116(String pc20116) {
+        this.pc20116 = pc20116;
+        notifyPropertyChanged(BR.pc20116);
+    }
+
+    @Bindable
+    public String getPc20117() {
+        return pc20117;
+    }
+
+    public void setPc20117(String pc20117) {
+        this.pc20117 = pc20117;
+        notifyPropertyChanged(BR.pc20117);
+    }
+
+    @Bindable
+    public String getPc20118() {
+        return pc20118;
+    }
+
+    public void setPc20118(String pc20118) {
+        this.pc20118 = pc20118;
+        notifyPropertyChanged(BR.pc20118);
+    }
+
+    @Bindable
+    public String getPc20119() {
+        return pc20119;
+    }
+
+    public void setPc20119(String pc20119) {
+        this.pc20119 = pc20119;
+        notifyPropertyChanged(BR.pc20119);
+    }
+
+    @Bindable
+    public String getPc20196() {
+        return pc20196;
+    }
+
+    public void setPc20196(String pc20196) {
+        this.pc20196 = pc20196;
+        notifyPropertyChanged(BR.pc20196);
+    }
+
+    @Bindable
+    public String getPc20196x() {
+        return pc20196x;
+    }
+
+    public void setPc20196x(String pc20196x) {
+        this.pc20196x = pc20196x;
+        notifyPropertyChanged(BR.pc20196x);
+    }
+
+
+    @Bindable
+    public String getDi202() {
+        return di202;
+    }
+
+    public void setDi202(String di202) {
+        this.di202 = di202;
+        notifyPropertyChanged(BR.di202);
+    }
+
+    @Bindable
+    public String getDi20201() {
+        return di20201;
+    }
+
+    public void setDi20201(String di20201) {
+        this.di20201 = di20201;
+        notifyPropertyChanged(BR.di20201);
+    }
+
+    @Bindable
+    public String getDi20202() {
+        return di20202;
+    }
+
+    public void setDi20202(String di20202) {
+        this.di20202 = di20202;
+        notifyPropertyChanged(BR.di20202);
+    }
+
+    @Bindable
+    public String getDi20203() {
+        return di20203;
+    }
+
+    public void setDi20203(String di20203) {
+        this.di20203 = di20203;
+        notifyPropertyChanged(BR.di20203);
+    }
+
+    @Bindable
+    public String getDi20204() {
+        return di20204;
+    }
+
+    public void setDi20204(String di20204) {
+        this.di20204 = di20204;
+        notifyPropertyChanged(BR.di20204);
+    }
+
+    @Bindable
+    public String getDi20205() {
+        return di20205;
+    }
+
+    public void setDi20205(String di20205) {
+        this.di20205 = di20205;
+        notifyPropertyChanged(BR.di20205);
+    }
+
+    @Bindable
+    public String getDi20206() {
+        return di20206;
+    }
+
+    public void setDi20206(String di20206) {
+        this.di20206 = di20206;
+        notifyPropertyChanged(BR.di20206);
+    }
+
+    @Bindable
+    public String getDi20207() {
+        return di20207;
+    }
+
+    public void setDi20207(String di20207) {
+        this.di20207 = di20207;
+        notifyPropertyChanged(BR.di20207);
+    }
+
+    @Bindable
+    public String getDi20208() {
+        return di20208;
+    }
+
+    public void setDi20208(String di20208) {
+        this.di20208 = di20208;
+        notifyPropertyChanged(BR.di20208);
+    }
+
+    @Bindable
+    public String getDi20209() {
+        return di20209;
+    }
+
+    public void setDi20209(String di20209) {
+        this.di20209 = di20209;
+        notifyPropertyChanged(BR.di20209);
+    }
+
+    @Bindable
+    public String getDi20210() {
+        return di20210;
+    }
+
+    public void setDi20210(String di20210) {
+        this.di20210 = di20210;
+        notifyPropertyChanged(BR.di20210);
+    }
+
+    @Bindable
+    public String getDi20211() {
+        return di20211;
+    }
+
+    public void setDi20211(String di20211) {
+        this.di20211 = di20211;
+        notifyPropertyChanged(BR.di20211);
+    }
+
+    @Bindable
+    public String getDi20212() {
+        return di20212;
+    }
+
+    public void setDi20212(String di20212) {
+        this.di20212 = di20212;
+        notifyPropertyChanged(BR.di20212);
+    }
+
+    @Bindable
+    public String getDi20213() {
+        return di20213;
+    }
+
+    public void setDi20213(String di20213) {
+        this.di20213 = di20213;
+        notifyPropertyChanged(BR.di20213);
+    }
+
+    @Bindable
+    public String getDi20214() {
+        return di20214;
+    }
+
+    public void setDi20214(String di20214) {
+        this.di20214 = di20214;
+        notifyPropertyChanged(BR.di20214);
+    }
+
+    @Bindable
+    public String getDi20215() {
+        return di20215;
+    }
+
+    public void setDi20215(String di20215) {
+        this.di20215 = di20215;
+        notifyPropertyChanged(BR.di20215);
+    }
+
+    @Bindable
+    public String getDi20216() {
+        return di20216;
+    }
+
+    public void setDi20216(String di20216) {
+        this.di20216 = di20216;
+        notifyPropertyChanged(BR.di20216);
+    }
+
+    @Bindable
+    public String getDi20217() {
+        return di20217;
+    }
+
+    public void setDi20217(String di20217) {
+        this.di20217 = di20217;
+        notifyPropertyChanged(BR.di20217);
+    }
+
+    @Bindable
+    public String getDi20218() {
+        return di20218;
+    }
+
+    public void setDi20218(String di20218) {
+        this.di20218 = di20218;
+        notifyPropertyChanged(BR.di20218);
+    }
+
+    @Bindable
+    public String getDi20219() {
+        return di20219;
+    }
+
+    public void setDi20219(String di20219) {
+        this.di20219 = di20219;
+        notifyPropertyChanged(BR.di20219);
+    }
+
+    @Bindable
+    public String getDi20296() {
+        return di20296;
+    }
+
+    public void setDi20296(String di20296) {
+        this.di20296 = di20296;
+        notifyPropertyChanged(BR.di20296);
+    }
+
+    @Bindable
+    public String getDi20296x() {
+        return di20296x;
+    }
+
+    public void setDi20296x(String di20296x) {
+        this.di20296x = di20296x;
+        notifyPropertyChanged(BR.di20296x);
+    }
+
+    @Bindable
+    public String getMe203() {
+        return me203;
+    }
+
+    public void setMe203(String me203) {
+        this.me203 = me203;
+        notifyPropertyChanged(BR.me203);
+    }
+
+    @Bindable
+    public String getMe20301() {
+        return me20301;
+    }
+
+    public void setMe20301(String me20301) {
+        this.me20301 = me20301;
+        notifyPropertyChanged(BR.me20301);
+    }
+
+    @Bindable
+    public String getMe20302() {
+        return me20302;
+    }
+
+    public void setMe20302(String me20302) {
+        this.me20302 = me20302;
+        notifyPropertyChanged(BR.me20302);
+    }
+
+    @Bindable
+    public String getMe20303() {
+        return me20303;
+    }
+
+    public void setMe20303(String me20303) {
+        this.me20303 = me20303;
+        notifyPropertyChanged(BR.me20303);
+    }
+
+    @Bindable
+    public String getMe20304() {
+        return me20304;
+    }
+
+    public void setMe20304(String me20304) {
+        this.me20304 = me20304;
+        notifyPropertyChanged(BR.me20304);
+    }
+
+    @Bindable
+    public String getMe20305() {
+        return me20305;
+    }
+
+    public void setMe20305(String me20305) {
+        this.me20305 = me20305;
+        notifyPropertyChanged(BR.me20305);
+    }
+
+    @Bindable
+    public String getMe20306() {
+        return me20306;
+    }
+
+    public void setMe20306(String me20306) {
+        this.me20306 = me20306;
+        notifyPropertyChanged(BR.me20306);
+    }
+
+    @Bindable
+    public String getMe20307() {
+        return me20307;
+    }
+
+    public void setMe20307(String me20307) {
+        this.me20307 = me20307;
+        notifyPropertyChanged(BR.me20307);
+    }
+
+    @Bindable
+    public String getMe20308() {
+        return me20308;
+    }
+
+    public void setMe20308(String me20308) {
+        this.me20308 = me20308;
+        notifyPropertyChanged(BR.me20308);
+    }
+
+    @Bindable
+    public String getMe20309() {
+        return me20309;
+    }
+
+    public void setMe20309(String me20309) {
+        this.me20309 = me20309;
+        notifyPropertyChanged(BR.me20309);
+    }
+
+    @Bindable
+    public String getMe20310() {
+        return me20310;
+    }
+
+    public void setMe20310(String me20310) {
+        this.me20310 = me20310;
+        notifyPropertyChanged(BR.me20310);
+    }
+
+    @Bindable
+    public String getMe20311() {
+        return me20311;
+    }
+
+    public void setMe20311(String me20311) {
+        this.me20311 = me20311;
+        notifyPropertyChanged(BR.me20311);
+    }
+
+    @Bindable
+    public String getMe20312() {
+        return me20312;
+    }
+
+    public void setMe20312(String me20312) {
+        this.me20312 = me20312;
+        notifyPropertyChanged(BR.me20312);
+    }
+
+    @Bindable
+    public String getMe20313() {
+        return me20313;
+    }
+
+    public void setMe20313(String me20313) {
+        this.me20313 = me20313;
+        notifyPropertyChanged(BR.me20313);
+    }
+
+    @Bindable
+    public String getMe20314() {
+        return me20314;
+    }
+
+    public void setMe20314(String me20314) {
+        this.me20314 = me20314;
+        notifyPropertyChanged(BR.me20314);
+    }
+
+    @Bindable
+    public String getMe20315() {
+        return me20315;
+    }
+
+    public void setMe20315(String me20315) {
+        this.me20315 = me20315;
+        notifyPropertyChanged(BR.me20315);
+    }
+
+    @Bindable
+    public String getMe20316() {
+        return me20316;
+    }
+
+    public void setMe20316(String me20316) {
+        this.me20316 = me20316;
+        notifyPropertyChanged(BR.me20316);
+    }
+
+    @Bindable
+    public String getMe20317() {
+        return me20317;
+    }
+
+    public void setMe20317(String me20317) {
+        this.me20317 = me20317;
+        notifyPropertyChanged(BR.me20317);
+    }
+
+    @Bindable
+    public String getMe20318() {
+        return me20318;
+    }
+
+    public void setMe20318(String me20318) {
+        this.me20318 = me20318;
+        notifyPropertyChanged(BR.me20318);
+    }
+
+    @Bindable
+    public String getMe20319() {
+        return me20319;
+    }
+
+    public void setMe20319(String me20319) {
+        this.me20319 = me20319;
+        notifyPropertyChanged(BR.me20319);
+    }
+
+    @Bindable
+    public String getMe20320() {
+        return me20320;
+    }
+
+    public void setMe20320(String me20320) {
+        this.me20320 = me20320;
+        notifyPropertyChanged(BR.me20320);
+    }
+
+    @Bindable
+    public String getMe20321() {
+        return me20321;
+    }
+
+    public void setMe20321(String me20321) {
+        this.me20321 = me20321;
+        notifyPropertyChanged(BR.me20321);
+    }
+
+    @Bindable
+    public String getMe20322() {
+        return me20322;
+    }
+
+    public void setMe20322(String me20322) {
+        this.me20322 = me20322;
+        notifyPropertyChanged(BR.me20322);
+    }
+
+    @Bindable
+    public String getMe20323() {
+        return me20323;
+    }
+
+    public void setMe20323(String me20323) {
+        this.me20323 = me20323;
+        notifyPropertyChanged(BR.me20323);
+    }
+
+    @Bindable
+    public String getMe20324() {
+        return me20324;
+    }
+
+    public void setMe20324(String me20324) {
+        this.me20324 = me20324;
+        notifyPropertyChanged(BR.me20324);
+    }
+
+    @Bindable
+    public String getMe20396() {
+        return me20396;
+    }
+
+    public void setMe20396(String me20396) {
+        this.me20396 = me20396;
+        notifyPropertyChanged(BR.me20396);
+    }
+
+    @Bindable
+    public String getMe20396x() {
+        return me20396x;
+    }
+
+    public void setMe20396x(String me20396x) {
+        this.me20396x = me20396x;
+        notifyPropertyChanged(BR.me20396x);
+    }
+
+
+    @Bindable
+    public String getVs301() {
+        return vs301;
+    }
+
+    public void setVs301(String vs301) {
+        this.vs301 = vs301;
+        notifyPropertyChanged(BR.vs301);
+    }
+
+    @Bindable
+    public String getVs302() {
+        return vs302;
+    }
+
+    public void setVs302(String vs302) {
+        this.vs302 = vs302;
+        notifyPropertyChanged(BR.vs302);
+    }
+
+    @Bindable
+    public String getVs303() {
+        return vs303;
+    }
+
+    public void setVs303(String vs303) {
+        this.vs303 = vs303;
+        notifyPropertyChanged(BR.vs303);
+    }
+
+    @Bindable
+    public String getVs304() {
+        return vs304;
+    }
+
+    public void setVs304(String vs304) {
+        this.vs304 = vs304;
+        notifyPropertyChanged(BR.vs304);
+    }
+
+    @Bindable
+    public String getVs305() {
+        return vs305;
+    }
+
+    public void setVs305(String vs305) {
+        this.vs305 = vs305;
+        notifyPropertyChanged(BR.vs305);
+    }
+
+    @Bindable
+    public String getVs306() {
+        return vs306;
+    }
+
+    public void setVs306(String vs306) {
+        this.vs306 = vs306;
+        notifyPropertyChanged(BR.vs306);
+    }
+
+    @Bindable
+    public String getVs306a() {
+        return vs306a;
+    }
+
+    public void setVs306a(String vs306a) {
+        this.vs306a = vs306a;
+        notifyPropertyChanged(BR.vs306a);
+    }
+
+    @Bindable
+    public String getVs306b() {
+        return vs306b;
+    }
+
+    public void setVs306b(String vs306b) {
+        this.vs306b = vs306b;
+        notifyPropertyChanged(BR.vs306b);
+    }
+
+    @Bindable
+    public String getVs306c() {
+        return vs306c;
+    }
+
+    public void setVs306c(String vs306c) {
+        this.vs306c = vs306c;
+        notifyPropertyChanged(BR.vs306c);
+    }
+
+    @Bindable
+    public String getVs306d() {
+        return vs306d;
+    }
+
+    public void setVs306d(String vs306d) {
+        this.vs306d = vs306d;
+        notifyPropertyChanged(BR.vs306d);
+    }
+
+    @Bindable
+    public String getVs306e() {
+        return vs306e;
+    }
+
+    public void setVs306e(String vs306e) {
+        this.vs306e = vs306e;
+        notifyPropertyChanged(BR.vs306e);
+    }
+
+    @Bindable
+    public String getVs306f() {
+        return vs306f;
+    }
+
+    public void setVs306f(String vs306f) {
+        this.vs306f = vs306f;
+        notifyPropertyChanged(BR.vs306f);
+    }
+
+    @Bindable
+    public String getVs306g() {
+        return vs306g;
+    }
+
+    public void setVs306g(String vs306g) {
+        this.vs306g = vs306g;
+        notifyPropertyChanged(BR.vs306g);
+    }
+
+    @Bindable
+    public String getVs306i() {
+        return vs306i;
+    }
+
+    public void setVs306i(String vs306i) {
+        this.vs306i = vs306i;
+        notifyPropertyChanged(BR.vs306i);
+    }
+
+    @Bindable
+    public String getVs307() {
+        return vs307;
+    }
+
+    public void setVs307(String vs307) {
+        this.vs307 = vs307;
+        notifyPropertyChanged(BR.vs307);
+    }
+
+    @Bindable
+    public String getVs308() {
+        return vs308;
+    }
+
+    public void setVs308(String vs308) {
+        this.vs308 = vs308;
+        notifyPropertyChanged(BR.vs308);
+    }
+
+
+    @Bindable
+    public String getSs101() {
+        return ss101;
+    }
+
+    public void setSs101(String ss101) {
+        this.ss101 = ss101;
+        notifyPropertyChanged(BR.ss101);
+    }
+
+    @Bindable
+    public String getSs107() {
+        return ss107;
+    }
+
+    public void setSs107(String ss107) {
+        this.ss107 = ss107;
+        notifyPropertyChanged(BR.ss107);
+    }
 }

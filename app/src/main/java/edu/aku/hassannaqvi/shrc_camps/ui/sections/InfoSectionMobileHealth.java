@@ -18,7 +18,7 @@ import edu.aku.hassannaqvi.shrc_camps.R;
 import edu.aku.hassannaqvi.shrc_camps.contracts.MHContract;
 import edu.aku.hassannaqvi.shrc_camps.core.MainApp;
 import edu.aku.hassannaqvi.shrc_camps.database.DatabaseHelper;
-import edu.aku.hassannaqvi.shrc_camps.databinding.ActivityInfoMobileHealthBinding;
+import edu.aku.hassannaqvi.shrc_camps.databinding.ActivityInfoMobileHealthR2Binding;
 import edu.aku.hassannaqvi.shrc_camps.models.MobileHealth;
 import edu.aku.hassannaqvi.shrc_camps.utils.AppUtilsKt;
 import edu.aku.hassannaqvi.shrc_camps.utils.EndSectionActivity;
@@ -28,14 +28,15 @@ import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.mobileHealth;
 
 public class InfoSectionMobileHealth extends AppCompatActivity implements EndSectionActivity {
 
-    ActivityInfoMobileHealthBinding bi;
+    ActivityInfoMobileHealthR2Binding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_info_mobile_health);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_info_mobile_health_r2);
         bi.setCallback(this);
         setupSkips();
+
     }
 
     private void setupSkips() {
@@ -71,11 +72,11 @@ public class InfoSectionMobileHealth extends AppCompatActivity implements EndSec
         mobileHealth.setDeviceTag(MainApp.appInfo.getTagName());
         mobileHealth.setAppver(MainApp.appInfo.getAppVersion());*/
 
-        mobileHealth.setMh01(bi.mh01.getText().toString().trim().isEmpty() ? "-1" : bi.mh01.getText().toString());
-        mobileHealth.setMh02(bi.mh02.getText().toString().trim().isEmpty() ? "-1" : bi.mh02.getText().toString());
-        mobileHealth.setMh03(bi.mh03.getText().toString().trim().isEmpty() ? "-1" : bi.mh03.getText().toString());
-        mobileHealth.setMh04(bi.mh04.getText().toString().trim().isEmpty() ? "-1" : bi.mh04.getText().toString());
-        mobileHealth.setMh05(bi.mh05.getText().toString().trim().isEmpty() ? "-1" : bi.mh05.getText().toString());
+        mobileHealth.setSs101(bi.ss101.getText().toString().trim().isEmpty() ? "-1" : bi.ss101.getText().toString());
+        mobileHealth.setSs102(bi.ss102.getText().toString().trim().isEmpty() ? "-1" : bi.ss102.getText().toString());
+        mobileHealth.setSs103(bi.ss103.getText().toString().trim().isEmpty() ? "-1" : bi.ss103.getText().toString());
+        mobileHealth.setSs104(bi.ss104.getText().toString().trim().isEmpty() ? "-1" : bi.ss104.getText().toString());
+        //mobileHealth.setSs105(bi.ss105.getText().toString().trim().isEmpty() ? "-1" : bi.ss105.getText().toString());
 
     }
 

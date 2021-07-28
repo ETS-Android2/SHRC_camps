@@ -62,7 +62,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
 
         String Status = "Status  Unknown";
         int iColor = 0;
-        switch (fc.get(position).getMh010()) {
+        switch (fc.get(position).getSs108()) {
             case "1":
                 holder.status.setBackgroundColor(c.getResources().getColor(R.color.colorAccent));
                 holder.status.setImageResource(R.drawable.male);
@@ -108,12 +108,11 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
 
         }*/
 
-        holder.hhno.setText(fc.get(position).getMh02() + "\t\t\t | \t\t\t" + fc.get(position).getSysDate());
-        holder.father.setText(" ( " + fc.get(position).getMh08() + " )");
-        holder.cluster.setText(fc.get(position).getMh07());
-        holder.istatus.setText(fc.get(position).getMh06());
-        Log.d("TAG", "onBindViewHolder: gender " + fc.get(position).getMh010());
-        holder.sysdate.setText(fc.get(position).getMh09y() + "y \t\t\t " + (fc.get(position).getMh010().equals("1") ? "Male" : "Female"));
+        holder.hhno.setText(fc.get(position).getSs102() + "\t\t\t | \t\t\t" + fc.get(position).getSysDate());
+        holder.father.setText(" ( " + fc.get(position).getSs108() + " )");
+        holder.cluster.setText(fc.get(position).getSs107());
+        holder.istatus.setText(fc.get(position).getSs106());
+        holder.sysdate.setText(fc.get(position).getSs107y() + "y \t\t\t " + (fc.get(position).getSs108().equals("1") ? "Male" : "Female"));
         holder.status.setBackgroundColor(iColor);
 
 

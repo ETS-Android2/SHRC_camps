@@ -31,7 +31,7 @@ import edu.aku.hassannaqvi.shrc_camps.models.Camps
 import edu.aku.hassannaqvi.shrc_camps.ui.list_activity.FormsReportCluster
 import edu.aku.hassannaqvi.shrc_camps.ui.list_activity.FormsReportDate
 import edu.aku.hassannaqvi.shrc_camps.ui.login_activity.LoginActivity
-import edu.aku.hassannaqvi.shrc_camps.ui.sections.SectionMobileHealth
+import edu.aku.hassannaqvi.shrc_camps.ui.sections.SectionMobileHealthR2
 import edu.aku.hassannaqvi.shrc_camps.utils.extension.gotoActivity
 import edu.aku.hassannaqvi.shrc_camps.utils.extension.gotoActivityWithNoHistory
 import edu.aku.hassannaqvi.shrc_camps.utils.extension.obtainViewModel
@@ -263,7 +263,7 @@ class MainActivity : AppCompatActivity() {
         when (v.id) {
             R.id.formA -> {
                 SharedStorage.setSelectedCampData(this, Gson().toJson(camp))
-                gotoActivity(SectionMobileHealth::class.java)
+                gotoActivity(SectionMobileHealthR2::class.java)
             }
             R.id.databaseBtn -> startActivity(Intent(this, AndroidDatabaseManager::class.java))
             R.id.btn_check_camp -> {
