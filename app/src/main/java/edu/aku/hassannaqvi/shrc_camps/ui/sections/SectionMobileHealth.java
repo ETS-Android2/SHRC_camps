@@ -27,7 +27,7 @@ import edu.aku.hassannaqvi.shrc_camps.R;
 import edu.aku.hassannaqvi.shrc_camps.contracts.MHContract;
 import edu.aku.hassannaqvi.shrc_camps.core.MainApp;
 import edu.aku.hassannaqvi.shrc_camps.database.DatabaseHelper;
-import edu.aku.hassannaqvi.shrc_camps.databinding.ActivityMobileHealthBinding;
+import edu.aku.hassannaqvi.shrc_camps.databinding.ActivityMobileHealthR2Binding;
 import edu.aku.hassannaqvi.shrc_camps.models.Camps;
 import edu.aku.hassannaqvi.shrc_camps.models.Doctor;
 import edu.aku.hassannaqvi.shrc_camps.models.MobileHealth;
@@ -45,7 +45,7 @@ import static edu.aku.hassannaqvi.shrc_camps.utils.extension.ActivityExtKt.gotoA
 public class SectionMobileHealth extends AppCompatActivity implements EndSectionActivity {
 
     private final boolean AllVaccinationsViewed = false;
-    ActivityMobileHealthBinding bi;
+    ActivityMobileHealthR2Binding bi;
     private String patientType;
     private List<String> campNo;
     private DatabaseHelper db;
@@ -54,7 +54,7 @@ public class SectionMobileHealth extends AppCompatActivity implements EndSection
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_mobile_health);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_mobile_health_r2);
         bi.setCallback(this);
         setSupportActionBar(bi.toolbar);
 
