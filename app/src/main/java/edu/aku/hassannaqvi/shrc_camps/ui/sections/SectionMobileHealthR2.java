@@ -89,7 +89,7 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         bi.vs307.setOnCheckedChangeListener((radioGroup, i) -> {
             Clear.clearAllFields(bi.fldGrpCVvs308);
 
-            if (i == bi.vs307b.getId()) {
+            if (i == bi.vs307b.getId() || i == bi.vs30799.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVvs308, false);
             } else
                 Clear.clearAllFields(bi.fldGrpCVvs308, true);
@@ -319,7 +319,7 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
 
     private void saveDraft() {
 
-        // mobileHealth = new MobileHealth();
+        mobileHealth = new MobileHealth();
         mobileHealth.setSysDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
         mobileHealth.setUserName(MainApp.user.getUserName());
         mobileHealth.setDeviceId(MainApp.appInfo.getDeviceID());
