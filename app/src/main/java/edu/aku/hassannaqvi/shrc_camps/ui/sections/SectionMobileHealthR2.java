@@ -59,7 +59,7 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
          * Get camp data and set it to xml
          * */
         Camps camp = new Gson().fromJson(SharedStorage.INSTANCE.getSelectedCampData(this), Camps.class);
-        bi.setMob(camp);
+        bi.setCamps(camp);
         db = MainApp.appInfo.dbHelper;
         //populateSpinner(camp.getIdCamp());  // Populate Doctors' Name
         bi.ss101.setMinDate(convertDateFormat(camp.getPlan_date()));
