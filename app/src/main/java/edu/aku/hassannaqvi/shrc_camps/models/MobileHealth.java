@@ -42,6 +42,7 @@ public class MobileHealth extends BaseObservable {
     public String ss111b;
     public String ss111c;
     public String ss111d;
+    public String ss11199;
     public String pc201;
     public String pc20101;
     public String pc20102;
@@ -64,6 +65,7 @@ public class MobileHealth extends BaseObservable {
     public String pc20119;
     public String pc20196;
     public String pc20196x;
+    public String pc20199;
     public String di202;
     public String di20201;
     public String di20202;
@@ -86,6 +88,7 @@ public class MobileHealth extends BaseObservable {
     public String di20219;
     public String di20296;
     public String di20296x;
+    public String di20299;
     public String me203;
     public String me20301;
     public String me20302;
@@ -113,6 +116,7 @@ public class MobileHealth extends BaseObservable {
     public String me20324;
     public String me20396;
     public String me20396x;
+    public String me20399;
     public String vs301;
     public String vs302;
     public String vs303;
@@ -127,6 +131,7 @@ public class MobileHealth extends BaseObservable {
     public String vs306f;
     public String vs306g;
     public String vs306i;
+    public String vs30699;
     public String vs307;
     public String vs308;
 
@@ -396,6 +401,7 @@ public class MobileHealth extends BaseObservable {
                     .put("ss111b", ss111b)
                     .put("ss111c", ss111c)
                     .put("ss111d", ss111d)
+                    .put("ss11199", ss11199)
                     .put("pc20101", pc20101)
                     .put("pc20102", pc20102)
                     .put("pc20103", pc20103)
@@ -417,6 +423,7 @@ public class MobileHealth extends BaseObservable {
                     .put("pc20119", pc20119)
                     .put("pc20196", pc20196)
                     .put("pc20196x", pc20196x)
+                    .put("pc20199", pc20199)
                     .put("di20201", di20201)
                     .put("di20202", di20202)
                     .put("di20203", di20203)
@@ -438,6 +445,7 @@ public class MobileHealth extends BaseObservable {
                     .put("di20219", di20219)
                     .put("di20296", di20296)
                     .put("di20296x", di20296x)
+                    .put("di20299", di20299)
                     .put("me20301", me20301)
                     .put("me20302", me20302)
                     .put("me20303", me20303)
@@ -464,6 +472,7 @@ public class MobileHealth extends BaseObservable {
                     .put("me20324", me20324)
                     .put("me20396", me20396)
                     .put("me20396x", me20396x)
+                    .put("me20399", me20399)
                     .put("vs301", vs301)
                     .put("vs302", vs302)
                     .put("vs303", vs303)
@@ -477,6 +486,7 @@ public class MobileHealth extends BaseObservable {
                     .put("vs306f", vs306f)
                     .put("vs306g", vs306g)
                     .put("vs306i", vs306i)
+                    .put("vs30699", vs30699)
                     .put("vs307", vs307)
                     .put("vs308", vs308);
 
@@ -559,6 +569,7 @@ public class MobileHealth extends BaseObservable {
                 this.ss111b = json.getString("ss111b");
                 this.ss111c = json.getString("ss111c");
                 this.ss111d = json.getString("ss111d");
+                this.ss11199 = json.getString("ss11199");
                 this.pc20101 = json.getString("pc20101");
                 this.pc20102 = json.getString("pc20102");
                 this.pc20103 = json.getString("pc20103");
@@ -580,6 +591,7 @@ public class MobileHealth extends BaseObservable {
                 this.pc20119 = json.getString("pc20119");
                 this.pc20196 = json.getString("pc20196");
                 this.pc20196x = json.getString("pc20196x");
+                this.pc20199 = json.getString("pc20199");
                 this.di20201 = json.getString("di20201");
                 this.di20202 = json.getString("di20202");
                 this.di20203 = json.getString("di20203");
@@ -601,6 +613,7 @@ public class MobileHealth extends BaseObservable {
                 this.di20219 = json.getString("di20219");
                 this.di20296 = json.getString("di20296");
                 this.di20296x = json.getString("di20296x");
+                this.di20299 = json.getString("di20299");
                 this.me20301 = json.getString("me20301");
                 this.me20302 = json.getString("me20302");
                 this.me20303 = json.getString("me20303");
@@ -627,6 +640,7 @@ public class MobileHealth extends BaseObservable {
                 this.me20324 = json.getString("me20324");
                 this.me20396 = json.getString("me20396");
                 this.me20396x = json.getString("me20396x");
+                this.me20399 = json.getString("me20399");
                 this.vs301 = json.getString("vs301");
                 this.vs302 = json.getString("vs302");
                 this.vs303 = json.getString("vs303");
@@ -640,6 +654,7 @@ public class MobileHealth extends BaseObservable {
                 this.vs306f = json.getString("vs306f");
                 this.vs306g = json.getString("vs306g");
                 this.vs306i = json.getString("vs306i");
+                this.vs30699 = json.getString("vs30699");
                 this.vs307 = json.getString("vs307");
                 this.vs308 = json.getString("vs308");
 
@@ -838,6 +853,16 @@ public class MobileHealth extends BaseObservable {
     public void setSs111d(String ss111d) {
         this.ss111d = ss111d;
         notifyPropertyChanged(BR.ss111d);
+    }
+
+    @Bindable
+    public String getSs11199() {
+        return ss11199;
+    }
+
+    public void setSs11199(String ss11199) {
+        this.ss11199 = ss11199;
+        notifyPropertyChanged(BR.ss11199);
     }
 
 
@@ -1061,6 +1086,16 @@ public class MobileHealth extends BaseObservable {
         notifyPropertyChanged(BR.pc20196x);
     }
 
+    @Bindable
+    public String getPc20199() {
+        return pc20199;
+    }
+
+    public void setPc20199(String pc20199) {
+        this.pc20199 = pc20199;
+        notifyPropertyChanged(BR.pc20199);
+    }
+
 
     @Bindable
     public String getDi202() {
@@ -1280,6 +1315,16 @@ public class MobileHealth extends BaseObservable {
     public void setDi20296x(String di20296x) {
         this.di20296x = di20296x;
         notifyPropertyChanged(BR.di20296x);
+    }
+
+    @Bindable
+    public String getDi20299() {
+        return di20299;
+    }
+
+    public void setDi20299(String di20299) {
+        this.di20299 = di20299;
+        notifyPropertyChanged(BR.di20299);
     }
 
     @Bindable
@@ -1552,6 +1597,16 @@ public class MobileHealth extends BaseObservable {
         notifyPropertyChanged(BR.me20396x);
     }
 
+    @Bindable
+    public String getMe20399() {
+        return me20399;
+    }
+
+    public void setMe20399(String me20399) {
+        this.me20399 = me20399;
+        notifyPropertyChanged(BR.me20399);
+    }
+
 
     @Bindable
     public String getVs301() {
@@ -1691,6 +1746,16 @@ public class MobileHealth extends BaseObservable {
     public void setVs306i(String vs306i) {
         this.vs306i = vs306i;
         notifyPropertyChanged(BR.vs306i);
+    }
+
+    @Bindable
+    public String getVs30699() {
+        return vs30699;
+    }
+
+    public void setVs30699(String vs30699) {
+        this.vs30699 = vs30699;
+        notifyPropertyChanged(BR.vs30699);
     }
 
     @Bindable

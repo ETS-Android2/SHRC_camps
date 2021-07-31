@@ -95,6 +95,12 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
                 Clear.clearAllFields(bi.fldGrpCVvs308, true);
         });
 
+        bi.vs30699.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.vs306check, !b));
+        bi.ss11199.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.ss111check, !b));
+        bi.pc20199.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.pc201check, !b));
+        bi.di20299.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.di202check, !b));
+        bi.me20399.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.me203check, !b));
+
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             bi.llscrollviewmh26.setOnScrollChangeListener(new View.OnScrollChangeListener() {
                 @Override
@@ -201,9 +207,11 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
 
         int age = Integer.parseInt(bi.ss107y.getText().toString());
 
-        if (age < 14) {
+        if (age < 14 || bi.ss108a.isChecked()) {
+            //Clear.clearAllFields(bi.fldGrpCVss108, false);
             Clear.clearAllFields(bi.fldGrpCVss109, false);
         } else
+            //Clear.clearAllFields(bi.fldGrpCVss108, true);
             Clear.clearAllFields(bi.fldGrpCVss109, true);
     }
 
@@ -334,12 +342,14 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
                 : "-1");
         mobileHealth.setSs109(bi.ss109a.isChecked() ? "1"
                 : bi.ss109b.isChecked() ? "2"
+                : bi.ss10999.isChecked() ? "99"
                 : "-1");
         mobileHealth.setSs110(bi.ss110.getText().toString());
         mobileHealth.setSs111a(bi.ss111a.isChecked() ? "1" : "-1");
         mobileHealth.setSs111b(bi.ss111b.isChecked() ? "2" : "-1");
         mobileHealth.setSs111c(bi.ss111c.isChecked() ? "3" : "-1");
         mobileHealth.setSs111d(bi.ss111d.isChecked() ? "4" : "-1");
+        mobileHealth.setSs11199(bi.ss11199.isChecked() ? "99" : "-1");
         mobileHealth.setPc20101(bi.pc20101.isChecked() ? "1" : "-1");
         mobileHealth.setPc20102(bi.pc20102.isChecked() ? "2" : "-1");
         mobileHealth.setPc20103(bi.pc20103.isChecked() ? "3" : "-1");
@@ -361,6 +371,7 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         mobileHealth.setPc20119(bi.pc20119.isChecked() ? "19" : "-1");
         mobileHealth.setPc20196(bi.pc20196.isChecked() ? "20" : "-1");
         mobileHealth.setPc20196x(bi.pc20196x.getText().toString());
+        mobileHealth.setPc20199(bi.pc20199.isChecked() ? "99" : "-1");
         mobileHealth.setDi20201(bi.di20201.isChecked() ? "1" : "-1");
         mobileHealth.setDi20202(bi.di20202.isChecked() ? "2" : "-1");
         mobileHealth.setDi20203(bi.di20203.isChecked() ? "3" : "-1");
@@ -382,6 +393,7 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         mobileHealth.setDi20219(bi.di20219.isChecked() ? "19" : "-1");
         mobileHealth.setDi20296(bi.di20296.isChecked() ? "96" : "-1");
         mobileHealth.setDi20296x(bi.di20296x.getText().toString());
+        mobileHealth.setDi20299(bi.di20299.isChecked() ? "99" : "-1");
         mobileHealth.setMe20301(bi.me20301.isChecked() ? "1" : "-1");
         mobileHealth.setMe20302(bi.me20302.isChecked() ? "2" : "-1");
         mobileHealth.setMe20303(bi.me20303.isChecked() ? "3" : "-1");
@@ -408,24 +420,30 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         mobileHealth.setMe20324(bi.me20324.isChecked() ? "24" : "-1");
         mobileHealth.setMe20396(bi.me20396.isChecked() ? "96" : "-1");
         mobileHealth.setMe20396x(bi.me20396x.getText().toString());
+        mobileHealth.setMe20399(bi.me20399.isChecked() ? "99" : "-1");
         mobileHealth.setVs301(bi.vs301a.isChecked() ? "1"
                 : bi.vs301b.isChecked() ? "2"
+                : bi.vs30199.isChecked() ? "99"
                 : "-1");
         mobileHealth.setVs302(bi.vs302a.isChecked() ? "1"
                 : bi.vs302b.isChecked() ? "2"
+                : bi.vs30299.isChecked() ? "99"
                 : "-1");
         mobileHealth.setVs303(bi.vs303a.isChecked() ? "1"
                 : bi.vs303b.isChecked() ? "2"
+                : bi.vs30399.isChecked() ? "99"
                 : "-1");
         mobileHealth.setVs304(bi.vs304a.isChecked() ? "1"
                 : bi.vs304b.isChecked() ? "2"
                 : bi.vs304c.isChecked() ? "3"
                 : bi.vs304d.isChecked() ? "4"
+                : bi.vs30499.isChecked() ? "99"
                 : "-1");
         mobileHealth.setVs305(bi.vs305a.isChecked() ? "1"
                 : bi.vs305b.isChecked() ? "2"
                 : bi.vs305c.isChecked() ? "3"
                 : bi.vs305d.isChecked() ? "4"
+                : bi.vs30599.isChecked() ? "99"
                 : "-1");
         mobileHealth.setVs306a(bi.vs306a.isChecked() ? "1" : "-1");
         mobileHealth.setVs306b(bi.vs306b.isChecked() ? "2" : "-1");
@@ -435,8 +453,10 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         mobileHealth.setVs306f(bi.vs306f.isChecked() ? "6" : "-1");
         mobileHealth.setVs306g(bi.vs306g.isChecked() ? "7" : "-1");
         mobileHealth.setVs306i(bi.vs306i.isChecked() ? "8" : "-1");
+        mobileHealth.setVs30699(bi.vs30699.isChecked() ? "99" : "-1");
         mobileHealth.setVs307(bi.vs307a.isChecked() ? "1"
                 : bi.vs307b.isChecked() ? "2"
+                : bi.vs30799.isChecked() ? "99"
                 : "-1");
         mobileHealth.setVs308(bi.vs308a.isChecked() ? "1"
                 : bi.vs308b.isChecked() ? "2"

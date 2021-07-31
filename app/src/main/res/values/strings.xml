@@ -667,6 +667,7 @@
     <string name="vs307">Has the vaccinator provided the vaccination card?</string>
     <string name="vs307a">Yes</string>
     <string name="vs307b">No</string>
+    <string name="nr">Not Reported</string>
     <string name="vs308">Why the vaccination card was not provided?</string>
     <string name="vs308a">Card not available</string>
     <string name="vs308b">Client Refused to take the card</string>
