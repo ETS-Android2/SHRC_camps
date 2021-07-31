@@ -6,7 +6,7 @@
         <import type="android.view.View" />
 
         <variable
-            name="mob"
+            name="camps"
             type="edu.aku.hassannaqvi.shrc_camps.models.Camps" />
 
         <variable
@@ -75,7 +75,7 @@
                                 android:gravity="center"
                                 android:hint="YYYY-MM-DD"
                                 android:inputType="number"
-                                android:text="@{mob.plan_date}"
+                                android:text="@{camps.plan_date}"
                                 app:dateFormat="yyyy-MM-dd"
                                 app:maxDate="CR_DATE"
                                 app:minDate="CR_DATE"
@@ -121,7 +121,7 @@
                             style="@style/sub_labels"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text='@={mob.camp_no}'
+                            android:text='@={camps.camp_no}'
                             android:textAlignment="center" />
 
                         <!--<com.edittextpicker.aliazaz.EditTextPicker
@@ -144,7 +144,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVss103"
                     style="@style/cardView"
-                    android:visibility="gone">
+          >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -175,6 +175,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:editable="false"
+                            android:text="@{camps.district}"
                             android:hint="@string/ss103" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -183,7 +184,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVss104"
                     style="@style/cardView"
-                    android:visibility="gone">
+       >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -214,6 +215,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:editable="false"
+                            android:text="@{camps.ucName}"
                             android:hint="@string/ss104" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
