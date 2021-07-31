@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.shrc_camps.ui.sections;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.google.gson.Gson;
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import java.text.SimpleDateFormat;
@@ -66,6 +68,32 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
 
 
     private void setupSkips() {
+
+        bi.ss108.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVss109);
+            Clear.clearAllFields(bi.fldGrpCVvs301);
+
+            if (i == bi.ss108a.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVss109, false);
+                Clear.clearAllFields(bi.fldGrpCVvs301, false);
+            } else {
+                if (TextUtils.isEmpty(bi.ss107y.getText().toString())) {
+                    return;
+                } else if (Integer.parseInt(bi.ss107y.getText().toString()) >= 14) {
+                    Clear.clearAllFields(bi.fldGrpCVss109, true);
+                    Clear.clearAllFields(bi.fldGrpCVvs301, true);
+                }
+            }
+        });
+
+        bi.vs307.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVvs308);
+
+            if (i == bi.vs307b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVvs308, false);
+            } else
+                Clear.clearAllFields(bi.fldGrpCVvs308, true);
+        });
 
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             bi.llscrollviewmh26.setOnScrollChangeListener(new View.OnScrollChangeListener() {
@@ -165,6 +193,18 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         });*/
 
 
+    }
+
+    public void ss107yOnTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(bi.ss107y.getText().toString()))
+            return;
+
+        int age = Integer.parseInt(bi.ss107y.getText().toString());
+
+        if (age < 14) {
+            Clear.clearAllFields(bi.fldGrpCVss109, false);
+        } else
+            Clear.clearAllFields(bi.fldGrpCVss109, true);
     }
 
     public void setTags(RadioGroup rg, View[] views) {
@@ -271,7 +311,7 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
 
     private void saveDraft() {
 
-       // mobileHealth = new MobileHealth();
+        // mobileHealth = new MobileHealth();
         mobileHealth.setSysDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
         mobileHealth.setUserName(MainApp.user.getUserName());
         mobileHealth.setDeviceId(MainApp.appInfo.getDeviceID());
@@ -285,16 +325,16 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         mobileHealth.setSs104(bi.ss104.getText().toString());
         mobileHealth.setSs105(bi.ss105.getText().toString());
         mobileHealth.setSs106(bi.ss106.getText().toString());
-        mobileHealth.setSs107(bi.ss107y.getText().toString()+"-"+bi.ss107m.getText().toString()+"-"+bi.ss107d.getText().toString());
+        mobileHealth.setSs107(bi.ss107y.getText().toString() + "-" + bi.ss107m.getText().toString() + "-" + bi.ss107d.getText().toString());
         mobileHealth.setSs107y(bi.ss107y.getText().toString());
         mobileHealth.setSs107m(bi.ss107m.getText().toString());
         mobileHealth.setSs107d(bi.ss107d.getText().toString());
-        mobileHealth.setSs108( bi.ss108a.isChecked() ? "1"
+        mobileHealth.setSs108(bi.ss108a.isChecked() ? "1"
                 : bi.ss108b.isChecked() ? "2"
-                :  "-1");
-        mobileHealth.setSs109( bi.ss109a.isChecked() ? "1"
+                : "-1");
+        mobileHealth.setSs109(bi.ss109a.isChecked() ? "1"
                 : bi.ss109b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
         mobileHealth.setSs110(bi.ss110.getText().toString());
         mobileHealth.setSs111a(bi.ss111a.isChecked() ? "1" : "-1");
         mobileHealth.setSs111b(bi.ss111b.isChecked() ? "2" : "-1");
@@ -368,25 +408,25 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         mobileHealth.setMe20324(bi.me20324.isChecked() ? "24" : "-1");
         mobileHealth.setMe20396(bi.me20396.isChecked() ? "96" : "-1");
         mobileHealth.setMe20396x(bi.me20396x.getText().toString());
-        mobileHealth.setVs301( bi.vs301a.isChecked() ? "1"
+        mobileHealth.setVs301(bi.vs301a.isChecked() ? "1"
                 : bi.vs301b.isChecked() ? "2"
-                :  "-1");
-        mobileHealth.setVs302( bi.vs302a.isChecked() ? "1"
+                : "-1");
+        mobileHealth.setVs302(bi.vs302a.isChecked() ? "1"
                 : bi.vs302b.isChecked() ? "2"
-                :  "-1");
-        mobileHealth.setVs303( bi.vs303a.isChecked() ? "1"
+                : "-1");
+        mobileHealth.setVs303(bi.vs303a.isChecked() ? "1"
                 : bi.vs303b.isChecked() ? "2"
-                :  "-1");
-        mobileHealth.setVs304( bi.vs304a.isChecked() ? "1"
+                : "-1");
+        mobileHealth.setVs304(bi.vs304a.isChecked() ? "1"
                 : bi.vs304b.isChecked() ? "2"
                 : bi.vs304c.isChecked() ? "3"
                 : bi.vs304d.isChecked() ? "4"
-                :  "-1");
-        mobileHealth.setVs305( bi.vs305a.isChecked() ? "1"
+                : "-1");
+        mobileHealth.setVs305(bi.vs305a.isChecked() ? "1"
                 : bi.vs305b.isChecked() ? "2"
                 : bi.vs305c.isChecked() ? "3"
                 : bi.vs305d.isChecked() ? "4"
-                :  "-1");
+                : "-1");
         mobileHealth.setVs306a(bi.vs306a.isChecked() ? "1" : "-1");
         mobileHealth.setVs306b(bi.vs306b.isChecked() ? "2" : "-1");
         mobileHealth.setVs306c(bi.vs306c.isChecked() ? "3" : "-1");
@@ -395,12 +435,12 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         mobileHealth.setVs306f(bi.vs306f.isChecked() ? "6" : "-1");
         mobileHealth.setVs306g(bi.vs306g.isChecked() ? "7" : "-1");
         mobileHealth.setVs306i(bi.vs306i.isChecked() ? "8" : "-1");
-        mobileHealth.setVs307( bi.vs307a.isChecked() ? "1"
+        mobileHealth.setVs307(bi.vs307a.isChecked() ? "1"
                 : bi.vs307b.isChecked() ? "2"
-                :  "-1");
-        mobileHealth.setVs308( bi.vs308a.isChecked() ? "1"
+                : "-1");
+        mobileHealth.setVs308(bi.vs308a.isChecked() ? "1"
                 : bi.vs308b.isChecked() ? "2"
-                :  "-1");
+                : "-1");
 
     }
 

@@ -395,7 +395,7 @@ public class SyncActivity extends AppCompatActivity {
                         int sDuplicate = 0;
                         StringBuilder sSyncedError = new StringBuilder();
                         JSONArray json;
-
+//                        MainApp.uploadData[position]
                         String result = MainApp.downloadData[position];
                         if (result != null) {
                             if (result.length() > 0) {

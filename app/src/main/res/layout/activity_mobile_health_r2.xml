@@ -116,23 +116,35 @@
                                 android:text="@string/ss102" />
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <TextView
+                            android:id="@+id/ss102"
+                            style="@style/sub_labels"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='@={mob.camp_no}'
+                            android:textAlignment="center"/>
+
+                        <!--<com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/ss102"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:enabled="false"
                             android:hint="@string/ss102"
                             android:inputType="number"
-                            android:maxLength="3"
+                            android:maxLength="6"
+                            android:text='@={mob.camp_no}'
                             app:maxValue="100"
                             app:minValue="1"
-                            app:type="range" />
+                            app:type="range" />-->
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <!-- ss103  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVss103"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -162,6 +174,7 @@
                             android:id="@+id/ss103"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:editable="false"
                             android:hint="@string/ss103" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -169,7 +182,8 @@
                 <!-- ss104  Input   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVss104"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="gone">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -199,6 +213,7 @@
                             android:id="@+id/ss104"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:editable="false"
                             android:hint="@string/ss104" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -236,6 +251,7 @@
                             android:id="@+id/ss105"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/ss105" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -273,6 +289,7 @@
                             android:id="@+id/ss106"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/ss106" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -351,6 +368,7 @@
                                 android:hint="##"
                                 android:inputType="number"
                                 android:maxLength="2"
+                                android:onTextChanged="@{callback.ss107yOnTextChanged}"
                                 app:maxValue="99"
                                 app:minValue="0"
                                 app:type="range" />
@@ -533,8 +551,10 @@
                             android:hint="@string/ss110"
                             android:inputType="number"
                             android:maxLength="3"
+                            app:mask="###.#"
                             app:maxValue="200"
                             app:minValue="1"
+                            app:pattern="^(\\d{3,3}\\.\\d{1,1})$"
                             app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
