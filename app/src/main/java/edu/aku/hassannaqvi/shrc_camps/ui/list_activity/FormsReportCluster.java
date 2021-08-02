@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.shrc_camps.ui.list_activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -8,6 +9,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
 import java.util.Collection;
@@ -21,6 +24,7 @@ import edu.aku.hassannaqvi.shrc_camps.models.MobileHealth;
 
 
 public class FormsReportCluster extends AppCompatActivity {
+    private static final String TAG = "FormsReportCluster";
     DatabaseHelper db;
     Collection<MobileHealth> fc;
     String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
@@ -46,7 +50,13 @@ public class FormsReportCluster extends AppCompatActivity {
         dtFilter = findViewById(R.id.dtFilter);
         noresult = findViewById(R.id.noresult);
         db = new DatabaseHelper(this);
-        fc = db.getFormsByCluster("0000000");
+        try {
+            fc = db.getFormsByCluster("0000000");
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.d(TAG, "onCreate(getFormsByCluster): "+e.getMessage());
+            Toast.makeText(this, "onCreate(getFormsByCluster): "+e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
         // specify an adapter (see also next example)
         formsAdapter = new FormsAdapter((List<MobileHealth>) fc, this);
@@ -55,7 +65,13 @@ public class FormsReportCluster extends AppCompatActivity {
 
     public void filterForms(View view) {
         Toast.makeText(this, "updated", Toast.LENGTH_SHORT).show();
-        fc = db.getFormsByCluster(dtFilter.getText().toString());
+        try {
+            fc = db.getFormsByCluster(dtFilter.getText().toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.d(TAG, "filterForms(getFormsByCluster): "+e.getMessage());
+            Toast.makeText(this, "filterForms(getFormsByCluster): "+e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
         if (fc.size() > 0) {
             recyclerView.setVisibility(View.VISIBLE);
             noresult.setVisibility(View.GONE);

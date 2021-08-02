@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.shrc_camps.ui.list_activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -8,6 +9,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
 import java.util.Collection;
@@ -21,6 +24,7 @@ import edu.aku.hassannaqvi.shrc_camps.models.MobileHealth;
 
 
 public class FormsReportDate extends AppCompatActivity {
+    private static final String TAG = "FormsReportDate";
     DatabaseHelper db;
     Collection<MobileHealth> fc;
     String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
@@ -46,7 +50,13 @@ public class FormsReportDate extends AppCompatActivity {
         dtFilter = findViewById(R.id.dtFilter);
         noresult = findViewById(R.id.noresult);
         db = new DatabaseHelper(this);
-        fc = db.getTodayForms(sysdateToday);
+        try {
+            fc = db.getTodayForms(sysdateToday);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.d(TAG, "onCreate(getTodayForms): "+e.getMessage());
+            Toast.makeText(this, "onCreate(getTodayForms): "+e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
 
         // specify an adapter (see also next example)
         formsAdapter = new FormsAdapter((List<MobileHealth>) fc, this);
@@ -54,7 +64,13 @@ public class FormsReportDate extends AppCompatActivity {
     }
 
     public void filterForms(View view) {
-        fc = db.getTodayForms(dtFilter.getText().toString());
+        try {
+            fc = db.getTodayForms(dtFilter.getText().toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+            Log.d(TAG, "filterForms(getTodayForms): "+e.getMessage());
+            Toast.makeText(this, "filterForms(getTodayForms): "+e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
         if (fc.size() > 0) {
             recyclerView.setVisibility(View.VISIBLE);
             noresult.setVisibility(View.GONE);

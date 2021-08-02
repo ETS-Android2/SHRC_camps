@@ -1472,7 +1472,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
-    public JSONArray getUnsyncedMH() {
+    public JSONArray getUnsyncedMH() throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = {
@@ -1633,7 +1633,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public Collection<MobileHealth> getFormsByCluster(String cluster) {
+    public Collection<MobileHealth> getFormsByCluster(String cluster) throws JSONException {
 
         // String sysdate =  spDateT.substring(0, 8).trim()
         SQLiteDatabase db = this.getReadableDatabase();
@@ -1778,7 +1778,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
-    public Collection<MobileHealth> getTodayForms(String sysdate) {
+    public Collection<MobileHealth> getTodayForms(String sysdate) throws JSONException {
 
         // String sysdate =  spDateT.substring(0, 8).trim()
         SQLiteDatabase db = this.getReadableDatabase();

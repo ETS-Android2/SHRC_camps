@@ -342,7 +342,7 @@ public class MobileHealth extends BaseObservable {
     }
 
 
-    public MobileHealth Hydrate(Cursor cursor) {
+    public MobileHealth Hydrate(Cursor cursor) throws JSONException {
         this.id = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_ID));
         this.uid = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_UID));
         this.userName = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_USERNAME));
@@ -383,7 +383,7 @@ public class MobileHealth extends BaseObservable {
 
         try {
             json
-                    .put("ss101d", ss101d)
+                  /*  .put("ss101d", ss101d)
                     .put("ss101m", ss101m)
                     .put("ss101y", ss101y)
                     .put("ss102", ss102)
@@ -393,7 +393,7 @@ public class MobileHealth extends BaseObservable {
                     .put("ss106", ss106)
                     .put("ss107y", ss107y)
                     .put("ss107m", ss107m)
-                    .put("ss107d", ss107d)
+                    .put("ss107d", ss107d)*/
                     .put("ss108", ss108)
                     .put("ss109", ss109)
                     .put("ss110", ss110)
@@ -499,11 +499,11 @@ public class MobileHealth extends BaseObservable {
     }
 
 
-    public JSONObject toJSONObject() {
+    public JSONObject toJSONObject() throws JSONException {
 
         JSONObject json = new JSONObject();
 
-        try {
+
             json.put(MHContract.MHTable.COLUMN_ID, this.id);
             json.put(MHContract.MHTable.COLUMN_UID, this.uid);
             json.put(MHContract.MHTable.COLUMN_USERNAME, this.userName);
@@ -535,24 +535,20 @@ public class MobileHealth extends BaseObservable {
             }*/
 
             return json;
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
+
     }
 
 
-    public void sAHydrate(String string) {
+    public void sAHydrate(String string) throws JSONException {
         Log.d("sAHydrateS", "string: " + string);
 
         if (string != null) {
 
-            try {
+
                 JSONObject json = null;
                 json = new JSONObject(string);
 
-
-                this.ss101d = json.getString("ss101d");
+/*                this.ss101d = json.getString("ss101d");
                 this.ss101m = json.getString("ss101m");
                 this.ss101y = json.getString("ss101y");
                 this.ss102 = json.getString("ss102");
@@ -562,7 +558,7 @@ public class MobileHealth extends BaseObservable {
                 this.ss106 = json.getString("ss106");
                 this.ss107y = json.getString("ss107y");
                 this.ss107m = json.getString("ss107m");
-                this.ss107d = json.getString("ss107d");
+                this.ss107d = json.getString("ss107d");*/
                 this.ss108 = json.getString("ss108");
                 this.ss109 = json.getString("ss109");
                 this.ss110 = json.getString("ss110");
@@ -660,9 +656,6 @@ public class MobileHealth extends BaseObservable {
                 this.vs308 = json.getString("vs308");
 
 
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
         }
     }
 
