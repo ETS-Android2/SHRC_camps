@@ -219,6 +219,8 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
         if (TextUtils.isEmpty(bi.ss107y.getText().toString()))
             return;
 
+        Clear.clearAllFields(bi.fldGrpCVss108);
+
         int age = Integer.parseInt(bi.ss107y.getText().toString());
 
         if (age < 14) {
