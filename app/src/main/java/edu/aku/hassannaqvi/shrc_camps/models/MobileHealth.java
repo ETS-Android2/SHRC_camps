@@ -504,34 +504,35 @@ public class MobileHealth extends BaseObservable {
         JSONObject json = new JSONObject();
 
         try {
-            json.put(MHContract.MHTable.COLUMN_ID, this.id == null ? JSONObject.NULL : this.id);
-            json.put(MHContract.MHTable.COLUMN_UID, this.uid == null ? JSONObject.NULL : this.uid);
-            json.put(MHContract.MHTable.COLUMN_USERNAME, this.userName == null ? JSONObject.NULL : this.userName);
-            json.put(MHContract.MHTable.COLUMN_SYSDATE, this.sysDate == null ? JSONObject.NULL : this.sysDate);
-            json.put(MHContract.MHTable.COLUMN_DEVICEID, this.deviceId == null ? JSONObject.NULL : this.deviceId);
-            json.put(MHContract.MHTable.COLUMN_DEVICETAGID, this.deviceTag == null ? JSONObject.NULL : this.deviceTag);
-            json.put(MHContract.MHTable.COLUMN_APPVERSION, this.appver == null ? JSONObject.NULL : this.appver);
-            json.put(MHContract.MHTable.COLUMN_SYNCED, this.synced == null ? JSONObject.NULL : this.synced);
-            json.put(MHContract.MHTable.COLUMN_SYNCED_DATE, this.syncDate == null ? JSONObject.NULL : this.syncDate);
-            json.put(MHContract.MHTable.COLUMN_STATUS, this.status == null ? JSONObject.NULL : this.status);
-            json.put(MHContract.MHTable.COLUMN_SERIAL, this.serial == null ? JSONObject.NULL : this.serial);
-            json.put(MHContract.MHTable.COLUMN_SS101, this.ss101 == null ? JSONObject.NULL : this.ss101);
-            json.put(MHContract.MHTable.COLUMN_SS102, this.ss102 == null ? JSONObject.NULL : this.ss102);
-            json.put(MHContract.MHTable.COLUMN_SS103, this.ss103 == null ? JSONObject.NULL : this.ss103);
-            json.put(MHContract.MHTable.COLUMN_SS104, this.ss104 == null ? JSONObject.NULL : this.ss104);
-            json.put(MHContract.MHTable.COLUMN_SS105, this.ss105 == null ? JSONObject.NULL : this.ss105);
-            json.put(MHContract.MHTable.COLUMN_SS106, this.ss106 == null ? JSONObject.NULL : this.ss106);
-            json.put(MHContract.MHTable.COLUMN_SS107, this.ss107 == null ? JSONObject.NULL : this.ss107);
+            json.put(MHContract.MHTable.COLUMN_ID, this.id);
+            json.put(MHContract.MHTable.COLUMN_UID, this.uid);
+            json.put(MHContract.MHTable.COLUMN_USERNAME, this.userName);
+            json.put(MHContract.MHTable.COLUMN_SYSDATE,  this.sysDate);
+            json.put(MHContract.MHTable.COLUMN_DEVICEID,  this.deviceId);
+            json.put(MHContract.MHTable.COLUMN_DEVICETAGID,  this.deviceTag);
+            json.put(MHContract.MHTable.COLUMN_APPVERSION, this.appver);
+            json.put(MHContract.MHTable.COLUMN_SYNCED,  this.synced);
+            json.put(MHContract.MHTable.COLUMN_SYNCED_DATE,  this.syncDate);
+            json.put(MHContract.MHTable.COLUMN_STATUS, this.status);
+            json.put(MHContract.MHTable.COLUMN_SERIAL, this.serial);
+            json.put(MHContract.MHTable.COLUMN_SS101, this.ss101);
+            json.put(MHContract.MHTable.COLUMN_SS102,this.ss102);
+            json.put(MHContract.MHTable.COLUMN_SS103,  this.ss103);
+            json.put(MHContract.MHTable.COLUMN_SS104, this.ss104);
+            json.put(MHContract.MHTable.COLUMN_SS105, this.ss105);
+            json.put(MHContract.MHTable.COLUMN_SS106, this.ss106);
+            json.put(MHContract.MHTable.COLUMN_SS107,  this.ss107);
+
+            json.put(MHContract.MHTable.COLUMN_SA, new JSONObject(sAtoString()));
 
             //For ChildCount
             //json.put(MHContract.MHTable.COLUMN_SA, this.sA == null ? JSONObject.NULL : this.sA);
 
-            json.put(MHContract.MHTable.COLUMN_SA, new JSONObject(sAtoString()));
 
-
+/*
             if (this.sA != null && !this.sA.equals("")) {
                 json.put(MHContract.MHTable.COLUMN_SA, new JSONObject(this.sA));
-            }
+            }*/
 
             return json;
         } catch (JSONException e) {
