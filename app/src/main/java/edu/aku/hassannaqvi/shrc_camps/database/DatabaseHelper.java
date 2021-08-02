@@ -1613,7 +1613,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
-    public void updateSyncedcamp_patient_dtl(String id) {
+    public void updateSyncedmobilehealth_r2(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column
