@@ -638,7 +638,9 @@
                             android:layout_gravity="end"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:background="#7fefd6d6"
                             android:tag="-1"
+                            android:textColor="@color/redDark"
                             android:text="@string/nr" />
 
                     </LinearLayout>
@@ -809,32 +811,37 @@
                                 android:layout_width="260dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/pc20196" />
-
-                            <EditText
-                                android:id="@+id/pc20196x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/pc20196"
-                                android:tag="pc20196"
-                                android:text='@{pc20196.checked ? pc20196x.getText().toString() : ""}'
-                                android:visibility='@{pc20196.checked? View.VISIBLE : View.GONE}' />
                         </com.google.android.flexbox.FlexboxLayout>
 
                         <CheckBox
                             android:id="@+id/pc20199"
                             android:layout_width="260dp"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#7fefd6d6"
                             android:tag="-1"
-                            android:text="@string/nr" />
+                            android:text="@string/nr"
+                            android:textColor="@color/redDark" />
+
+                        <EditText
+                            android:id="@+id/pc20196x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/pc20196"
+                            android:tag="pc20196"
+                            android:text='@{pc20196.checked ? pc20196x.getText().toString() : ""}'
+                            android:visibility='@{pc20196.checked? View.VISIBLE : View.GONE}' />
+
+
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
-                <!-- di202  CheckBox   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVdi202"
-                    style="@style/cardView">
+        <!-- di202  CheckBox   -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fldGrpCVdi202"
+            style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -991,23 +998,27 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/di20296" />
 
-                            <EditText
-                                android:id="@+id/di20296x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/di20296"
-                                android:tag="di20296"
-                                android:text='@{di20296.checked ? di20296x.getText().toString() : ""}'
-                                android:visibility='@{di20296.checked? View.VISIBLE : View.GONE}' />
-                        </com.google.android.flexbox.FlexboxLayout>
 
+                        </com.google.android.flexbox.FlexboxLayout>
                         <CheckBox
                             android:id="@+id/di20299"
                             android:layout_width="260dp"
                             android:layout_height="wrap_content"
+                            android:background="#7fefd6d6"
+                            android:textColor="@color/redDark"
                             android:tag="-1"
+                            android:layout_gravity="center"
                             android:text="@string/nr" />
+                        <EditText
+                            android:id="@+id/di20296x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/di20296"
+                            android:tag="di20296"
+                            android:text='@{di20296.checked ? di20296x.getText().toString() : ""}'
+                            android:visibility='@{di20296.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1203,23 +1214,26 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/me20396" />
 
-                            <EditText
-                                android:id="@+id/me20396x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/me20396"
-                                android:tag="me20396"
-                                android:text='@{me20396.checked ? me20396x.getText().toString() : ""}'
-                                android:visibility='@{me20396.checked? View.VISIBLE : View.GONE}' />
                         </com.google.android.flexbox.FlexboxLayout>
-
                         <CheckBox
                             android:id="@+id/me20399"
                             android:layout_width="260dp"
                             android:layout_height="wrap_content"
+                            android:background="#7fefd6d6"
+                            android:textColor="@color/redDark"
                             android:tag="-1"
+                            android:layout_gravity="center"
                             android:text="@string/nr" />
+                        <EditText
+                            android:id="@+id/me20396x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                            android:hint="@string/me20396"
+                            android:tag="me20396"
+                            android:text='@{me20396.checked ? me20396x.getText().toString() : ""}'
+                            android:visibility='@{me20396.checked? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1277,6 +1291,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:background="#7fefd6d6"
+                                android:textColor="@color/redDark"
                                 android:text="@string/nr" />
                         </RadioGroup>
                     </LinearLayout>
@@ -1336,6 +1352,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:background="#7fefd6d6"
+                                android:textColor="@color/redDark"
                                 android:text="@string/nr" />
                         </RadioGroup>
                     </LinearLayout>
@@ -1395,6 +1413,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:background="#7fefd6d6"
+                                android:textColor="@color/redDark"
                                 android:text="@string/nr" />
                         </RadioGroup>
                     </LinearLayout>
@@ -1463,6 +1483,8 @@
                                 android:id="@+id/vs30499"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:background="#7fefd6d6"
+                                android:textColor="@color/redDark"
                                 android:text="@string/nr" />
                         </RadioGroup>
                     </LinearLayout>
@@ -1531,6 +1553,8 @@
                                 android:id="@+id/vs30599"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:background="#7fefd6d6"
+                                android:textColor="@color/redDark"
                                 android:text="@string/nr" />
                         </RadioGroup>
                     </LinearLayout>
@@ -1623,13 +1647,16 @@
                                 android:layout_width="260dp"
                                 android:layout_height="wrap_content"
                                 android:text="@string/vs306i" />
-                        </com.google.android.flexbox.FlexboxLayout>
 
+                        </com.google.android.flexbox.FlexboxLayout>
                         <CheckBox
                             android:id="@+id/vs30699"
                             android:layout_width="260dp"
                             android:layout_height="wrap_content"
                             android:tag="-1"
+                            android:layout_gravity="center"
+                            android:background="#7fefd6d6"
+                            android:textColor="@color/redDark"
                             android:text="@string/nr" />
 
                     </LinearLayout>
@@ -1690,6 +1717,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:background="#7fefd6d6"
+                                android:textColor="@color/redDark"
                                 android:text="@string/nr" />
                         </RadioGroup>
                     </LinearLayout>
