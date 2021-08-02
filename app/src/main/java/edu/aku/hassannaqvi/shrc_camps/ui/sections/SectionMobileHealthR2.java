@@ -70,8 +70,8 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
     private void setupSkips() {
 
         bi.ss108.setOnCheckedChangeListener((radioGroup, i) -> {
-            Clear.clearAllFields(bi.fldGrpCVss109);
-            Clear.clearAllFields(bi.fldGrpCVvs301);
+ /*           Clear.clearAllFields(bi.fldGrpCVss109);
+            Clear.clearAllFields(bi.fldGrpCVvs301);*/
 
             if (i == bi.ss108a.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVss109, false);
