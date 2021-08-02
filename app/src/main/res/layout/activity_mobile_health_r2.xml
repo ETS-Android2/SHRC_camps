@@ -63,6 +63,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/ss102" />
+
                             <TextView
                                 android:id="@+id/ss102"
                                 style="@style/sub_labels"
@@ -72,7 +73,6 @@
                                 android:text='@={camps.camp_no}'
                                 android:textAlignment="center" />
                         </LinearLayout>
-
 
 
                         <!--<com.edittextpicker.aliazaz.EditTextPicker
@@ -101,17 +101,15 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/ss103" />
+
                             <TextView
-                            android:id="@+id/ss103"
+                                android:id="@+id/ss103"
+                                style="@style/sub_labels"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="2"
-                                style="@style/sub_labels"
-                            android:text="@{camps.district}"
-              />
+                                android:text="@{camps.district}" />
                         </LinearLayout>
-
-
 
 
                         <LinearLayout
@@ -125,14 +123,14 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:text="@string/ss104" />
+
                             <TextView
-                            style="@style/sub_labels"
-                            android:id="@+id/ss104"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="2"
-                            android:text="@{camps.ucName}"
-                       />
+                                android:id="@+id/ss104"
+                                style="@style/sub_labels"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:text="@{camps.ucName}" />
                         </LinearLayout>
 
 
@@ -599,13 +597,13 @@
 
                         <CheckBox
                             android:id="@+id/ss11199"
-                            android:layout_gravity="end"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="end"
                             android:background="#7fefd6d6"
                             android:tag="-1"
-                            android:textColor="@color/redDark"
-                            android:text="@string/nr" />
+                            android:text="@string/nr"
+                            android:textColor="@color/redDark" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -799,13 +797,13 @@
 
 
                     </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
-        <!-- di202  CheckBox   -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/fldGrpCVdi202"
-            style="@style/cardView">
+                <!-- di202  CheckBox   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVdi202"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -964,15 +962,17 @@
 
 
                         </com.google.android.flexbox.FlexboxLayout>
+
                         <CheckBox
                             android:id="@+id/di20299"
                             android:layout_width="260dp"
                             android:layout_height="wrap_content"
-                            android:background="#7fefd6d6"
-                            android:textColor="@color/redDark"
-                            android:tag="-1"
                             android:layout_gravity="center"
-                            android:text="@string/nr" />
+                            android:background="#7fefd6d6"
+                            android:tag="-1"
+                            android:text="@string/nr"
+                            android:textColor="@color/redDark" />
+
                         <EditText
                             android:id="@+id/di20296x"
                             android:layout_width="match_parent"
@@ -1179,15 +1179,17 @@
                                 android:text="@string/me20396" />
 
                         </com.google.android.flexbox.FlexboxLayout>
+
                         <CheckBox
                             android:id="@+id/me20399"
                             android:layout_width="260dp"
                             android:layout_height="wrap_content"
-                            android:background="#7fefd6d6"
-                            android:textColor="@color/redDark"
-                            android:tag="-1"
                             android:layout_gravity="center"
-                            android:text="@string/nr" />
+                            android:background="#7fefd6d6"
+                            android:tag="-1"
+                            android:text="@string/nr"
+                            android:textColor="@color/redDark" />
+
                         <EditText
                             android:id="@+id/me20396x"
                             android:layout_width="match_parent"
@@ -1256,8 +1258,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:background="#7fefd6d6"
-                                android:textColor="@color/redDark"
-                                android:text="@string/nr" />
+                                android:text="@string/nr"
+                                android:textColor="@color/redDark" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1317,8 +1319,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:background="#7fefd6d6"
-                                android:textColor="@color/redDark"
-                                android:text="@string/nr" />
+                                android:text="@string/nr"
+                                android:textColor="@color/redDark" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1378,8 +1380,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:background="#7fefd6d6"
-                                android:textColor="@color/redDark"
-                                android:text="@string/nr" />
+                                android:text="@string/nr"
+                                android:textColor="@color/redDark" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1448,8 +1450,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="#7fefd6d6"
-                                android:textColor="@color/redDark"
-                                android:text="@string/nr" />
+                                android:text="@string/nr"
+                                android:textColor="@color/redDark" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1518,8 +1520,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="#7fefd6d6"
-                                android:textColor="@color/redDark"
-                                android:text="@string/nr" />
+                                android:text="@string/nr"
+                                android:textColor="@color/redDark" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1613,15 +1615,16 @@
                                 android:text="@string/vs306i" />
 
                         </com.google.android.flexbox.FlexboxLayout>
+
                         <CheckBox
                             android:id="@+id/vs30699"
                             android:layout_width="260dp"
                             android:layout_height="wrap_content"
-                            android:tag="-1"
                             android:layout_gravity="center"
                             android:background="#7fefd6d6"
-                            android:textColor="@color/redDark"
-                            android:text="@string/nr" />
+                            android:tag="-1"
+                            android:text="@string/nr"
+                            android:textColor="@color/redDark" />
 
                     </LinearLayout>
 
@@ -1682,8 +1685,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:background="#7fefd6d6"
-                                android:textColor="@color/redDark"
-                                android:text="@string/nr" />
+                                android:text="@string/nr"
+                                android:textColor="@color/redDark" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1691,7 +1694,8 @@
                 <!-- vs308  Radio   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVvs308"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{vs307a.checked ? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"
