@@ -69,31 +69,45 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
 
     private void setupSkips() {
 
-        bi.ss108.setOnCheckedChangeListener((radioGroup, i) -> {
- /*           Clear.clearAllFields(bi.fldGrpCVss109);
-            Clear.clearAllFields(bi.fldGrpCVvs301);*/
+/*        bi.ss108.setOnCheckedChangeListener((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVss109);
+            Clear.clearAllFields(bi.fldGrpCVvs301);
 
             if (i == bi.ss108a.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVss109, false);
-                Clear.clearAllFields(bi.fldGrpCVvs301, false);
+                Clear.clearAllFields(bi.fldGrpCVss109);
+                bi.fldGrpCVss109.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVvs301);
+                bi.fldGrpCVvs301.setVisibility(View.GONE);
             } else {
                 if (TextUtils.isEmpty(bi.ss107y.getText().toString())) {
                     return;
                 } else if (Integer.parseInt(bi.ss107y.getText().toString()) >= 14) {
-                    Clear.clearAllFields(bi.fldGrpCVss109, true);
-                    Clear.clearAllFields(bi.fldGrpCVvs301, true);
+                    Clear.clearAllFields(bi.fldGrpCVss109);
+                    bi.fldGrpCVss109.setVisibility(View.VISIBLE);
+                    Clear.clearAllFields(bi.fldGrpCVvs301);
+                    bi.fldGrpCVvs301.setVisibility(View.VISIBLE);
+                }
+            }
+        });*/
+
+        bi.ss108.setOnCheckedChangeListener((radioGroup, i) -> {
+            if (i == bi.ss108a.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVss109);
+                bi.fldGrpCVss109.setVisibility(View.GONE);
+                Clear.clearAllFields(bi.fldGrpCVvs301);
+                bi.fldGrpCVvs301.setVisibility(View.GONE);
+            } else {
+                if (TextUtils.isEmpty(bi.ss107y.getText().toString())) {
+                    return;
+                } else if (Integer.parseInt(bi.ss107y.getText().toString()) >= 14) {
+                    bi.fldGrpCVss109.setVisibility(View.VISIBLE);
+                    bi.fldGrpCVvs301.setVisibility(View.VISIBLE);
                 }
             }
         });
 
-        bi.vs307.setOnCheckedChangeListener((radioGroup, i) -> {
-            Clear.clearAllFields(bi.fldGrpCVvs308);
 
-            if (i == bi.vs307b.getId() || i == bi.vs30799.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVvs308, false);
-            } else
-                Clear.clearAllFields(bi.fldGrpCVvs308, true);
-        });
+        bi.vs307.setOnCheckedChangeListener((radioGroup, i) -> Clear.clearAllFields(bi.fldGrpCVvs308));
 
         bi.vs30699.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.vs306check, !b));
         bi.ss11199.setOnCheckedChangeListener((compoundButton, b) -> Clear.clearAllFields(bi.ss111check, !b));
@@ -207,12 +221,15 @@ public class SectionMobileHealthR2 extends AppCompatActivity implements EndSecti
 
         int age = Integer.parseInt(bi.ss107y.getText().toString());
 
-        if (age < 14 || bi.ss108a.isChecked()) {
-            //Clear.clearAllFields(bi.fldGrpCVss108, false);
-            Clear.clearAllFields(bi.fldGrpCVss109, false);
-        } else
-            //Clear.clearAllFields(bi.fldGrpCVss108, true);
-            Clear.clearAllFields(bi.fldGrpCVss109, true);
+        if (age < 14) {
+            Clear.clearAllFields(bi.fldGrpCVss109);
+            bi.fldGrpCVss109.setVisibility(View.GONE);
+            Clear.clearAllFields(bi.fldGrpCVvs301);
+            bi.fldGrpCVvs301.setVisibility(View.GONE);
+        } else {
+            bi.fldGrpCVss109.setVisibility(View.VISIBLE);
+            bi.fldGrpCVvs301.setVisibility(View.VISIBLE);
+        }
     }
 
     public void setTags(RadioGroup rg, View[] views) {
