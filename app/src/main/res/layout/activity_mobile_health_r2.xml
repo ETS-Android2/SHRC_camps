@@ -31,6 +31,100 @@
             app:titleTextAppearance="@style/ToolbarTheme" />
 
 
+        <!-- ss102  Input-Numeric   -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fldGrpCVss102"
+            style="@style/cardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/ss102" />
+
+                    <TextView
+                        android:id="@+id/ss102"
+                        style="@style/sub_labels"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text='@={camps.camp_no}'
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+
+                <!--<com.edittextpicker.aliazaz.EditTextPicker
+                    android:id="@+id/ss102"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:enabled="false"
+                    android:hint="@string/ss102"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:text='@={mob.camp_no}'
+                    app:maxValue="100"
+                    app:minValue="1"
+                    app:type="range" />-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/ss103" />
+
+                    <TextView
+                        android:id="@+id/ss103"
+                        style="@style/sub_labels"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@{camps.district}" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/ss104" />
+
+                    <TextView
+                        android:id="@+id/ss104"
+                        style="@style/sub_labels"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="@{camps.ucName}" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -41,101 +135,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
-                <!-- ss102  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVss102"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/ss102" />
-
-                            <TextView
-                                android:id="@+id/ss102"
-                                style="@style/sub_labels"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:text='@={camps.camp_no}'
-                                android:textAlignment="center" />
-                        </LinearLayout>
-
-
-                        <!--<com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/ss102"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:editable="false"
-                            android:enabled="false"
-                            android:hint="@string/ss102"
-                            android:inputType="number"
-                            android:maxLength="6"
-                            android:text='@={mob.camp_no}'
-                            app:maxValue="100"
-                            app:minValue="1"
-                            app:type="range" />-->
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/ss103" />
-
-                            <TextView
-                                android:id="@+id/ss103"
-                                style="@style/sub_labels"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:text="@{camps.district}" />
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/ss104" />
-
-                            <TextView
-                                android:id="@+id/ss104"
-                                style="@style/sub_labels"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="2"
-                                android:text="@{camps.ucName}" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
                 <!-- ss101  Input-Numeric   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVss101"
