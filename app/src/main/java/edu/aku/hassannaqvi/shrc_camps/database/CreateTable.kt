@@ -1,10 +1,10 @@
 package edu.aku.hassannaqvi.shrc_camps.database
 
 import edu.aku.hassannaqvi.shrc_camps.contracts.*
+import edu.aku.hassannaqvi.shrc_camps.core.MainApp.PROJECT_NAME
 import edu.aku.hassannaqvi.shrc_camps.models.*
 
 object CreateTable {
-    const val PROJECT_NAME = "SHRUC Camps"
     const val DATABASE_NAME = "$PROJECT_NAME.db"
     const val DATABASE_COPY = "${PROJECT_NAME}_copy.db"
     const val DATABASE_VERSION = 1

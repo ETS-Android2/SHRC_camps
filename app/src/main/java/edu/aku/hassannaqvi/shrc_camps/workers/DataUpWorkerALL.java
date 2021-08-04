@@ -28,7 +28,7 @@ import java.net.URL;
 import edu.aku.hassannaqvi.shrc_camps.R;
 import edu.aku.hassannaqvi.shrc_camps.core.MainApp;
 
-import static edu.aku.hassannaqvi.shrc_camps.database.CreateTable.PROJECT_NAME;
+import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.PROJECT_NAME;
 
 
 public class DataUpWorkerALL extends Worker {
@@ -237,18 +237,18 @@ public class DataUpWorkerALL extends Worker {
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel("scrlog", "BLF", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel(String.valueOf(position), APP_NAME, NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
 
-        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "scrlog")
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), String.valueOf(position))
                 .setContentTitle(title)
                 .setContentText(task)
                 .setSmallIcon(R.mipmap.ic_launcher);
 
-        final int maxProgress = 100;
+        final int maxProgress = length;
         int curProgress = 0;
-        notification.setProgress(length, curProgress, false);
+        notification.setProgress(maxProgress, curProgress, false);
 
         notificationManager.notify(1, notification.build());
     }

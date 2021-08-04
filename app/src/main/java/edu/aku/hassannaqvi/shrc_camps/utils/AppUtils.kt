@@ -18,9 +18,9 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import edu.aku.hassannaqvi.shrc_camps.CONSTANTS
 import edu.aku.hassannaqvi.shrc_camps.R
+import edu.aku.hassannaqvi.shrc_camps.core.MainApp.PROJECT_NAME
 import edu.aku.hassannaqvi.shrc_camps.database.CreateTable.DATABASE_COPY
 import edu.aku.hassannaqvi.shrc_camps.database.CreateTable.DATABASE_NAME
-import edu.aku.hassannaqvi.shrc_camps.database.CreateTable.PROJECT_NAME
 import edu.aku.hassannaqvi.shrc_camps.databinding.EndSectionDialogBinding
 import edu.aku.hassannaqvi.shrc_camps.ui.EndingActivity
 import edu.aku.hassannaqvi.shrc_camps.utils.extension.gotoActivityWithSerializable

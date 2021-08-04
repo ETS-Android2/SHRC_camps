@@ -33,12 +33,13 @@ import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.PROJECT_NAME;
 
 public class DataDownWorkerALL extends Worker {
 
-    private static final Object APP_NAME = PROJECT_NAME;
+    private static final String APP_NAME = PROJECT_NAME;
     private final String TAG = "DataWorkerEN()";
 
     private final int position;
     private final String uploadTable;
-    private final String uploadWhere;
+    private final String uploadFilter;
+    private final String uploadSelect;
     private final URL serverURL = null;
     private final String nTitle = "Naunehal: Data Download";
     HttpURLConnection urlConnection;
@@ -52,8 +53,8 @@ public class DataDownWorkerALL extends Worker {
         uploadTable = workerParams.getInputData().getString("table");
         position = workerParams.getInputData().getInt("position", -2);
         Log.d(TAG, "DataDownWorkerALL: position " + position);
-        //uploadColumns = workerParams.getInputData().getString("columns");
-        uploadWhere = workerParams.getInputData().getString("where");
+        uploadSelect = workerParams.getInputData().getString("select");
+        uploadFilter = workerParams.getInputData().getString("filter");
 
 
     }
@@ -105,8 +106,8 @@ public class DataDownWorkerALL extends Worker {
             JSONArray jsonParam = new JSONArray();
 
             jsonTable.put("table", uploadTable);
-            //jsonTable.put("select", uploadColumns);
-            jsonTable.put("filter", uploadWhere);
+            jsonTable.put("select", uploadSelect);
+            jsonTable.put("filter", uploadFilter);
             //jsonTable.put("limit", "3");
             //jsonTable.put("orderby", "rand()");
             //jsonSync.put(uploadData);
@@ -234,7 +235,7 @@ public class DataDownWorkerALL extends Worker {
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel("scrlog", nTitle, NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel(String.valueOf(position), APP_NAME, NotificationManager.IMPORTANCE_DEFAULT);
             notificationManager.createNotificationChannel(channel);
         }
 
