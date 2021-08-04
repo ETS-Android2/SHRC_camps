@@ -4,6 +4,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.icu.util.Calendar;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -41,8 +42,8 @@ public class DataDownWorkerALL extends Worker {
     private final String uploadFilter;
     private final String uploadSelect;
     private final URL serverURL = null;
-    private final String nTitle = "Naunehal: Data Download";
     HttpURLConnection urlConnection;
+    private String nTitle = "Naunehal: Data Download";
     private ProgressDialog pd;
     private int length;
     private Data data;
@@ -55,6 +56,7 @@ public class DataDownWorkerALL extends Worker {
         Log.d(TAG, "DataDownWorkerALL: position " + position);
         uploadSelect = workerParams.getInputData().getString("select");
         uploadFilter = workerParams.getInputData().getString("filter");
+        nTitle = uploadTable.toUpperCase();
 
 
     }
@@ -74,7 +76,7 @@ public class DataDownWorkerALL extends Worker {
     public Result doWork() {
 
         Log.d(TAG, "doWork: Starting");
-        //displayNotification(nTitle, "Starting upload");
+        displayNotification(nTitle, "Starting download", 0);
 
         StringBuilder result = new StringBuilder();
 
@@ -126,7 +128,7 @@ public class DataDownWorkerALL extends Worker {
 
             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 Log.d(TAG, "Connection Response: " + urlConnection.getResponseCode());
-                //displayNotification(nTitle, "Connection Established");
+                displayNotification(nTitle, "Connection Established",0);
 
                 length = urlConnection.getContentLength();
                 Log.d(TAG, "Content Length: " + length);
@@ -138,6 +140,7 @@ public class DataDownWorkerALL extends Worker {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     result.append(line);
+                    displayNotification(nTitle, "Received Data", result.length()*100/length);
 
                 }
 
@@ -150,7 +153,7 @@ public class DataDownWorkerALL extends Worker {
                             .build();
                     return Result.failure(data);
                 }
-                //displayNotification(nTitle, "Received Data");
+                displayNotification(nTitle, "Received Data", 100);
                 Log.d(TAG, "doWork(EN): " + result.toString());
             } else {
 
@@ -164,7 +167,7 @@ public class DataDownWorkerALL extends Worker {
             }
         } catch (java.net.SocketTimeoutException e) {
             Log.d(TAG, "doWork (Timeout): " + e.getMessage());
-            //displayNotification(nTitle, "Timeout Error: " + e.getMessage());
+            displayNotification(nTitle, "Timeout Error: " + e.getMessage(), 0);
             data = new Data.Builder()
                     .putString("error", String.valueOf(e.getMessage()))
                     .putInt("position", this.position)
@@ -173,7 +176,7 @@ public class DataDownWorkerALL extends Worker {
 
         } catch (IOException | JSONException e) {
             Log.d(TAG, "doWork (IO Error): " + e.getMessage());
-            //displayNotification(nTitle, "IO Error: " + e.getMessage());
+            displayNotification(nTitle, "IO Error: " + e.getMessage(),0);
             data = new Data.Builder()
                     .putString("error", String.valueOf(e.getMessage()))
                     .putInt("position", this.position)
@@ -187,11 +190,11 @@ public class DataDownWorkerALL extends Worker {
 
         //Do something with the JSON string
         if (result != null) {
-            //displayNotification(nTitle, "Starting Data Processing");
+            displayNotification(nTitle, "Starting Data Processing", 100);
 
             //String json = result.toString();
             /*if (json.length() > 0) {*/
-            //displayNotification(nTitle, "Data Size: " + result.length());
+            //(nTitle, "Data Size: " + result.length());
 
 
             // JSONArray jsonArray = new JSONArray(json);
@@ -208,7 +211,7 @@ public class DataDownWorkerALL extends Worker {
                     .build();
 
 
-            //displayNotification(nTitle, "Uploaded successfully");
+            displayNotification(nTitle, "Downloaded successfully", 100);
             Log.d(TAG, "doWork: " + result);
             Log.d(TAG, "doWork (success) : position " + data.getInt("position", -1));
             return Result.success(data);
@@ -218,7 +221,7 @@ public class DataDownWorkerALL extends Worker {
                     .putString("error", String.valueOf(result))
                     .putInt("position", this.position)
                     .build();
-            //displayNotification(nTitle, "Error Received");
+            displayNotification(nTitle, "Error Received",0);
             return Result.failure(data);
         }
 
@@ -231,7 +234,7 @@ public class DataDownWorkerALL extends Worker {
      * If you are confused about it
      * you should check the Android Notification Tutorial
      * */
-    private void ddisplayNotification(String title, String task) {
+    private void displayNotification(String title, String task, int updtProgress) {
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -239,15 +242,18 @@ public class DataDownWorkerALL extends Worker {
             notificationManager.createNotificationChannel(channel);
         }
 
-        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "scrlog")
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), String.valueOf(position))
                 .setContentTitle(title)
+                .setSubText("Data Size: "+length )
                 .setContentText(task)
-                .setSmallIcon(R.mipmap.ic_launcher);
+                .setWhen(Calendar.getInstance().getTimeInMillis())
+                .setColorized(true)
+                .setSmallIcon(R.drawable.app_icon);
 
         final int maxProgress = 100;
-        int curProgress = 0;
+        int curProgress = updtProgress;
         notification.setProgress(length, curProgress, false);
 
-        notificationManager.notify(1, notification.build());
+        notificationManager.notify(position, notification.build());
     }
 }
