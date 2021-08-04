@@ -9,6 +9,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 import androidx.work.Data;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
@@ -42,6 +43,7 @@ public class DataDownWorkerALL extends Worker {
     private final String uploadFilter;
     private final String uploadSelect;
     private final URL serverURL = null;
+    private final Context mContext;
     HttpURLConnection urlConnection;
     private String nTitle = "Naunehal: Data Download";
     private ProgressDialog pd;
@@ -50,6 +52,9 @@ public class DataDownWorkerALL extends Worker {
 
     public DataDownWorkerALL(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
+
+        mContext = context;
+
         // to be initialised by workParams
         uploadTable = workerParams.getInputData().getString("table");
         position = workerParams.getInputData().getInt("position", -2);
@@ -140,7 +145,7 @@ public class DataDownWorkerALL extends Worker {
                 String line;
                 while ((line = reader.readLine()) != null) {
                     result.append(line);
-                    displayNotification(nTitle, "Received Data", result.length()*100/length);
+                    displayNotification(nTitle, "Received Data", result.length());
 
                 }
 
@@ -153,7 +158,7 @@ public class DataDownWorkerALL extends Worker {
                             .build();
                     return Result.failure(data);
                 }
-                displayNotification(nTitle, "Received Data", 100);
+                displayNotification(nTitle, "Received Data", result.length());
                 Log.d(TAG, "doWork(EN): " + result.toString());
             } else {
 
@@ -190,7 +195,7 @@ public class DataDownWorkerALL extends Worker {
 
         //Do something with the JSON string
         if (result != null) {
-            displayNotification(nTitle, "Starting Data Processing", 100);
+            displayNotification(nTitle, "Starting Data Processing", result.length());
 
             //String json = result.toString();
             /*if (json.length() > 0) {*/
@@ -211,7 +216,7 @@ public class DataDownWorkerALL extends Worker {
                     .build();
 
 
-            displayNotification(nTitle, "Downloaded successfully", 100);
+            displayNotification(nTitle, "Downloaded successfully", result.length());
             Log.d(TAG, "doWork: " + result);
             Log.d(TAG, "doWork (success) : position " + data.getInt("position", -1));
             return Result.success(data);
@@ -221,7 +226,7 @@ public class DataDownWorkerALL extends Worker {
                     .putString("error", String.valueOf(result))
                     .putInt("position", this.position)
                     .build();
-            displayNotification(nTitle, "Error Received",0);
+            displayNotification(nTitle, "Error Received: "+result,0);
             return Result.failure(data);
         }
 
@@ -248,6 +253,9 @@ public class DataDownWorkerALL extends Worker {
                 .setContentText(task)
                 .setWhen(Calendar.getInstance().getTimeInMillis())
                 .setColorized(true)
+                .setAutoCancel(true)
+                .setColor(ContextCompat.getColor(mContext, R.color.colorPrimary))
+                .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
                 .setSmallIcon(R.drawable.app_icon);
 
         final int maxProgress = 100;
