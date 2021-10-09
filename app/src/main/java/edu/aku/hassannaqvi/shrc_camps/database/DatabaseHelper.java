@@ -1,5 +1,7 @@
 package edu.aku.hassannaqvi.shrc_camps.database;
 
+import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.mobileHealth;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -48,8 +50,6 @@ import edu.aku.hassannaqvi.shrc_camps.models.Users;
 import edu.aku.hassannaqvi.shrc_camps.models.Users.UsersTable;
 import edu.aku.hassannaqvi.shrc_camps.models.VersionApp;
 import edu.aku.hassannaqvi.shrc_camps.models.VersionApp.VersionAppTable;
-
-import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.mobileHealth;
 
 /*import edu.aku.hassannaqvi.naunehal.models.Immunization;*/
 
@@ -1613,7 +1613,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 whereArgs);
     }
 
-    public void updateSyncedmobilehealth_r2(String id) {
+    public void updateSyncedmobilehealth_r3(String id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column

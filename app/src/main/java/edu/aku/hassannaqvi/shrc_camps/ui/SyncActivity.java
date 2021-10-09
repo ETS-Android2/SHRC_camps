@@ -1,5 +1,10 @@
 package edu.aku.hassannaqvi.shrc_camps.ui;
 
+import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.PROJECT_NAME;
+import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.sdDir;
+import static edu.aku.hassannaqvi.shrc_camps.utils.AndroidUtilityKt.isNetworkConnected;
+import static edu.aku.hassannaqvi.shrc_camps.utils.AppUtilsKt.dbBackup;
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.SuppressLint;
@@ -59,11 +64,6 @@ import edu.aku.hassannaqvi.shrc_camps.models.VersionApp;
 import edu.aku.hassannaqvi.shrc_camps.workers.DataDownWorkerALL;
 import edu.aku.hassannaqvi.shrc_camps.workers.DataUpWorkerALL;
 import edu.aku.hassannaqvi.shrc_camps.workers.PhotoUploadWorker2;
-
-import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.PROJECT_NAME;
-import static edu.aku.hassannaqvi.shrc_camps.core.MainApp.sdDir;
-import static edu.aku.hassannaqvi.shrc_camps.utils.AndroidUtilityKt.isNetworkConnected;
-import static edu.aku.hassannaqvi.shrc_camps.utils.AppUtilsKt.dbBackup;
 
 
 public class SyncActivity extends AppCompatActivity {
@@ -174,7 +174,7 @@ public class SyncActivity extends AppCompatActivity {
                     downloadTables.add(new SyncModel(VersionApp.VersionAppTable.TABLE_NAME));
 
                     String select = " idCamp, camp_no, dist_id, district, ucCode, ucName, area_name, plan_date ";
-                    String filter = " camp_status = 'Conducted' AND locked = 0  AND camp_round=2";
+                    String filter = " camp_status = 'Conducted' AND locked = 0  AND camp_round=3";
                     downloadTables.add(new SyncModel(Camps.TableCamp.TABLE_NAME, select, filter));
                     downloadTables.add(new SyncModel(Doctor.TableDoctor.TABLE_NAME));
                 }
