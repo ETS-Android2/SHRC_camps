@@ -24,7 +24,7 @@ import edu.aku.hassannaqvi.shrc_camps.base.repository.GeneralRepository
 import edu.aku.hassannaqvi.shrc_camps.base.repository.ResponseStatus
 import edu.aku.hassannaqvi.shrc_camps.base.viewmodel.MainViewModel
 import edu.aku.hassannaqvi.shrc_camps.core.MainApp
-import edu.aku.hassannaqvi.shrc_camps.database.AndroidDatabaseManager
+import edu.aku.hassannaqvi.shrc_camps.database.AndroidManager
 import edu.aku.hassannaqvi.shrc_camps.database.DatabaseHelper
 import edu.aku.hassannaqvi.shrc_camps.databinding.ActivityMainBinding
 import edu.aku.hassannaqvi.shrc_camps.models.Camps
@@ -240,7 +240,7 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
             R.id.action_database -> {
-                gotoActivity(AndroidDatabaseManager::class.java)
+                gotoActivity(AndroidManager::class.java)
                 return true
             }
         }
@@ -265,7 +265,7 @@ class MainActivity : AppCompatActivity() {
                 SharedStorage.setSelectedCampData(this, Gson().toJson(camp))
                 gotoActivity(SectionMobileHealthR2::class.java)
             }
-            R.id.databaseBtn -> startActivity(Intent(this, AndroidDatabaseManager::class.java))
+            R.id.databaseBtn -> startActivity(Intent(this, AndroidManager::class.java))
             R.id.btn_check_camp -> {
                 populateCampDetails()
             }

@@ -174,7 +174,7 @@ public class SyncActivity extends AppCompatActivity {
                     downloadTables.add(new SyncModel(VersionApp.VersionAppTable.TABLE_NAME));
 
                     String select = " idCamp, camp_no, dist_id, district, ucCode, ucName, area_name, plan_date ";
-                    String filter = " camp_status = 'Conducted'  AND camp_round=3 AND (locked = 0 OR locked is NULL)";
+                    String filter = " camp_status = 'Conducted'  AND camp_round=4 AND (locked = 0 OR locked is NULL)";
                     downloadTables.add(new SyncModel(Camps.TableCamp.TABLE_NAME, select, filter));
                     downloadTables.add(new SyncModel(Doctor.TableDoctor.TABLE_NAME));
                 }

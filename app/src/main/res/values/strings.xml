@@ -493,7 +493,7 @@
     <string name="Q_mh030">MH030</string>
 
     <string name="dpr_mainheading">DPR: Daily Patient Record Sheet</string>
-    <string name="app_name"> SHRC Camps - R3 </string>
+    <string name="app_name"> SHRC Camps - R4 </string>
     <string name="btnSync">Download Data</string>
     <string name="btnUpload">Upload Data</string>
     <string name="prompt_email">Email</string>
