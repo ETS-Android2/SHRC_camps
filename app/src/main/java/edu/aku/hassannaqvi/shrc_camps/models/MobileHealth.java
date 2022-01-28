@@ -135,13 +135,13 @@ public class MobileHealth extends BaseObservable {
     public String vs307;
     public String vs308;
 
-    private String patientType = StringUtils.EMPTY;
+    private final String patientType = StringUtils.EMPTY;
 
-    private String chkWeight = StringUtils.EMPTY;
+    private final String chkWeight = StringUtils.EMPTY;
 
-    private String chkHeight = StringUtils.EMPTY;
+    private final String chkHeight = StringUtils.EMPTY;
 
-    private String chkMUAC = StringUtils.EMPTY;
+    private final String chkMUAC = StringUtils.EMPTY;
 
 
     // APP VARIABLES
@@ -343,29 +343,29 @@ public class MobileHealth extends BaseObservable {
 
 
     public MobileHealth Hydrate(Cursor cursor) throws JSONException {
-        this.id = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_ID));
-        this.uid = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_UID));
-        this.userName = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_USERNAME));
-        this.sysDate = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SYSDATE));
-        this.deviceId = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_DEVICEID));
-        this.deviceTag = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_DEVICETAGID));
-        this.appver = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_APPVERSION));
-        this.synced = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SYNCED));
-        this.syncDate = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SYNCED_DATE));
-        this.status = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_STATUS));
-        this.serial = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SERIAL));
-        this.ss101 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS101));
-        this.ss102 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS102));
-        this.ss103 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS103));
-        this.ss104 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS104));
-        this.ss105 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS105));
-        this.ss106 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS106));
-        this.ss107 = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SS107));
+        this.id = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_ID));
+        this.uid = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_UID));
+        this.userName = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_USERNAME));
+        this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SYSDATE));
+        this.deviceId = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_DEVICEID));
+        this.deviceTag = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_DEVICETAGID));
+        this.appver = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_APPVERSION));
+        this.synced = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SYNCED));
+        this.syncDate = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SYNCED_DATE));
+        this.status = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_STATUS));
+        this.serial = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SERIAL));
+        this.ss101 = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SS101));
+        this.ss102 = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SS102));
+        this.ss103 = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SS103));
+        this.ss104 = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SS104));
+        this.ss105 = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SS105));
+        this.ss106 = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SS106));
+        this.ss107 = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SS107));
 
         //For childCount
-        //this.sA = cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SA));
+        //this.sA = cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SA));
 
-        sAHydrate(cursor.getString(cursor.getColumnIndex(MHContract.MHTable.COLUMN_SA)));
+        sAHydrate(cursor.getString(cursor.getColumnIndexOrThrow(MHContract.MHTable.COLUMN_SA)));
 
         return this;
     }

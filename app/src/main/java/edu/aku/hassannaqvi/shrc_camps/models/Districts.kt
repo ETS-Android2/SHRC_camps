@@ -22,8 +22,10 @@ class Districts {
     }
 
     fun hydrate(cursor: Cursor): Districts {
-        districtCode = cursor.getString(cursor.getColumnIndex(TableDistricts.COLUMN_DISTRICT_CODE))
-        districtName = cursor.getString(cursor.getColumnIndex(TableDistricts.COLUMN_DISTRICT_NAME))
+        districtCode =
+            cursor.getString(cursor.getColumnIndexOrThrow(TableDistricts.COLUMN_DISTRICT_CODE))
+        districtName =
+            cursor.getString(cursor.getColumnIndexOrThrow(TableDistricts.COLUMN_DISTRICT_NAME))
         return this
     }
 

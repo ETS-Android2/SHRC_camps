@@ -42,18 +42,20 @@ class BLRandom {
     }
 
     fun hydrate(cursor: Cursor): BLRandom {
-        id = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_ID))
-        lUID = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_LUID))
-        clusterCode = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_CLUSTER_CODE))
-        distCode = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_DIST_CODE))
-        structure = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_STRUCTURE_NO))
-        extension = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_FAMILY_EXT_CODE))
-        hh = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_HH))
-        randomDT = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_RANDOMDT))
-        hhhead = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_HH_HEAD))
-        contact = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_CONTACT))
-        updateDT = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_UPDATEDT))
-        sno = cursor.getString(cursor.getColumnIndex(TableRandom.COLUMN_SNO_HH))
+        id = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_ID))
+        lUID = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_LUID))
+        clusterCode =
+            cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_CLUSTER_CODE))
+        distCode = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_DIST_CODE))
+        structure = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_STRUCTURE_NO))
+        extension =
+            cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_FAMILY_EXT_CODE))
+        hh = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_HH))
+        randomDT = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_RANDOMDT))
+        hhhead = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_HH_HEAD))
+        contact = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_CONTACT))
+        updateDT = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_UPDATEDT))
+        sno = cursor.getString(cursor.getColumnIndexOrThrow(TableRandom.COLUMN_SNO_HH))
         return this
     }
 

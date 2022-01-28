@@ -944,30 +944,30 @@ public class Child extends BaseObservable {
 
 
     public Child Hydrate(Cursor cursor) {
-        this.id = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_ID));
-        this.uid = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_UID));
-        this.uuid = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_UUID));
-        this.fmuid = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_FMUID));
-        this.userName = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_USERNAME));
-        this.sysDate = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_SYSDATE));
-        this.dcode = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_DCODE));
-        this.ucode = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_UCODE));
-        this.cluster = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_CLUSTER));
-        this.hhno = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_HHNO));
-        this.deviceId = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_DEVICEID));
-        this.deviceTag = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_DEVICETAGID));
-        this.appver = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_APPVERSION));
-        this.synced = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_SYNCED));
-        this.syncDate = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_SYNCED_DATE));
-        this.status = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_STATUS));
-        this.mothername = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_MOTHER_NAME));
-        this.childname = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_CHILD_NAME));
-        this.serial = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_SERIAL));
+        this.id = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_ID));
+        this.uid = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_UID));
+        this.uuid = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_UUID));
+        this.fmuid = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_FMUID));
+        this.userName = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_USERNAME));
+        this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_SYSDATE));
+        this.dcode = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_DCODE));
+        this.ucode = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_UCODE));
+        this.cluster = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_CLUSTER));
+        this.hhno = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_HHNO));
+        this.deviceId = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_DEVICEID));
+        this.deviceTag = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_DEVICETAGID));
+        this.appver = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_APPVERSION));
+        this.synced = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_SYNCED));
+        this.syncDate = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_SYNCED_DATE));
+        this.status = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_STATUS));
+        this.mothername = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_MOTHER_NAME));
+        this.childname = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_CHILD_NAME));
+        this.serial = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_SERIAL));
 
         //For childCount
-        //this.s01HH = cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_S01HH));
+        //this.s01HH = cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_S01HH));
 
-        s03CSHydrate(cursor.getString(cursor.getColumnIndex(ChildContract.ChildTable.COLUMN_SCS)));
+        s03CSHydrate(cursor.getString(cursor.getColumnIndexOrThrow(ChildContract.ChildTable.COLUMN_SCS)));
 
         return this;
     }

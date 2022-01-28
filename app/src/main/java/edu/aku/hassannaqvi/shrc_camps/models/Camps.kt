@@ -43,14 +43,14 @@ class Camps() : Parcelable {
     }
 
     fun hydrate(cursor: Cursor): Camps {
-        idCamp = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_ID_CAMP))
-        camp_no = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_CAMP_NO))
-        dist_id = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_DIST_ID))
-        district = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_DISTRICT))
-        ucCode = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_UC_CODE))
-        ucName = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_UC_NAME))
-        area_name = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_AREA_NAME))
-        plan_date = cursor.getString(cursor.getColumnIndex(TableCamp.COLUMN_PLAN_DATE))
+        idCamp = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_ID_CAMP))
+        camp_no = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_CAMP_NO))
+        dist_id = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_DIST_ID))
+        district = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_DISTRICT))
+        ucCode = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_UC_CODE))
+        ucName = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_UC_NAME))
+        area_name = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_AREA_NAME))
+        plan_date = cursor.getString(cursor.getColumnIndexOrThrow(TableCamp.COLUMN_PLAN_DATE))
         return this
     }
 

@@ -2,9 +2,15 @@ package edu.aku.hassannaqvi.shrc_camps.core;
 
 import android.app.Application;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
+
+import net.sqlcipher.database.SQLiteDatabase;
 
 import org.json.JSONArray;
 
@@ -24,7 +30,7 @@ public class MainApp extends Application {
     public static final String DIST_ID = null;
     public static final String SYNC_LOGIN = "sync_login";
     public static final String _IP = "https://vcoe1.aku.edu";// .LIVE server
-    //    public static final String _IP = "http://cls-pae-fp51764";// .TEST server
+    //    public static final String _IP = "https://cls-pae-fp51764";// .TEST server
     //public static final String _IP = "http://43.245.131.159:8080";// .TEST server
     public static final String _HOST_URL = MainApp._IP + "/shrc_camps/api/";// .TEST server;
     public static final String _SERVER_URL = "sync.php";
@@ -45,6 +51,8 @@ public class MainApp extends Application {
     public static List<JSONArray> uploadData;
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
+    private static final String TAG = "MainApp";
+    public static String IBAHC = "";
 
     public static void hideSystemUI(View decorView) {
         // Enables regular immersive mode.
@@ -66,10 +74,36 @@ public class MainApp extends Application {
     public void onCreate() {
         super.onCreate();
 
+                /*
+        RootBeer rootBeer = new RootBeer(this);
+        if (rootBeer.isRooted()) {
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+        }*/
+
         //Initiate DateTime
         AndroidThreeTen.init(this);
         //Initializ App info
         appInfo = new AppInfo(this);
 
+        initSecure();
+
+    }
+
+    private void initSecure() {
+        // Initialize SQLCipher library
+        SQLiteDatabase.loadLibs(this);
+
+        // Prepare encryption KEY
+        ApplicationInfo ai = null;
+        try {
+            ai = getPackageManager().getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
+            Bundle bundle = ai.metaData;
+            int TRATS = bundle.getInt("YEK_TRATS");
+            IBAHC = bundle.getString("YEK_REVRES").substring(TRATS, TRATS + 16);
+            Log.d(TAG, "onCreate: YEK_REVRES = " + IBAHC);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

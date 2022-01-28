@@ -4596,33 +4596,33 @@ public class Form extends BaseObservable {
 
 
     public Form Hydrate(Cursor cursor) {
-        this.id = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_ID));
-        this.uid = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_UID));
-        this.userName = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_USERNAME));
-        this.sysDate = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SYSDATE));
-        this.dcode = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_DCODE));
-        this.ucode = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_UCODE));
-        this.cluster = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_CLUSTER));
-        this.hhno = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_HHNO));
-        this.deviceId = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_DEVICEID));
-        this.deviceTag = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_DEVICETAGID));
-        this.appver = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_APPVERSION));
-        this.endTime = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_ENDINGDATETIME));
-        this.iStatus = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS));
-        this.iStatus96x = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_ISTATUS96x));
-        this.synced = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED));
-        this.syncDate = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_SYNCED_DATE));
-        this.g5Flag = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_G5FLAG));
-        this.hhflag = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_HHFLAG));
+        this.id = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_ID));
+        this.uid = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_UID));
+        this.userName = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_USERNAME));
+        this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_SYSDATE));
+        this.dcode = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_DCODE));
+        this.ucode = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_UCODE));
+        this.cluster = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_CLUSTER));
+        this.hhno = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_HHNO));
+        this.deviceId = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_DEVICEID));
+        this.deviceTag = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_DEVICETAGID));
+        this.appver = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_APPVERSION));
+        this.endTime = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_ENDINGDATETIME));
+        this.iStatus = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_ISTATUS));
+        this.iStatus96x = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_ISTATUS96x));
+        this.synced = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_SYNCED));
+        this.syncDate = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_SYNCED_DATE));
+        this.g5Flag = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_G5FLAG));
+        this.hhflag = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_HHFLAG));
 
         //For childCount
-        //this.s01HH = cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_S01HH));
+        //this.s01HH = cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_S01HH));
 
-        s01HHHydrate(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_S01HH)));
-        s05PDHydrate(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_S05PD)));
-        s06BFHydrate(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_S06BF)));
-        s07CVHydrate(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_S07CV)));
-        s08SEHydrate(cursor.getString(cursor.getColumnIndex(FormsContract.FormsTable.COLUMN_S08SE)));
+        s01HHHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_S01HH)));
+        s05PDHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_S05PD)));
+        s06BFHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_S06BF)));
+        s07CVHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_S07CV)));
+        s08SEHydrate(cursor.getString(cursor.getColumnIndexOrThrow(FormsContract.FormsTable.COLUMN_S08SE)));
 
         return this;
     }

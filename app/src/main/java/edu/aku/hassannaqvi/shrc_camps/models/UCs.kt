@@ -24,9 +24,9 @@ class UCs {
     }
 
     fun hydrate(cursor: Cursor): UCs {
-        ucCode = cursor.getString(cursor.getColumnIndex(TableUCs.COLUMN_UC_CODE))
-        ucName = cursor.getString(cursor.getColumnIndex(TableUCs.COLUMN_UC_NAME))
-        districtCode = cursor.getString(cursor.getColumnIndex(TableUCs.COLUMN_DISTRICT_CODE))
+        ucCode = cursor.getString(cursor.getColumnIndexOrThrow(TableUCs.COLUMN_UC_CODE))
+        ucName = cursor.getString(cursor.getColumnIndexOrThrow(TableUCs.COLUMN_UC_NAME))
+        districtCode = cursor.getString(cursor.getColumnIndexOrThrow(TableUCs.COLUMN_DISTRICT_CODE))
         return this
     }
 

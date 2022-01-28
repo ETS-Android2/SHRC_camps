@@ -24,9 +24,11 @@ class Clusters {
     }
 
     fun hydrate(cursor: Cursor): Clusters {
-        clusterCode = cursor.getString(cursor.getColumnIndex(TableClusters.COLUMN_CLUSTER_CODE))
-        clustername = cursor.getString(cursor.getColumnIndex(TableClusters.COLUMN_CLUSTER_NAME))
-        distCode = cursor.getString(cursor.getColumnIndex(TableClusters.COLUMN_DIST_CODE))
+        clusterCode =
+            cursor.getString(cursor.getColumnIndexOrThrow(TableClusters.COLUMN_CLUSTER_CODE))
+        clustername =
+            cursor.getString(cursor.getColumnIndexOrThrow(TableClusters.COLUMN_CLUSTER_NAME))
+        distCode = cursor.getString(cursor.getColumnIndexOrThrow(TableClusters.COLUMN_DIST_CODE))
         return this
     }
 

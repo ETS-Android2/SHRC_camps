@@ -21,9 +21,9 @@ class Doctor {
     }
 
     fun hydrate(cursor: Cursor): Doctor {
-        idCamp = cursor.getString(cursor.getColumnIndex(TableDoctor.COLUMN_ID_CAMP))
-        iddoctor = cursor.getString(cursor.getColumnIndex(TableDoctor.COLUMN_ID_DOCTOR))
-        staff_name = cursor.getString(cursor.getColumnIndex(TableDoctor.COLUMN_STAFF_NAME))
+        idCamp = cursor.getString(cursor.getColumnIndexOrThrow(TableDoctor.COLUMN_ID_CAMP))
+        iddoctor = cursor.getString(cursor.getColumnIndexOrThrow(TableDoctor.COLUMN_ID_DOCTOR))
+        staff_name = cursor.getString(cursor.getColumnIndexOrThrow(TableDoctor.COLUMN_STAFF_NAME))
         return this
     }
 

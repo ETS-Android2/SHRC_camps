@@ -1332,30 +1332,30 @@ public class Immunization extends BaseObservable {
 
 
     public Immunization Hydrate(Cursor cursor) {
-        this.id = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_ID));
-        this.uid = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_UID));
-        this.uuid = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_UUID));
-        this.fmuid = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_FMUID));
-        this.userName = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_USERNAME));
-        this.sysDate = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_SYSDATE));
-        this.dcode = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_DCODE));
-        this.ucode = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_UCODE));
-        this.cluster = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_CLUSTER));
-        this.hhno = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_HHNO));
-        this.deviceId = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_DEVICEID));
-        this.deviceTag = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_DEVICETAGID));
-        this.appver = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_APPVERSION));
-        this.synced = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_SYNCED));
-        this.syncDate = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_SYNCED_DATE));
-        this.status = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_STATUS));
-        this.mothername = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_MOTHER_NAME));
-        this.childname = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_CHILD_NAME));
-        this.serial = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_SERIAL));
+        this.id = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_ID));
+        this.uid = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_UID));
+        this.uuid = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_UUID));
+        this.fmuid = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_FMUID));
+        this.userName = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_USERNAME));
+        this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_SYSDATE));
+        this.dcode = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_DCODE));
+        this.ucode = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_UCODE));
+        this.cluster = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_CLUSTER));
+        this.hhno = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_HHNO));
+        this.deviceId = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_DEVICEID));
+        this.deviceTag = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_DEVICETAGID));
+        this.appver = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_APPVERSION));
+        this.synced = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_SYNCED));
+        this.syncDate = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_SYNCED_DATE));
+        this.status = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_STATUS));
+        this.mothername = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_MOTHER_NAME));
+        this.childname = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_CHILD_NAME));
+        this.serial = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_SERIAL));
 
         //For childCount
-        //this.s01HH = cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_S01HH));
+        //this.s01HH = cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_S01HH));
 
-        s04IMHydrate(cursor.getString(cursor.getColumnIndex(IMContract.IMTable.COLUMN_SIM)));
+        s04IMHydrate(cursor.getString(cursor.getColumnIndexOrThrow(IMContract.IMTable.COLUMN_SIM)));
 
         return this;
     }

@@ -1,10 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -183,5 +182,13 @@ dependencies {
 
     // GOOGLE: Flexbox Layout
     implementation 'com.google.android:flexbox:2.0.1'
+
+    // Sqlcipher
+    implementation "net.zetetic:android-database-sqlcipher:4.5.0"
+    implementation "androidx.sqlite:sqlite-ktx:2.2.0"
+    implementation "androidx.sqlite:sqlite:2.2.0"
+
+    //Rooted
+    implementation 'com.scottyab:rootbeer-lib:0.1.0'
 
 }
