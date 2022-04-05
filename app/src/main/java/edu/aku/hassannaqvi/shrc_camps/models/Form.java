@@ -419,6 +419,7 @@ public class Form extends BaseObservable {
     private String iStatus96x = StringUtils.EMPTY;
     private String synced = StringUtils.EMPTY;
     private String syncDate = StringUtils.EMPTY;
+    private final String entryType = StringUtils.EMPTY;
     private String g5Flag = "-1";
     private String hhflag = "-1";
     // SECTION VARIABLES

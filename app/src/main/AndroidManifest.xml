@@ -55,7 +55,7 @@
             </intent-filter>-->
         </activity>
         <activity
-            android:name=".ui.login_activity.LoginActivity"
+            android:name=".ui.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge" />
         <activity
@@ -90,6 +90,11 @@
             android:name=".database.AndroidManager"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.ChangePasswordActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
 
         <meta-data
             android:name="YEK_REVRES"

@@ -1,13 +1,13 @@
 package edu.aku.hassannaqvi.shrc_camps.database
 
 import edu.aku.hassannaqvi.shrc_camps.contracts.*
+import edu.aku.hassannaqvi.shrc_camps.contracts.EntryLog.EntryLogTable
 import edu.aku.hassannaqvi.shrc_camps.core.MainApp.PROJECT_NAME
 import edu.aku.hassannaqvi.shrc_camps.models.*
 
 object CreateTable {
     const val DATABASE_NAME = "$PROJECT_NAME.db"
     const val DATABASE_COPY = "${PROJECT_NAME}_copy.db"
-    const val DATABASE_VERSION = 1
 
     const val SQL_CREATE_FORMS = ("CREATE TABLE "
             + FormsContract.FormsTable.TABLE_NAME + "("
@@ -138,8 +138,28 @@ object CreateTable {
             + Users.UsersTable.COLUMN_USERNAME + " TEXT,"
             + Users.UsersTable.COLUMN_PASSWORD + " TEXT,"
             + Users.UsersTable.COLUMN_FULLNAME + " TEXT,"
+            + Users.UsersTable.COLUMN_ENABLED + " TEXT,"
+            + Users.UsersTable.COLUMN_ISNEW_USER + " TEXT,"
+            + Users.UsersTable.COLUMN_PWD_EXPIRY + " TEXT,"
             + Users.UsersTable.COLUMN_DIST_ID + " TEXT"
             + " );")
+
+    const val SQL_ALTER_USERS_ENABLED = ("Alter TABLE "
+            + Users.UsersTable.TABLE_NAME + " ADD "
+            + Users.UsersTable.COLUMN_ENABLED + " TEXT"
+            + " ;"
+            )
+
+    const val SQL_ALTER_USERS_ISNEW_USER = ("Alter TABLE "
+            + Users.UsersTable.TABLE_NAME + " ADD "
+            + Users.UsersTable.COLUMN_ISNEW_USER + " TEXT"
+            + " ;"
+            )
+    const val SQL_ALTER_USERS_PWD_EXPIRY = ("Alter TABLE "
+            + Users.UsersTable.TABLE_NAME + " ADD "
+            + Users.UsersTable.COLUMN_PWD_EXPIRY + " TEXT"
+            + " ;"
+            )
 
     const val SQL_CREATE_DISTRICTS = ("CREATE TABLE " + Districts.TableDistricts.TABLE_NAME + "("
             + Districts.TableDistricts.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -200,4 +220,25 @@ object CreateTable {
             + Doctor.TableDoctor.COLUMN_ID_DOCTOR + " TEXT,"
             + Doctor.TableDoctor.COLUMN_STAFF_NAME + " TEXT"
             + " );")
+
+    const val SQL_CREATE_ENTRYLOGS = ("CREATE TABLE "
+            + EntryLogTable.TABLE_NAME + "("
+            + EntryLogTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + EntryLogTable.COLUMN_PROJECT_NAME + " TEXT,"
+            + EntryLogTable.COLUMN_UID + " TEXT,"
+            + EntryLogTable.COLUMN_UUID + " TEXT,"
+            + EntryLogTable.COLUMN_PSU_CODE + " TEXT,"
+            + EntryLogTable.COLUMN_HHID + " TEXT,"
+            + EntryLogTable.COLUMN_USERNAME + " TEXT,"
+            + EntryLogTable.COLUMN_SYSDATE + " TEXT,"
+            + EntryLogTable.COLUMN_DEVICEID + " TEXT,"
+            + EntryLogTable.COLUMN_ENTRY_DATE + " TEXT,"
+            + EntryLogTable.COLUMN_ISTATUS + " TEXT,"
+            + EntryLogTable.COLUMN_ISTATUS96x + " TEXT,"
+            + EntryLogTable.COLUMN_ENTRY_TYPE + " TEXT,"
+            + EntryLogTable.COLUMN_SYNCED + " TEXT,"
+            + EntryLogTable.COLUMN_SYNC_DATE + " TEXT,"
+            + EntryLogTable.COLUMN_APPVERSION + " TEXT"
+            + " );"
+            )
 }

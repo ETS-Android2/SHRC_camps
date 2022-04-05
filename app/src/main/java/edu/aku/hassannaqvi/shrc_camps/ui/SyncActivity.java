@@ -48,6 +48,7 @@ import java.util.concurrent.TimeUnit;
 import edu.aku.hassannaqvi.shrc_camps.CONSTANTS;
 import edu.aku.hassannaqvi.shrc_camps.R;
 import edu.aku.hassannaqvi.shrc_camps.adapters.SyncListAdapter;
+import edu.aku.hassannaqvi.shrc_camps.contracts.EntryLog;
 import edu.aku.hassannaqvi.shrc_camps.contracts.MHContract;
 import edu.aku.hassannaqvi.shrc_camps.core.MainApp;
 import edu.aku.hassannaqvi.shrc_camps.database.DatabaseHelper;
@@ -148,10 +149,19 @@ public class SyncActivity extends AppCompatActivity {
                     MainApp.uploadData.add(db.getUnsyncedMH());
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Log.d(TAG, "ProcessStart(MHTable): "+e.getMessage());
-                    Toast.makeText(this, "ProcessStart(MHTable): "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.d(TAG, "ProcessStart(MHTable): " + e.getMessage());
+                    Toast.makeText(this, "ProcessStart(MHTable): " + e.getMessage(), Toast.LENGTH_SHORT).show();
 
-                             }
+                }
+
+                //Entry Log
+                uploadTables.add(new SyncModel(EntryLog.EntryLogTable.TABLE_NAME));
+                try {
+                    MainApp.uploadData.add(db.getUnsyncedEntryLog());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(SyncActivity.this, "JSONException(EntryLog)" + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
 
                 MainApp.downloadData = new String[uploadTables.size()];
                 setAdapter(uploadTables);

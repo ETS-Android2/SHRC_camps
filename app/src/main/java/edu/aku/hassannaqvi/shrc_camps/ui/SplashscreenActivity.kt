@@ -3,7 +3,6 @@ package edu.aku.hassannaqvi.shrc_camps.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import edu.aku.hassannaqvi.shrc_camps.R
-import edu.aku.hassannaqvi.shrc_camps.ui.login_activity.LoginActivity
 import edu.aku.hassannaqvi.shrc_camps.utils.extension.gotoActivity
 import kotlinx.coroutines.*
 
@@ -42,11 +41,11 @@ class SplashscreenActivity : AppCompatActivity() {
     }
 
     private fun launchSplashScope() =
-            CoroutineScope(Dispatchers.Main).launch {
-                delay(SPLASH_TIME_OUT.toLong())
-                finish()
-                gotoActivity(LoginActivity::class.java)
-            }
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(SPLASH_TIME_OUT.toLong())
+            finish()
+            gotoActivity(edu.aku.hassannaqvi.shrc_camps.ui.LoginActivity::class.java)
+        }
 
     companion object {
         private const val SPLASH_TIME_OUT = 1000

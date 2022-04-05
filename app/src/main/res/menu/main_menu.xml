@@ -17,6 +17,9 @@
                 android:id="@+id/action_data_sync"
                 android:title="@string/action_data_sync" />
             <item
+                android:id="@+id/changePassword"
+                android:title="Change Password" />
+            <item
                 android:id="@+id/checkOpenForms"
                 android:title="Unfinished Forms"
                 app:showAsAction="collapseActionView" />

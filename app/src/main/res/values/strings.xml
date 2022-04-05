@@ -2,6 +2,19 @@
     <string name="action_database">Database Manager</string>
     <string name="action_data_sync">Sync Data</string>
     <string name="btnDownload">Download Data</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword" translatable="false">Confirm Password</string>
+    <string name="btnResetPassword">Reset Password</string>
+    <string name="folder_not_created"> Folder Not Created </string>
+    <string name="network_conn_error"> Network connection not available ! </string>
+    <string name="invalid_password"> Invalid Password </string>
+    <string name="username_required"> Username is required. </string>
+    <string name="incorrect_username_or_password">Incorrect Username or Password</string>
+    <string name="upd_db_error"> Updating Database… ERROR! </string>
+    <string name="username">Username</string>
+    <string name="btnLogin">Login</string>
+    <string name="country">Language (Click to change)</string>
+    <string name="downData">Download Data</string>
 
     <!--SECTION HEADINGS-->
     <string name="mobilehealthserviceform_heading"> Mobile Health Service Form </string>

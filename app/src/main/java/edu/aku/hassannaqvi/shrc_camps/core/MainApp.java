@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 
@@ -40,6 +41,7 @@ public class MainApp extends Application {
     public static File sdDir;
     public static String[] downloadData;
     public static Form form;
+    public static final String _USER_URL = "resetpassword.php";
     public static Child child;
     public static Immunization immunization;
     public static MobileHealth mobileHealth;
@@ -49,10 +51,12 @@ public class MainApp extends Application {
     public static Users user;
     public static Boolean admin = false;
     public static List<JSONArray> uploadData;
-    SharedPreferences.Editor editor;
-    SharedPreferences sharedPref;
+    public static String deviceid;
+    public static SharedPreferences.Editor editor;
+    public static SharedPreferences sharedPref;
     private static final String TAG = "MainApp";
     public static String IBAHC = "";
+    public static boolean permissionCheck = false;
 
     public static void hideSystemUI(View decorView) {
         // Enables regular immersive mode.
@@ -85,6 +89,9 @@ public class MainApp extends Application {
         AndroidThreeTen.init(this);
         //Initializ App info
         appInfo = new AppInfo(this);
+        sharedPref = getSharedPreferences(PROJECT_NAME, MODE_PRIVATE);
+        editor = sharedPref.edit();
+        deviceid = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
 
         initSecure();
 

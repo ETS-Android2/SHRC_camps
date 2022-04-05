@@ -30,7 +30,6 @@ import edu.aku.hassannaqvi.shrc_camps.databinding.ActivityMainBinding
 import edu.aku.hassannaqvi.shrc_camps.models.Camps
 import edu.aku.hassannaqvi.shrc_camps.ui.list_activity.FormsReportCluster
 import edu.aku.hassannaqvi.shrc_camps.ui.list_activity.FormsReportDate
-import edu.aku.hassannaqvi.shrc_camps.ui.login_activity.LoginActivity
 import edu.aku.hassannaqvi.shrc_camps.ui.sections.SectionMobileHealthR2
 import edu.aku.hassannaqvi.shrc_camps.utils.extension.gotoActivity
 import edu.aku.hassannaqvi.shrc_camps.utils.extension.gotoActivityWithNoHistory
@@ -57,7 +56,8 @@ class MainActivity : AppCompatActivity() {
         bi.callback = this
         setSupportActionBar(bi.toolbar)
         if (MainApp.admin) bi.adminSection.visibility = View.VISIBLE
-        viewModel = obtainViewModel(MainViewModel::class.java, GeneralRepository(DatabaseHelper(this)))
+        viewModel =
+            obtainViewModel(MainViewModel::class.java, GeneralRepository(DatabaseHelper(this)))
 
 
         /*
@@ -201,8 +201,10 @@ class MainActivity : AppCompatActivity() {
         if (exit) {
             gotoActivityWithNoHistory(LoginActivity::class.java)
         } else {
-            Toast.makeText(this, "Press back again to exit",
-                    Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this, "Press back again to exit",
+                Toast.LENGTH_SHORT
+            ).show()
             exit = true
             Handler(Looper.getMainLooper()).postDelayed({ exit = false }, 3000)
         }
@@ -226,8 +228,13 @@ class MainActivity : AppCompatActivity() {
                     gotoActivity(SyncActivity::class.java)
 
                 } else
-                    Toast.makeText(this, "Network connection not available!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Network connection not available!", Toast.LENGTH_SHORT)
+                        .show()
 
+                return true
+            }
+            R.id.changePassword -> {
+                gotoActivity(ChangePasswordActivity::class.java)
                 return true
             }
             R.id.formsReportDate -> {
@@ -287,13 +294,13 @@ class MainActivity : AppCompatActivity() {
         * listener set on the view.
         * */
         bi.statisticLayout.syncLinearLayout.animate()
-                .alpha(1f)
-                .setDuration(shortAnimationDuration.toLong())
-                .setListener(null)
+            .alpha(1f)
+            .setDuration(shortAnimationDuration.toLong())
+            .setListener(null)
         bi.statisticLayout.statusLinearLayout.animate()
-                .alpha(1f)
-                .setDuration(shortAnimationDuration.toLong())
-                .setListener(null)
+            .alpha(1f)
+            .setDuration(shortAnimationDuration.toLong())
+            .setListener(null)
 
         /* 
         * Animate the loading view to 0% opacity. After the animation ends, 
@@ -301,13 +308,13 @@ class MainActivity : AppCompatActivity() {
         * in layout passes, etc.)
         * */
         bi.statisticLayout.loading.animate()
-                .alpha(0f)
-                .setDuration(shortAnimationDuration.toLong())
-                .setListener(object : AnimatorListenerAdapter() {
-                    override fun onAnimationEnd(animation: Animator) {
-                        bi.statisticLayout.loading.visibility = View.GONE
-                    }
-                })
+            .alpha(0f)
+            .setDuration(shortAnimationDuration.toLong())
+            .setListener(object : AnimatorListenerAdapter() {
+                override fun onAnimationEnd(animation: Animator) {
+                    bi.statisticLayout.loading.visibility = View.GONE
+                }
+            })
     }
 
     /*
